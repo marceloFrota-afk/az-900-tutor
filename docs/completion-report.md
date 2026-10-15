@@ -32,3 +32,7 @@ The optional catalog check reached 14 of 15 URLs; the community video resource r
 Open the repository in your agent, ask it to read `AGENTS.md` and `TUTOR.md`, and say: “Use az-900-tutor. Tenho dez dias, 45 minutos por dia e pouca experiência Azure. Comece com um diagnóstico curto em português.” For chatbots, attach the files listed in [Portuguese usage](usage.pt-BR.md), including the lesson JSON; a URL alone may not be readable. Python 3.11+ is only needed for local state utilities.
 
 Remaining human/time/resource dependencies: certified Azure/editorial signoff, novice usability observations, actual delayed learner retrieval, outcome/psychometric studies, exact hosted-model reproducibility, and a post-repair behavioral rerun. See the [human review packet](human-review-pack.md). No additional service is required for conceptual study.
+
+## PR lifecycle correction discovered at final verification
+
+PR #1 was already merged by vmenezesdev at 2026-10-15 13:57:15 UTC (10:57:15 America/Fortaleza), before this continuation began. Its closed head remains 519dfa8. This continuation pushed only the authorized feature branch and did not merge or directly update trunk. A follow-up PR is required to review these new commits. The new hardened workflow schedule awaits that follow-up merge; the original workflow may already be scheduled from the earlier external merge. Final code/content commit 2799d3e passed all four CI jobs in [run 38750603789](https://github.com/vmenezesdev/az-900-tutor/actions/runs/38750603789).
