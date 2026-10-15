@@ -5,7 +5,7 @@
     "license": "MIT",
     "concept_sources": "Microsoft Learn modules/paths; source content does not supply these questions.",
     "reviewed_at": "2026-10-15",
-    "limitations": "Independent second-agent editorial review completed; not a human Azure SME certification, learner trial, psychometric calibration or exam predictor.",
+    "limitations": "Q001-Q030 previously independently reviewed; Q031-Q065 author self-reviewed on 2026-10-15 with independent review pending. Not human Azure SME certification, learner trials, psychometric calibration or exam prediction.",
     "independent_editorial_review": {
       "date": "2026-10-15",
       "method": "Second agent read all prompts, keys, rubrics, distractors and primary competency mappings; checked official conceptual documentation, with targeted verification of ambiguous storage and RBAC cases.",
@@ -15,6 +15,24 @@
         "Q030 minor Portuguese correction."
       ],
       "limits": "Official modules and conceptual source families were reviewed; not every source leaf page or real Azure configuration was tested. No human subject-matter review or learner performance study."
+    },
+    "coverage": {
+      "curriculum_version": "2026-07-20",
+      "competency_count": 57,
+      "question_count": 65,
+      "method": "One primary-competency scenario for every curriculum competency plus eight transfer variants for recurrent confusions. Coverage is editorial mapping, not learner mastery.",
+      "added_on": "2026-10-15",
+      "new_question_ids": "Q031-Q065",
+      "transfer_question_ids": [
+        "Q058",
+        "Q059",
+        "Q060",
+        "Q061",
+        "Q062",
+        "Q063",
+        "Q064",
+        "Q065"
+      ]
     }
   },
   "questions": [
@@ -870,6 +888,941 @@
       "original": true,
       "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
       "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q031",
+      "competency_id": "AZ900-1.1.1",
+      "domain_id": "D1",
+      "type": "application",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "Um laboratório precisa de capacidade computacional por duas semanas e quer provisioná-la por uma interface remota em vez de comprar equipamentos. Explique o que torna essa oferta computação em nuvem e cite dois tipos de recursos que pode consumir.",
+      "answer": "Serviços computacionais são fornecidos sob demanda pela rede. O laboratório pode provisionar, por exemplo, processamento e armazenamento, sem adquirir a infraestrutura física correspondente.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Explica entrega sob demanda pela rede e aplica ao laboratório citando dois recursos, como computação, rede, banco de dados ou armazenamento.",
+        "full_credit": 3,
+        "partial_credit": "1: identifica uma parte correta, mas omite a distinção central; 2: explica a distinção central, mas deixa incompleta uma aplicação solicitada; 3: atende a todos os elementos do critério.",
+        "no_credit": "0: resposta ausente, incorreta ou contraditória na distinção central. Nomes de serviços sem justificativa não demonstram aplicação."
+      },
+      "rationale": "Explica entrega sob demanda pela rede e aplica ao laboratório citando dois recursos, como computação, rede, banco de dados ou armazenamento.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/3-what-cloud-compute"
+      ],
+      "skill_type": "application",
+      "original": true,
+      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q032",
+      "competency_id": "AZ900-1.1.4",
+      "domain_id": "D1",
+      "type": "application",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "Uma organização já opera uma nuvem privada para uma carga que deve continuar local. Quer integrar capacidade de uma nuvem pública a ela. Escolha pública, privada ou híbrida e explique o que mudaria se toda a solução precisasse usar recursos dedicados exclusivamente à organização.",
+      "answer": "A integração pede nuvem híbrida. Se toda a solução exigir recursos exclusivos, a opção é nuvem privada, que pode ser hospedada localmente ou por terceiros; pública não significa dados abertos.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Escolhe híbrida pela integração e privada pela exclusividade, sem confundir local de hospedagem com modelo.",
+        "full_credit": 3,
+        "partial_credit": "1: identifica uma parte correta, mas omite a distinção central; 2: explica a distinção central, mas deixa incompleta uma aplicação solicitada; 3: atende a todos os elementos do critério.",
+        "no_credit": "0: resposta ausente, incorreta ou contraditória na distinção central. Nomes de serviços sem justificativa não demonstram aplicação."
+      },
+      "rationale": "Escolhe híbrida pela integração e privada pela exclusividade, sem confundir local de hospedagem com modelo.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/5-define-cloud-models"
+      ],
+      "skill_type": "application",
+      "original": true,
+      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q033",
+      "competency_id": "AZ900-1.1.6",
+      "domain_id": "D1",
+      "type": "application",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "Uma equipe compara uma VM com demanda imprevisível, outra com uso estável de longo prazo e um processamento em lote que pode ser interrompido e retomado. Compare pagamento conforme uso, compromisso de uso e Spot. Por que o menor preço aparente não decide sozinho?",
+      "answer": "Pagamento conforme uso favorece flexibilidade sem compromisso; reservas ou planos de economia podem reduzir o custo de uso elegível estável mediante compromisso. Spot pode servir ao lote tolerante a interrupções, pois a capacidade pode ser retomada pelo Azure. Elegibilidade, compromisso e interrupção precisam ser avaliados.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Relaciona as três alternativas às cargas e reconhece compromisso e risco de interrupção; não promete desconto universal nem continuidade para Spot.",
+        "full_credit": 3,
+        "partial_credit": "1: identifica uma parte correta, mas omite a distinção central; 2: explica a distinção central, mas deixa incompleta uma aplicação solicitada; 3: atende a todos os elementos do critério.",
+        "no_credit": "0: resposta ausente, incorreta ou contraditória na distinção central. Nomes de serviços sem justificativa não demonstram aplicação."
+      },
+      "rationale": "Relaciona as três alternativas às cargas e reconhece compromisso e risco de interrupção; não promete desconto universal nem continuidade para Spot.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/2-describe-factors-affect-costs-azure",
+        "https://learn.microsoft.com/en-us/azure/virtual-machines/spot-vms",
+        "https://learn.microsoft.com/en-us/azure/cost-management-billing/reservations/save-compute-costs-reservations"
+      ],
+      "skill_type": "application",
+      "original": true,
+      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q034",
+      "competency_id": "AZ900-1.2.3",
+      "domain_id": "D1",
+      "type": "application",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "Três equipes criam ambientes com padrões diferentes. A organização quer auditar desvios e aplicar requisitos comuns. Explique dois benefícios de segurança e governança da nuvem e por que isso não comprova conformidade automaticamente.",
+      "answer": "Controles e auditoria centralizados ajudam a identificar desvios, e padrões ou políticas permitem aplicar requisitos de forma consistente. A organização continua responsável por configurar controles, gerir acessos e avaliar suas obrigações.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Aplica auditoria e padronização ao cenário e mantém responsabilidade do cliente pela configuração e avaliação de conformidade.",
+        "full_credit": 3,
+        "partial_credit": "1: identifica uma parte correta, mas omite a distinção central; 2: explica a distinção central, mas deixa incompleta uma aplicação solicitada; 3: atende a todos os elementos do critério.",
+        "no_credit": "0: resposta ausente, incorreta ou contraditória na distinção central. Nomes de serviços sem justificativa não demonstram aplicação."
+      },
+      "rationale": "Aplica auditoria e padronização ao cenário e mantém responsabilidade do cliente pela configuração e avaliação de conformidade.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/4-security-governance-cloud"
+      ],
+      "skill_type": "application",
+      "original": true,
+      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q035",
+      "competency_id": "AZ900-1.2.4",
+      "domain_id": "D1",
+      "type": "application",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "Uma operadora precisa provisionar o mesmo ambiente em vários projetos e acompanhar sua saúde sem visitar máquinas fisicamente. Como a gerenciabilidade da nuvem ajuda? Dê uma ação automatizável e uma forma de gestão remota.",
+      "answer": "Templates ou automação podem repetir o provisionamento, e monitoramento/alertas acompanham saúde. Portal, APIs, CLI ou PowerShell permitem gestão remota sujeita às permissões.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Dá uma ação automatizável e um canal de gestão remota vinculados aos requisitos; não presume que a automação dispensa supervisão.",
+        "full_credit": 3,
+        "partial_credit": "1: identifica uma parte correta, mas omite a distinção central; 2: explica a distinção central, mas deixa incompleta uma aplicação solicitada; 3: atende a todos os elementos do critério.",
+        "no_credit": "0: resposta ausente, incorreta ou contraditória na distinção central. Nomes de serviços sem justificativa não demonstram aplicação."
+      },
+      "rationale": "Dá uma ação automatizável e um canal de gestão remota vinculados aos requisitos; não presume que a automação dispensa supervisão.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/5-manageability-cloud"
+      ],
+      "skill_type": "application",
+      "original": true,
+      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q036",
+      "competency_id": "AZ900-1.3.4",
+      "domain_id": "D1",
+      "type": "application",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "Uma equipe quer publicar uma aplicação própria com runtime suportado sem manter o SO; outra só quer consumir um CRM pronto; uma terceira exige alterar o kernel de uma máquina. Escolha PaaS, SaaS ou IaaS para cada caso e justifique uma responsabilidade que permanece com o cliente.",
+      "answer": "PaaS para a aplicação própria no runtime suportado; SaaS para o CRM pronto; IaaS para controle do kernel. O cliente ainda gere dados, identidades e acessos conforme o serviço.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Mapeia os três casos e usa controle operacional para justificar; cita responsabilidade persistente do cliente.",
+        "full_credit": 3,
+        "partial_credit": "1: identifica uma parte correta, mas omite a distinção central; 2: explica a distinção central, mas deixa incompleta uma aplicação solicitada; 3: atende a todos os elementos do critério.",
+        "no_credit": "0: resposta ausente, incorreta ou contraditória na distinção central. Nomes de serviços sem justificativa não demonstram aplicação."
+      },
+      "rationale": "Mapeia os três casos e usa controle operacional para justificar; cita responsabilidade persistente do cliente.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/modules/describe-cloud-service-types/"
+      ],
+      "skill_type": "application",
+      "original": true,
+      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q037",
+      "competency_id": "AZ900-2.1.1",
+      "domain_id": "D2",
+      "type": "application",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "Um arquiteto diz: toda região Azure tem uma região pareada, e escolher o par já replica minha aplicação; uma nuvem soberana é só mais uma zona da mesma região. Corrija as afirmações e indique o que precisa verificar antes de planejar recuperação.",
+      "answer": "Nem toda região tem par. Pareamento regional não replica automaticamente toda aplicação: serviço, redundância, implantação e recuperação precisam ser configurados. Nuvens soberanas têm limites operacionais e requisitos próprios, distintos de zonas. Verificar disponibilidade dos serviços e requisitos de residência e recuperação.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Corrige universalidade do par, replicação automática e equivalência com zona; propõe verificar serviço e requisitos de recuperação.",
+        "full_credit": 3,
+        "partial_credit": "1: identifica uma parte correta, mas omite a distinção central; 2: explica a distinção central, mas deixa incompleta uma aplicação solicitada; 3: atende a todos os elementos do critério.",
+        "no_credit": "0: resposta ausente, incorreta ou contraditória na distinção central. Nomes de serviços sem justificativa não demonstram aplicação."
+      },
+      "rationale": "Corrige universalidade do par, replicação automática e equivalência com zona; propõe verificar serviço e requisitos de recuperação.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/5-describe-azure-physical-infrastructure",
+        "https://learn.microsoft.com/en-us/azure/reliability/regions-paired"
+      ],
+      "skill_type": "application",
+      "original": true,
+      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q038",
+      "competency_id": "AZ900-2.1.3",
+      "domain_id": "D2",
+      "type": "application",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "Uma pessoa afirma que criou um resource group e por isso recebeu um prédio exclusivo da Microsoft. Explique o que é um datacenter e como ele se relaciona com uma região e com esse grupo lógico.",
+      "answer": "Datacenter é a instalação física com servidores, energia, refrigeração e rede. Uma região compreende infraestrutura de datacenters em uma área geográfica; resource group organiza recursos logicamente e não reserva um prédio.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Distingue instalação física, região e agrupamento lógico e cita componentes físicos.",
+        "full_credit": 3,
+        "partial_credit": "1: identifica uma parte correta, mas omite a distinção central; 2: explica a distinção central, mas deixa incompleta uma aplicação solicitada; 3: atende a todos os elementos do critério.",
+        "no_credit": "0: resposta ausente, incorreta ou contraditória na distinção central. Nomes de serviços sem justificativa não demonstram aplicação."
+      },
+      "rationale": "Distingue instalação física, região e agrupamento lógico e cita componentes físicos.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/5-describe-azure-physical-infrastructure",
+        "https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/6-describe-azure-management-infrastructure"
+      ],
+      "skill_type": "application",
+      "original": true,
+      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q039",
+      "competency_id": "AZ900-2.1.4",
+      "domain_id": "D2",
+      "type": "application",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "Uma API e seu armazenamento têm o mesmo ciclo de vida. A equipe pretende organizá-los juntos e excluir o ambiente de teste depois. Diferencie recurso e resource group e explique o efeito de excluir o grupo e um cuidado antes disso.",
+      "answer": "A API e a conta de armazenamento são recursos; o resource group é seu contêiner lógico de gerenciamento. Excluir o grupo exclui os recursos contidos, sujeito a proteções aplicáveis. Conferir dependências, dados e locks antes da exclusão.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Identifica instâncias e contêiner, relaciona exclusão ao ciclo de vida e menciona verificação de dependências ou proteção dos dados.",
+        "full_credit": 3,
+        "partial_credit": "1: identifica uma parte correta, mas omite a distinção central; 2: explica a distinção central, mas deixa incompleta uma aplicação solicitada; 3: atende a todos os elementos do critério.",
+        "no_credit": "0: resposta ausente, incorreta ou contraditória na distinção central. Nomes de serviços sem justificativa não demonstram aplicação."
+      },
+      "rationale": "Identifica instâncias e contêiner, relaciona exclusão ao ciclo de vida e menciona verificação de dependências ou proteção dos dados.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/6-describe-azure-management-infrastructure"
+      ],
+      "skill_type": "application",
+      "original": true,
+      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q040",
+      "competency_id": "AZ900-2.1.5",
+      "domain_id": "D2",
+      "type": "application",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "Duas unidades querem separar faturamento e administração dos recursos Azure. Por que assinaturas diferentes podem ajudar? Criar apenas dois resource groups cria automaticamente dois limites de faturamento equivalentes?",
+      "answer": "Assinaturas são limites de faturamento e de gerenciamento/acesso. Resource groups organizam recursos dentro da assinatura e não criam assinaturas ou contratos de cobrança separados. Tags e análise podem auxiliar alocação interna de custos.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Relaciona assinatura a cobrança e gerenciamento e distingue isso de grupos dentro de uma assinatura.",
+        "full_credit": 3,
+        "partial_credit": "1: identifica uma parte correta, mas omite a distinção central; 2: explica a distinção central, mas deixa incompleta uma aplicação solicitada; 3: atende a todos os elementos do critério.",
+        "no_credit": "0: resposta ausente, incorreta ou contraditória na distinção central. Nomes de serviços sem justificativa não demonstram aplicação."
+      },
+      "rationale": "Relaciona assinatura a cobrança e gerenciamento e distingue isso de grupos dentro de uma assinatura.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/6-describe-azure-management-infrastructure"
+      ],
+      "skill_type": "application",
+      "original": true,
+      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q041",
+      "competency_id": "AZ900-2.1.6",
+      "domain_id": "D2",
+      "type": "application",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "Uma empresa terá várias assinaturas e quer que novas assinaturas recebam regras de governança comuns ao serem colocadas na estrutura. Onde organizar essas assinaturas e como a herança ajuda? Isso move todos os recursos para um único resource group?",
+      "answer": "Management groups organizam assinaturas acima delas; atribuições de políticas e acesso nesse escopo podem ser herdadas pelos escopos descendentes. Isso não reúne os recursos em um único resource group.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Escolhe management groups, explica herança e preserva os níveis de assinatura e grupo.",
+        "full_credit": 3,
+        "partial_credit": "1: identifica uma parte correta, mas omite a distinção central; 2: explica a distinção central, mas deixa incompleta uma aplicação solicitada; 3: atende a todos os elementos do critério.",
+        "no_credit": "0: resposta ausente, incorreta ou contraditória na distinção central. Nomes de serviços sem justificativa não demonstram aplicação."
+      },
+      "rationale": "Escolhe management groups, explica herança e preserva os níveis de assinatura e grupo.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/6-describe-azure-management-infrastructure"
+      ],
+      "skill_type": "application",
+      "original": true,
+      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q042",
+      "competency_id": "AZ900-2.2.2",
+      "domain_id": "D2",
+      "type": "application",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "Associe e justifique: aumentar ou reduzir uma frota de VMs semelhantes conforme demanda; distribuir VMs entre domínios de falha e atualização num datacenter; fornecer desktops remotos gerenciados; manter uma VM isolada de laboratório. Compare Scale Sets, availability sets, Azure Virtual Desktop e VM individual.",
+      "answer": "Scale Sets gerencia uma frota escalável; availability sets distribuem VMs em domínios de falha/atualização, sem ser autoscale; Azure Virtual Desktop oferece virtualização de desktops/aplicativos; VM individual atende o laboratório, sem redundância garantida por estar sozinha.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Mapeia quatro opções e distingue escalabilidade, proteção contra falhas/manutenção e virtualização de desktop.",
+        "full_credit": 3,
+        "partial_credit": "1: identifica uma parte correta, mas omite a distinção central; 2: explica a distinção central, mas deixa incompleta uma aplicação solicitada; 3: atende a todos os elementos do critério.",
+        "no_credit": "0: resposta ausente, incorreta ou contraditória na distinção central. Nomes de serviços sem justificativa não demonstram aplicação."
+      },
+      "rationale": "Mapeia quatro opções e distingue escalabilidade, proteção contra falhas/manutenção e virtualização de desktop.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/2-virtual-machines",
+        "https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/4-virtual-desktop"
+      ],
+      "skill_type": "application",
+      "original": true,
+      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q043",
+      "competency_id": "AZ900-2.2.3",
+      "domain_id": "D2",
+      "type": "application",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "Um orçamento lista apenas CPU e memória para criar uma VM. Identifique outros recursos necessários a uma VM Azure típica e explique por que um IP público não é obrigatório para toda VM.",
+      "answer": "É preciso considerar disco do SO, interface de rede e VNet/sub-rede, além do tamanho de computação; discos de dados são opcionais conforme a carga. A VM pode usar endereçamento privado e acesso apropriado pela rede privada sem IP público próprio.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Inclui disco do SO, NIC, VNet/sub-rede; distingue discos de dados opcionais e não exige IP público.",
+        "full_credit": 3,
+        "partial_credit": "1: identifica uma parte correta, mas omite a distinção central; 2: explica a distinção central, mas deixa incompleta uma aplicação solicitada; 3: atende a todos os elementos do critério.",
+        "no_credit": "0: resposta ausente, incorreta ou contraditória na distinção central. Nomes de serviços sem justificativa não demonstram aplicação."
+      },
+      "rationale": "Inclui disco do SO, NIC, VNet/sub-rede; distingue discos de dados opcionais e não exige IP público.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/2-virtual-machines"
+      ],
+      "skill_type": "application",
+      "original": true,
+      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q044",
+      "competency_id": "AZ900-2.3.4",
+      "domain_id": "D2",
+      "type": "application",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "Uma aplicação precisa guardar blobs e filas com desempenho padrão. Um colega escolhe uma conta Premium só pelo nome e presume que ela oferece todos os mesmos serviços. Como avaliar a escolha da conta de armazenamento?",
+      "answer": "Uma conta Standard general-purpose v2 suporta esses serviços. Contas Premium são voltadas a tipos e desempenho específicos e não oferecem universalmente os mesmos serviços. Comparar serviço suportado, desempenho, redundância, região e custo.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Relaciona GPv2 padrão a blobs/filas e verifica compatibilidade em vez de supor Premium universal.",
+        "full_credit": 3,
+        "partial_credit": "1: identifica uma parte correta, mas omite a distinção central; 2: explica a distinção central, mas deixa incompleta uma aplicação solicitada; 3: atende a todos os elementos do critério.",
+        "no_credit": "0: resposta ausente, incorreta ou contraditória na distinção central. Nomes de serviços sem justificativa não demonstram aplicação."
+      },
+      "rationale": "Relaciona GPv2 padrão a blobs/filas e verifica compatibilidade em vez de supor Premium universal.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/2-accounts"
+      ],
+      "skill_type": "application",
+      "original": true,
+      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q045",
+      "competency_id": "AZ900-2.3.5",
+      "domain_id": "D2",
+      "type": "application",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "Escolha uma ferramenta para cada necessidade e justifique: transferir arquivos por script para Azure Storage; explorar blobs visualmente; manter Windows Server local como cache de compartilhamentos Azure Files. Compare AzCopy, Storage Explorer e Azure File Sync.",
+      "answer": "AzCopy para transferência por linha de comando; Azure Storage Explorer para interface gráfica; Azure File Sync para sincronização/cache de Azure Files em Windows Server. Transferir com AzCopy não cria por si um cache híbrido contínuo.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Associa os três casos e distingue cópia pontual ou em script de sincronização/cache.",
+        "full_credit": 3,
+        "partial_credit": "1: identifica uma parte correta, mas omite a distinção central; 2: explica a distinção central, mas deixa incompleta uma aplicação solicitada; 3: atende a todos os elementos do critério.",
+        "no_credit": "0: resposta ausente, incorreta ou contraditória na distinção central. Nomes de serviços sem justificativa não demonstram aplicação."
+      },
+      "rationale": "Associa os três casos e distingue cópia pontual ou em script de sincronização/cache.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/7-identify-azure-file-movement-options"
+      ],
+      "skill_type": "application",
+      "original": true,
+      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q046",
+      "competency_id": "AZ900-2.4.1",
+      "domain_id": "D2",
+      "type": "application",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "Uma aplicação moderna usa identidade na nuvem; uma aplicação legada exige LDAP e ingresso em domínio sem a equipe manter controladores de domínio. Compare Microsoft Entra ID e Microsoft Entra Domain Services para esses requisitos.",
+      "answer": "Entra ID fornece identidade e acesso na nuvem para aplicativos modernos. Entra Domain Services fornece capacidades de domínio gerenciado, como LDAP, Kerberos/NTLM e ingresso em domínio. Entra ID por si não equivale a um domínio AD DS tradicional.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Associa identidade moderna a Entra ID e protocolos de domínio à opção gerenciada sem tratá-las como serviços idênticos.",
+        "full_credit": 3,
+        "partial_credit": "1: identifica uma parte correta, mas omite a distinção central; 2: explica a distinção central, mas deixa incompleta uma aplicação solicitada; 3: atende a todos os elementos do critério.",
+        "no_credit": "0: resposta ausente, incorreta ou contraditória na distinção central. Nomes de serviços sem justificativa não demonstram aplicação."
+      },
+      "rationale": "Associa identidade moderna a Entra ID e protocolos de domínio à opção gerenciada sem tratá-las como serviços idênticos.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/2-directory-services",
+        "https://learn.microsoft.com/en-us/entra/identity/domain-services/overview"
+      ],
+      "skill_type": "application",
+      "original": true,
+      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q047",
+      "competency_id": "AZ900-2.4.3",
+      "domain_id": "D2",
+      "type": "application",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "Uma empresa quer convidar um fornecedor a colaborar usando sua identidade externa e, em outro projeto, oferecer login a clientes de um aplicativo. Descreva como external identities atende esses públicos e por que ser convidado não dá acesso irrestrito.",
+      "answer": "Identidades externas podem apoiar colaboração B2B de parceiros convidados e cenários de identidade de clientes. O acesso depende de permissões e políticas apropriadas; convite ou autenticação não concede autorização universal.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Distingue colaboração de fornecedor e identidade de cliente e preserva autorização/políticas para cada cenário.",
+        "full_credit": 3,
+        "partial_credit": "1: identifica uma parte correta, mas omite a distinção central; 2: explica a distinção central, mas deixa incompleta uma aplicação solicitada; 3: atende a todos os elementos do critério.",
+        "no_credit": "0: resposta ausente, incorreta ou contraditória na distinção central. Nomes de serviços sem justificativa não demonstram aplicação."
+      },
+      "rationale": "Distingue colaboração de fornecedor e identidade de cliente e preserva autorização/políticas para cada cenário.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/4-external-identities"
+      ],
+      "skill_type": "application",
+      "original": true,
+      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q048",
+      "competency_id": "AZ900-2.4.4",
+      "domain_id": "D2",
+      "type": "application",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "Uma política deve exigir MFA quando alguém acessa um aplicativo de uma localização fora da rede conhecida. Explique o papel de Conditional Access e a diferença entre decidir exigir MFA e definir qual recurso o usuário pode administrar.",
+      "answer": "Conditional Access avalia sinais/contexto de acesso e aplica controles, como exigir MFA ou bloquear. Atribuições de autorização, como Azure RBAC, definem ações permitidas nos recursos; satisfazer MFA não concede um papel.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Relaciona sinal de localização e controle de MFA à política e distingue isso de autorização no recurso.",
+        "full_credit": 3,
+        "partial_credit": "1: identifica uma parte correta, mas omite a distinção central; 2: explica a distinção central, mas deixa incompleta uma aplicação solicitada; 3: atende a todos os elementos do critério.",
+        "no_credit": "0: resposta ausente, incorreta ou contraditória na distinção central. Nomes de serviços sem justificativa não demonstram aplicação."
+      },
+      "rationale": "Relaciona sinal de localização e controle de MFA à política e distingue isso de autorização no recurso.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/5-conditional-access"
+      ],
+      "skill_type": "application",
+      "original": true,
+      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q049",
+      "competency_id": "AZ900-2.4.6",
+      "domain_id": "D2",
+      "type": "application",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "Uma credencial foi roubada e o atacante já alcançou a rede interna. Proponha uma medida para cada princípio de Zero Trust e explique por que estar na rede não basta para confiar.",
+      "answer": "Verificar explicitamente identidade, dispositivo e contexto; dar somente privilégios necessários e limitados; assumir comprometimento segmentando acesso e monitorando atividade. A localização na rede não garante legitimidade.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Aplica verificar explicitamente, privilégio mínimo e assumir violação ao ataque, sem confiança automática na rede interna.",
+        "full_credit": 3,
+        "partial_credit": "1: identifica uma parte correta, mas omite a distinção central; 2: explica a distinção central, mas deixa incompleta uma aplicação solicitada; 3: atende a todos os elementos do critério.",
+        "no_credit": "0: resposta ausente, incorreta ou contraditória na distinção central. Nomes de serviços sem justificativa não demonstram aplicação."
+      },
+      "rationale": "Aplica verificar explicitamente, privilégio mínimo e assumir violação ao ataque, sem confiança automática na rede interna.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/7-describe-zero-trust-model"
+      ],
+      "skill_type": "application",
+      "original": true,
+      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q050",
+      "competency_id": "AZ900-2.4.7",
+      "domain_id": "D2",
+      "type": "application",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "Uma aplicação já tem firewall e a equipe propõe remover MFA, validação da aplicação e monitoramento. Explique como defesa em profundidade responde a isso e dê um exemplo do que outra camada pode limitar se o firewall falhar.",
+      "answer": "Defesa em profundidade combina controles independentes em camadas. MFA dificulta uso indevido de credenciais; autorização e validação na aplicação limitam ações/dados; monitoramento ajuda a detectar atividade. Uma falha de rede não deve derrubar todas as outras proteções.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Rejeita controle único e explica pelo menos duas outras camadas com efeitos concretos após falha de rede.",
+        "full_credit": 3,
+        "partial_credit": "1: identifica uma parte correta, mas omite a distinção central; 2: explica a distinção central, mas deixa incompleta uma aplicação solicitada; 3: atende a todos os elementos do critério.",
+        "no_credit": "0: resposta ausente, incorreta ou contraditória na distinção central. Nomes de serviços sem justificativa não demonstram aplicação."
+      },
+      "rationale": "Rejeita controle único e explica pelo menos duas outras camadas com efeitos concretos após falha de rede.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/8-describe-defense-depth"
+      ],
+      "skill_type": "application",
+      "original": true,
+      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q051",
+      "competency_id": "AZ900-2.4.8",
+      "domain_id": "D2",
+      "type": "application",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "Uma equipe quer descobrir configurações de nuvem inseguras e receber proteção e alertas de ameaças para cargas suportadas. Como Defender for Cloud atende esses dois objetivos? Ativá-lo garante proteção completa e correção automática de toda falha?",
+      "answer": "Defender for Cloud combina avaliação/recomendações de postura de segurança com proteção de cargas contra ameaças. A cobertura depende de planos, integrações e configuração; a equipe precisa avaliar e remediar recomendações. Não há garantia de correção ou proteção universal automática.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Distingue postura e proteção contra ameaças e reconhece limites de cobertura/configuração e necessidade de remediação.",
+        "full_credit": 3,
+        "partial_credit": "1: identifica uma parte correta, mas omite a distinção central; 2: explica a distinção central, mas deixa incompleta uma aplicação solicitada; 3: atende a todos os elementos do critério.",
+        "no_credit": "0: resposta ausente, incorreta ou contraditória na distinção central. Nomes de serviços sem justificativa não demonstram aplicação."
+      },
+      "rationale": "Distingue postura e proteção contra ameaças e reconhece limites de cobertura/configuração e necessidade de remediação.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/azure/defender-for-cloud/defender-for-cloud-introduction"
+      ],
+      "skill_type": "application",
+      "original": true,
+      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q052",
+      "competency_id": "AZ900-3.1.1",
+      "domain_id": "D3",
+      "type": "application",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "Duas soluções têm o mesmo número de VMs, mas uma usa tamanhos maiores, mais discos, outra região e mais saída de dados. Explique por que as contas podem divergir e como comparar sem inventar um preço fixo.",
+      "answer": "Quantidade de VMs não determina sozinha o gasto: tamanho/tempo de uso, armazenamento, região, tráfego tarifável e condições de compra alteram o custo. Comparar configurações e uso esperado na calculadora e validar a cobrança real.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Aplica pelo menos três fatores concretos e distingue estimativa de valor garantido.",
+        "full_credit": 3,
+        "partial_credit": "1: identifica uma parte correta, mas omite a distinção central; 2: explica a distinção central, mas deixa incompleta uma aplicação solicitada; 3: atende a todos os elementos do critério.",
+        "no_credit": "0: resposta ausente, incorreta ou contraditória na distinção central. Nomes de serviços sem justificativa não demonstram aplicação."
+      },
+      "rationale": "Aplica pelo menos três fatores concretos e distingue estimativa de valor garantido.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/2-describe-factors-affect-costs-azure"
+      ],
+      "skill_type": "application",
+      "original": true,
+      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q053",
+      "competency_id": "AZ900-3.2.1",
+      "domain_id": "D3",
+      "type": "application",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "A equipe de dados precisa descobrir onde há dados sensíveis e entender sua classificação em diferentes fontes. Outra equipe quer impedir criação de recursos em regiões proibidas. Compare o papel de Microsoft Purview e Azure Policy.",
+      "answer": "Purview oferece governança, descoberta/classificação e recursos de conformidade de dados. Azure Policy trata conformidade das configurações de recursos, como regiões permitidas. Descobrir/classificar dados não equivale a negar uma implantação.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Escolhe Purview para governança dos dados e Policy para regras dos recursos, justificando a distinção.",
+        "full_credit": 3,
+        "partial_credit": "1: identifica uma parte correta, mas omite a distinção central; 2: explica a distinção central, mas deixa incompleta uma aplicação solicitada; 3: atende a todos os elementos do critério.",
+        "no_credit": "0: resposta ausente, incorreta ou contraditória na distinção central. Nomes de serviços sem justificativa não demonstram aplicação."
+      },
+      "rationale": "Escolhe Purview para governança dos dados e Policy para regras dos recursos, justificando a distinção.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-azure-for-governance-compliance/2-describe-purpose-microsoft-purview"
+      ],
+      "skill_type": "application",
+      "original": true,
+      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q054",
+      "competency_id": "AZ900-3.3.1",
+      "domain_id": "D3",
+      "type": "application",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "Uma administradora autorizada quer inspecionar uma VM e alterar sua configuração pelo navegador. Que interface Azure é apropriada? Usá-la elimina a necessidade de permissões ou permite executar alterações sem impacto em recursos reais?",
+      "answer": "Azure portal é a interface web de gestão. As ações continuam sujeitas a permissões, políticas e locks aplicáveis; alterações podem afetar recursos reais e sua cobrança.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Identifica portal e mantém autorização e impacto operacional das ações.",
+        "full_credit": 3,
+        "partial_credit": "1: identifica uma parte correta, mas omite a distinção central; 2: explica a distinção central, mas deixa incompleta uma aplicação solicitada; 3: atende a todos os elementos do critério.",
+        "no_credit": "0: resposta ausente, incorreta ou contraditória na distinção central. Nomes de serviços sem justificativa não demonstram aplicação."
+      },
+      "rationale": "Identifica portal e mantém autorização e impacto operacional das ações.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-manage-deploy-azure-resources/2-describe-interacting-azure"
+      ],
+      "skill_type": "application",
+      "original": true,
+      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q055",
+      "competency_id": "AZ900-3.3.2",
+      "domain_id": "D3",
+      "type": "application",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "Um colega diz que Azure CLI só funciona dentro do Cloud Shell e que Cloud Shell é o nome dos cmdlets PowerShell. Corrija e escolha um caminho para executar comandos no navegador sem instalar ferramentas localmente.",
+      "answer": "Cloud Shell é um ambiente de shell hospedado acessível pelo navegador, com ferramentas como Azure CLI e Azure PowerShell. CLI e PowerShell também podem ser instalados e usados fora dele. Cmdlets Azure PowerShell e comandos Azure CLI são interfaces distintas.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Distingue ambiente hospedado e duas ferramentas e admite uso local; escolhe Cloud Shell para navegador.",
+        "full_credit": 3,
+        "partial_credit": "1: identifica uma parte correta, mas omite a distinção central; 2: explica a distinção central, mas deixa incompleta uma aplicação solicitada; 3: atende a todos os elementos do critério.",
+        "no_credit": "0: resposta ausente, incorreta ou contraditória na distinção central. Nomes de serviços sem justificativa não demonstram aplicação."
+      },
+      "rationale": "Distingue ambiente hospedado e duas ferramentas e admite uso local; escolhe Cloud Shell para navegador.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-manage-deploy-azure-resources/2-describe-interacting-azure"
+      ],
+      "skill_type": "application",
+      "original": true,
+      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q056",
+      "competency_id": "AZ900-3.3.4",
+      "domain_id": "D3",
+      "type": "application",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "Dois ambientes feitos à mão têm diferenças difíceis de rastrear. Explique como uma definição de infraestrutura versionada ajuda a criar ambientes repetíveis e revisar mudanças. Salvar uma captura do portal é suficiente para ser infraestrutura como código?",
+      "answer": "IaC usa definições processáveis de infraestrutura, como templates ARM/Bicep, para provisionamento repetível. Controle de versão permite revisar diferenças e histórico. Capturas documentam aparência mas não são definições executáveis de recursos.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Relaciona definição processável, repetibilidade e revisão/versionamento, rejeitando captura como definição de infraestrutura.",
+        "full_credit": 3,
+        "partial_credit": "1: identifica uma parte correta, mas omite a distinção central; 2: explica a distinção central, mas deixa incompleta uma aplicação solicitada; 3: atende a todos os elementos do critério.",
+        "no_credit": "0: resposta ausente, incorreta ou contraditória na distinção central. Nomes de serviços sem justificativa não demonstram aplicação."
+      },
+      "rationale": "Relaciona definição processável, repetibilidade e revisão/versionamento, rejeitando captura como definição de infraestrutura.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-manage-deploy-azure-resources/4-describe-azure-resource-manager-azure-arm-templates"
+      ],
+      "skill_type": "application",
+      "original": true,
+      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q057",
+      "competency_id": "AZ900-3.4.1",
+      "domain_id": "D3",
+      "type": "application",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "A solução está operando, mas a equipe quer recomendações personalizadas para melhorar custo, desempenho e confiabilidade dos recursos já implantados. Compare Azure Advisor com um painel de incidentes e com telemetria detalhada da aplicação.",
+      "answer": "Advisor analisa configurações/uso e recomenda melhorias para recursos. Service Health informa eventos da plataforma relevantes; Monitor/Application Insights coleta e analisa telemetria. Recomendações precisam ser avaliadas e não substituem diagnóstico de uma falha.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Seleciona Advisor para recomendações, distingue incidente e telemetria e não presume remediação automática.",
+        "full_credit": 3,
+        "partial_credit": "1: identifica uma parte correta, mas omite a distinção central; 2: explica a distinção central, mas deixa incompleta uma aplicação solicitada; 3: atende a todos os elementos do critério.",
+        "no_credit": "0: resposta ausente, incorreta ou contraditória na distinção central. Nomes de serviços sem justificativa não demonstram aplicação."
+      },
+      "rationale": "Seleciona Advisor para recomendações, distingue incidente e telemetria e não presume remediação automática.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/modules/describe-monitoring-tools-azure/2-describe-purpose-of-azure-advisor"
+      ],
+      "skill_type": "application",
+      "original": true,
+      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q058",
+      "competency_id": "AZ900-1.2.1",
+      "domain_id": "D1",
+      "type": "application",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "Uma API mantém duas instâncias em locais independentes para resistir a falhas. Em dias de campanha sobe de duas para dez e depois retorna a duas. Diferencie alta disponibilidade, escalabilidade e elasticidade usando cada parte do cenário.",
+      "answer": "Distribuição e redundância contribuem para alta disponibilidade. Capacidade de aumentar recursos é escalabilidade; ajustar capacidade para cima e para baixo conforme demanda caracteriza elasticidade. Nenhum desses fatos sozinho garante recuperação regional.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Relaciona redundância à disponibilidade, crescimento à escalabilidade e ajuste bidirecional à elasticidade.",
+        "full_credit": 3,
+        "partial_credit": "1: identifica uma parte correta, mas omite a distinção central; 2: explica a distinção central, mas deixa incompleta uma aplicação solicitada; 3: atende a todos os elementos do critério.",
+        "no_credit": "0: resposta ausente, incorreta ou contraditória na distinção central. Nomes de serviços sem justificativa não demonstram aplicação."
+      },
+      "rationale": "Relaciona redundância à disponibilidade, crescimento à escalabilidade e ajuste bidirecional à elasticidade.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/5-manageability-cloud"
+      ],
+      "skill_type": "transfer",
+      "original": true,
+      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15",
+      "transfer_variant": true
+    },
+    {
+      "id": "Q059",
+      "competency_id": "AZ900-2.4.5",
+      "domain_id": "D2",
+      "type": "application",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "Uma desenvolvedora consegue entrar no portal com MFA, mas recebe acesso negado ao tentar alterar uma VM. O gerente quer conceder Owner em toda a assinatura. Explique autenticação versus autorização e proponha um escopo mais restrito para avaliar.",
+      "answer": "MFA comprova fatores de autenticação; não atribui permissão de modificar VM. Avaliar um papel que permita as operações necessárias no escopo da VM ou de seu grupo, conforme a tarefa, em vez de Owner na assinatura. Privilégio mínimo e regras adicionais continuam relevantes.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Distingue autenticação de autorização e propõe papel/escopo adequados à tarefa sem conceder privilégios excessivos.",
+        "full_credit": 3,
+        "partial_credit": "1: identifica uma parte correta, mas omite a distinção central; 2: explica a distinção central, mas deixa incompleta uma aplicação solicitada; 3: atende a todos os elementos do critério.",
+        "no_credit": "0: resposta ausente, incorreta ou contraditória na distinção central. Nomes de serviços sem justificativa não demonstram aplicação."
+      },
+      "rationale": "Distingue autenticação de autorização e propõe papel/escopo adequados à tarefa sem conceder privilégios excessivos.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/5-conditional-access",
+        "https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/7-describe-zero-trust-model",
+        "https://learn.microsoft.com/en-us/azure/role-based-access-control/overview"
+      ],
+      "skill_type": "transfer",
+      "original": true,
+      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15",
+      "transfer_variant": true
+    },
+    {
+      "id": "Q060",
+      "competency_id": "AZ900-3.2.2",
+      "domain_id": "D3",
+      "type": "application",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "Uma pessoa com Contributor tenta criar um recurso numa região bloqueada por Policy; também tenta excluir outro recurso protegido por CanNotDelete. Compare a função de RBAC, Policy e lock nesses dois resultados e explique por que adicionar a tag Permitido=true não os resolve.",
+      "answer": "RBAC autoriza ações da identidade; Policy pode negar configuração fora das regiões permitidas; lock protege contra exclusão mesmo havendo autorização. Uma tag arbitrária não concede RBAC nem remove Policy ou lock.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Aplica os três mecanismos às ações e rejeita tag como substituto de autorização, conformidade ou proteção.",
+        "full_credit": 3,
+        "partial_credit": "1: identifica uma parte correta, mas omite a distinção central; 2: explica a distinção central, mas deixa incompleta uma aplicação solicitada; 3: atende a todos os elementos do critério.",
+        "no_credit": "0: resposta ausente, incorreta ou contraditória na distinção central. Nomes de serviços sem justificativa não demonstram aplicação."
+      },
+      "rationale": "Aplica os três mecanismos às ações e rejeita tag como substituto de autorização, conformidade ou proteção.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/6-describe-azure-management-infrastructure",
+        "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/4-security-governance-cloud",
+        "https://learn.microsoft.com/en-us/azure/governance/policy/overview",
+        "https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/lock-resources",
+        "https://learn.microsoft.com/en-us/azure/role-based-access-control/overview"
+      ],
+      "skill_type": "transfer",
+      "original": true,
+      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15",
+      "transfer_variant": true
+    },
+    {
+      "id": "Q061",
+      "competency_id": "AZ900-3.1.3",
+      "domain_id": "D3",
+      "type": "application",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "O alerta de orçamento disparou e as VMs continuam rodando. O time conclui que houve defeito no limite de gastos. Explique o comportamento esperado e proponha dois passos para investigar e controlar o consumo sem prometer desligamento universal.",
+      "answer": "Orçamento alerta, não é um teto universal que desliga recursos. Investigar gasto por serviço/projeto e recursos ociosos, ajustar capacidade e configurar ações automatizadas explicitamente quando apropriado, considerando impacto.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Explica ausência de desligamento automático e propõe investigação e ação de custo fundamentadas.",
+        "full_credit": 3,
+        "partial_credit": "1: identifica uma parte correta, mas omite a distinção central; 2: explica a distinção central, mas deixa incompleta uma aplicação solicitada; 3: atende a todos os elementos do critério.",
+        "no_credit": "0: resposta ausente, incorreta ou contraditória na distinção central. Nomes de serviços sem justificativa não demonstram aplicação."
+      },
+      "rationale": "Explica ausência de desligamento automático e propõe investigação e ação de custo fundamentadas.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/2-describe-factors-affect-costs-azure",
+        "https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/tutorial-acm-create-budgets"
+      ],
+      "skill_type": "transfer",
+      "original": true,
+      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15",
+      "transfer_variant": true
+    },
+    {
+      "id": "Q062",
+      "competency_id": "AZ900-3.4.3",
+      "domain_id": "D3",
+      "type": "application",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "Service Health não mostra incidente para a assinatura, mas usuários recebem erros só em uma rota da API. A equipe quer esperar um incidente aparecer. Qual evidência buscar agora, com qual ferramenta, e por que Advisor ou ausência de aviso não resolve a dúvida?",
+      "answer": "Examinar requisições, falhas, dependências e métricas com Azure Monitor/Application Insights. Falha pode estar no código ou configuração; ausência de aviso não prova saúde da aplicação. Advisor fornece recomendações, não substitui a telemetria dessa rota.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Propõe evidência de falhas/requisições e ferramenta apropriada; distingue monitoramento da aplicação de eventos da plataforma e recomendações.",
+        "full_credit": 3,
+        "partial_credit": "1: identifica uma parte correta, mas omite a distinção central; 2: explica a distinção central, mas deixa incompleta uma aplicação solicitada; 3: atende a todos os elementos do critério.",
+        "no_credit": "0: resposta ausente, incorreta ou contraditória na distinção central. Nomes de serviços sem justificativa não demonstram aplicação."
+      },
+      "rationale": "Propõe evidência de falhas/requisições e ferramenta apropriada; distingue monitoramento da aplicação de eventos da plataforma e recomendações.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/modules/describe-monitoring-tools-azure/2-describe-purpose-of-azure-advisor",
+        "https://learn.microsoft.com/en-us/azure/azure-monitor/app/app-insights-overview"
+      ],
+      "skill_type": "transfer",
+      "original": true,
+      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15",
+      "transfer_variant": true
+    },
+    {
+      "id": "Q063",
+      "competency_id": "AZ900-2.3.3",
+      "domain_id": "D2",
+      "type": "application",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "Um erro da aplicação sobrescreveu arquivos válidos. O administrador diz que a redundância geográfica basta para recuperar qualquer versão anterior. Avalie e indique uma proteção que precisa planejar separadamente.",
+      "answer": "Redundância replica alterações, inclusive alterações indesejadas; não equivale a histórico recuperável. Planejar mecanismos adequados ao serviço, como versionamento, exclusão temporária ou backup, com política de retenção e testes de recuperação.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Distingue replicação de retenção histórica e indica uma proteção recuperável e validada conforme o serviço.",
+        "full_credit": 3,
+        "partial_credit": "1: identifica uma parte correta, mas omite a distinção central; 2: explica a distinção central, mas deixa incompleta uma aplicação solicitada; 3: atende a todos os elementos do critério.",
+        "no_credit": "0: resposta ausente, incorreta ou contraditória na distinção central. Nomes de serviços sem justificativa não demonstram aplicação."
+      },
+      "rationale": "Distingue replicação de retenção histórica e indica uma proteção recuperável e validada conforme o serviço.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/2-accounts",
+        "https://learn.microsoft.com/en-us/azure/storage/blobs/data-protection-overview"
+      ],
+      "skill_type": "transfer",
+      "original": true,
+      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15",
+      "transfer_variant": true
+    },
+    {
+      "id": "Q064",
+      "competency_id": "AZ900-1.1.2",
+      "domain_id": "D1",
+      "type": "application",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "Uma equipe passa sua aplicação de VM para PaaS e decide remover todas as revisões de segurança porque o SO será mantido pelo provedor. Quais responsabilidades mudam e quais continuam? Use dados e identidades no exemplo.",
+      "answer": "O provedor assume a manutenção do SO/plataforma em PaaS; cliente continua cuidando do código, dados, identidades e configurações de acesso pertinentes. Revisar permissões e exposição de dados continua necessário.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Explica a mudança de camada e aplica duas responsabilidades persistentes aos dados e identidades.",
+        "full_credit": 3,
+        "partial_credit": "1: identifica uma parte correta, mas omite a distinção central; 2: explica a distinção central, mas deixa incompleta uma aplicação solicitada; 3: atende a todos os elementos do critério.",
+        "no_credit": "0: resposta ausente, incorreta ou contraditória na distinção central. Nomes de serviços sem justificativa não demonstram aplicação."
+      },
+      "rationale": "Explica a mudança de camada e aplica duas responsabilidades persistentes aos dados e identidades.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/modules/describe-cloud-service-types/",
+        "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/4-security-governance-cloud"
+      ],
+      "skill_type": "transfer",
+      "original": true,
+      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15",
+      "transfer_variant": true
+    },
+    {
+      "id": "Q065",
+      "competency_id": "AZ900-2.1.2",
+      "domain_id": "D2",
+      "type": "application",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "Uma aplicação usa instâncias em duas zonas da mesma região. O gestor registra isso como recuperação entre regiões. Explique o erro e uma decisão adicional de arquitetura necessária para enfrentar indisponibilidade regional.",
+      "answer": "Zonas oferecem isolamento físico dentro da região, sem se tornarem regiões distintas. É preciso planejar implantação/replicação e recuperação em outra região adequada, conforme suporte e requisitos do serviço; o pareamento por si não implementa isso.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Distingue zona de região e propõe estratégia regional explícita sem garantia automática de replicação.",
+        "full_credit": 3,
+        "partial_credit": "1: identifica uma parte correta, mas omite a distinção central; 2: explica a distinção central, mas deixa incompleta uma aplicação solicitada; 3: atende a todos os elementos do critério.",
+        "no_credit": "0: resposta ausente, incorreta ou contraditória na distinção central. Nomes de serviços sem justificativa não demonstram aplicação."
+      },
+      "rationale": "Distingue zona de região e propõe estratégia regional explícita sem garantia automática de replicação.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/5-describe-azure-physical-infrastructure",
+        "https://learn.microsoft.com/en-us/azure/reliability/regions-paired"
+      ],
+      "skill_type": "transfer",
+      "original": true,
+      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15",
+      "transfer_variant": true
     }
   ]
 }
