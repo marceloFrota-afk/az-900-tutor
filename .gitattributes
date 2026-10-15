@@ -1,0 +1,2 @@
+# Preserve verbatim Markdown transcripts, including intentional two-space line breaks.
+evals/runs/**/*.md whitespace=-blank-at-eol

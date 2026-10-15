@@ -21,7 +21,7 @@ Nine of ten cases passed per condition under the recorded judgments; no superior
 
 ## Checks and operational limits
 
-Validation and all tests passed at integration; later regression adds a safe publication-list saturation check. CI at `e9ec359` passed all four Windows/Linux Python 3.11/3.13 jobs: [run 38749583301](https://github.com/vmenezesdev/az-900-tutor/actions/runs/38749583301). Final PR checks are the authority for the final commit. `git diff --check` passed. The included migration demonstration was executed using the explicitly synthetic fixture; it is not a reconstructed historical Microsoft curriculum.
+Final local validation passed and **53 tests passed** on Windows/Python 3.13.5, including the safe publication-list saturation regression. CI at `e9ec359` passed all four Windows/Linux Python 3.11/3.13 jobs: [run 38749583301](https://github.com/vmenezesdev/az-900-tutor/actions/runs/38749583301). Final PR checks are the authority for the final commit. `git diff --check` passed. The included migration demonstration was executed using the explicitly synthetic fixture; it is not a reconstructed historical Microsoft curriculum.
 
 The updated collector/publisher workflow ran successfully on the feature branch: [38749582792](https://github.com/vmenezesdev/az-900-tutor/actions/runs/38749582792). Both candidate and publication report artifacts were downloaded and inspected. Approved content stayed intact. Live test issue writes used local GitHub CLI credentials, not a changed-report Actions token; that future operational observation remains partial. The weekly schedule awaits an approved merge. No merge, force push, direct trunk update, paid API or real learner data was used.
 
