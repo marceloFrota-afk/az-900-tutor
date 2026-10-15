@@ -39,6 +39,11 @@ class ProgressTests(unittest.TestCase):
         events = [event(), event(day="2026-10-11", question="b", kind="application", assisted=True)]
         self.assertNotEqual(tutor.competency_status(events, date(2026, 10, 11))["status"], "demonstrated")
 
+    def test_misconception_blocks_demonstration(self):
+        events = [event(), event(day="2026-10-11", question="b", kind="application")]
+        events[-1]["misconception"] = "Still confuses service and deployment models"
+        self.assertNotEqual(tutor.competency_status(events, date(2026, 10, 11))["status"], "demonstrated")
+
     def test_cli_roundtrip_invalid_import_and_no_overwrite(self):
         with tempfile.TemporaryDirectory() as folder:
             folder = Path(folder)
@@ -75,6 +80,20 @@ class ProgressTests(unittest.TestCase):
                      "profile": {"deadline": "2026-12-20", "minutes_per_day": 30}, "events": [event(score=score)]}
             with self.assertRaises(ValueError):
                 tutor.validate_state(state)
+
+    def test_noncanonical_dates_rejected(self):
+        state = {"schema_version": 1, "curriculum_version": tutor.version(),
+                 "profile": {"deadline": "2026-12-20", "minutes_per_day": 30},
+                 "events": [event(day="20261010")]}
+        with self.assertRaises(ValueError):
+            tutor.validate_state(state)
+
+    def test_import_order_does_not_change_priority(self):
+        state = {"events": [event(score=.1), event(day="2026-10-11", question="b", kind="application")],
+                 "profile": {"deadline": "2026-12-20", "minutes_per_day": 30}}
+        expected = tutor.recommend(state, date(2026, 10, 11))
+        state["events"].reverse()
+        self.assertEqual(tutor.recommend(state, date(2026, 10, 11)), expected)
 
     def test_recommendation_deterministic_and_respects_time(self):
         state = {"events": [], "profile": {"deadline": "2026-10-17", "minutes_per_day": 10}}

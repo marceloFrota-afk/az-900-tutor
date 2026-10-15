@@ -27,6 +27,15 @@ def version():
     return objectives()[0]["exam_version"]
 
 
+def iso_date(value):
+    if not isinstance(value, str):
+        raise ValueError("Date must be YYYY-MM-DD text")
+    parsed = date.fromisoformat(value)
+    if parsed.isoformat() != value:
+        raise ValueError("Date must use canonical YYYY-MM-DD format")
+    return parsed
+
+
 def atomic_write(path, data):
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
@@ -51,7 +60,7 @@ def validate_state(state):
     profile = state["profile"]
     if not isinstance(profile.get("minutes_per_day"), int) or isinstance(profile["minutes_per_day"], bool) or profile["minutes_per_day"] <= 0:
         raise ValueError("minutes_per_day must be a positive integer")
-    date.fromisoformat(profile["deadline"])
+    iso_date(profile["deadline"])
     known = {o["id"] for o in objectives()}
     for event in state["events"]:
         if not isinstance(event, dict) or event.get("competency") not in known:
@@ -66,7 +75,7 @@ def validate_state(state):
                 raise ValueError(f"Event {key} must be text")
         if not event["question"].strip() or not event["evidence"].strip():
             raise ValueError("Question and evidence cannot be empty")
-        when = date.fromisoformat(event["date"])
+        when = iso_date(event["date"])
         if when > date.today():
             raise ValueError("Future assessment evidence is invalid")
         if type(event.get("assisted")) is not bool:
@@ -80,9 +89,9 @@ def competency_status(events, today=None):
         return {"status": "not_assessed", "next_review": None, "evidence_count": 0}
     events = sorted(events, key=lambda e: e["date"])
     last = events[-1]
-    good = [e for e in events if e["score"] >= .8 and not e["assisted"]]
+    good = [e for e in events if e["score"] >= .8 and not e["assisted"] and not e["misconception"].strip()]
     # Distinct days + distinct prompts + explanation/application, after most recent failure.
-    failures = [e["date"] for e in events if e["score"] < .8 or e["assisted"]]
+    failures = [e["date"] for e in events if e["score"] < .8 or e["assisted"] or e["misconception"].strip()]
     good = [e for e in good if not failures or e["date"] > max(failures)]
     demonstrated = (len({e["date"] for e in good}) >= 2 and
                     len({e["question"] for e in good}) >= 2 and
@@ -108,6 +117,8 @@ def recommend(state, today=None):
     statuses = report(state, today)
     weights = {"D1": .275, "D2": .375, "D3": .325}
     counts = {d: sum(o["domain_id"] == d for o in objectives()) for d in weights}
+    bank = read(ROOT / "assessments/questions.json")["questions"]
+    used = {e["question"] for e in state["events"]}
     ranked = []
     for o in objectives():
         s = statuses[o["id"]]
@@ -117,13 +128,16 @@ def recommend(state, today=None):
         events = [e for e in state["events"] if e["competency"] == o["id"]]
         urgency = 4 if s["status"] == "needs_review" else 2
         uncertainty = 1 / (1 + len(events))
-        error = 1 if events and events[-1]["score"] < .8 else 0
+        latest = max(events, key=lambda e: e["date"]) if events else None
+        error = 1 if latest and latest["score"] < .8 else 0
         days_left = max(1, (date.fromisoformat(state["profile"]["deadline"]) - today).days)
         priority = (urgency + uncertainty + error + weights[o["domain_id"]] * 10 / counts[o["domain_id"]]) / (1 + len(missing))
         ranked.append({"competency": o["id"], "name": o["name"], "priority": round(priority, 4),
                        "reason": s["status"], "prerequisites_to_check": missing,
                        "session_minutes": min(state["profile"]["minutes_per_day"], 15 if days_left <= 3 else 25),
-                       "avoid_questions": sorted({e["question"] for e in events})})
+                       "avoid_questions": sorted({e["question"] for e in events}),
+                       "question_candidates": [q["id"] for q in bank if q["competency_id"] == o["id"] and q["id"] not in used],
+                       "fallback": "If no unseen bank item exists, author a changed scenario from the objective rubric; identify it as unreviewed."})
     return sorted(ranked, key=lambda r: (-r["priority"], r["competency"]))[:5]
 
 
