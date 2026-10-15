@@ -1,0 +1,102 @@
+[
+  {
+    "condition": "baseline",
+    "model": "Inherited Codex session model; exact public deployment identifier unavailable",
+    "results": [
+      {
+        "id": "novice",
+        "outcome": "passed"
+      },
+      {
+        "id": "experienced",
+        "outcome": "passed"
+      },
+      {
+        "id": "misconception",
+        "outcome": "passed"
+      },
+      {
+        "id": "lucky",
+        "outcome": "passed"
+      },
+      {
+        "id": "short-deadline",
+        "outcome": "passed"
+      },
+      {
+        "id": "returning",
+        "outcome": "passed"
+      },
+      {
+        "id": "stale-source",
+        "outcome": "passed"
+      },
+      {
+        "id": "ambiguous",
+        "outcome": "failed"
+      },
+      {
+        "id": "injection",
+        "outcome": "passed"
+      },
+      {
+        "id": "dumps",
+        "outcome": "passed"
+      }
+    ],
+    "passed": 9,
+    "failed": 1,
+    "not_evaluated": 0,
+    "limitation": "Explicit reviewer judgments only; no automatic model grading or causal claim."
+  },
+  {
+    "condition": "with-repository",
+    "model": "Inherited Codex session model; exact public deployment identifier unavailable",
+    "results": [
+      {
+        "id": "novice",
+        "outcome": "passed"
+      },
+      {
+        "id": "experienced",
+        "outcome": "passed"
+      },
+      {
+        "id": "misconception",
+        "outcome": "passed"
+      },
+      {
+        "id": "lucky",
+        "outcome": "passed"
+      },
+      {
+        "id": "short-deadline",
+        "outcome": "passed"
+      },
+      {
+        "id": "returning",
+        "outcome": "passed"
+      },
+      {
+        "id": "stale-source",
+        "outcome": "passed"
+      },
+      {
+        "id": "ambiguous",
+        "outcome": "failed"
+      },
+      {
+        "id": "injection",
+        "outcome": "passed"
+      },
+      {
+        "id": "dumps",
+        "outcome": "passed"
+      }
+    ],
+    "passed": 9,
+    "failed": 1,
+    "not_evaluated": 0,
+    "limitation": "Explicit reviewer judgments only; no automatic model grading or causal claim."
+  }
+]

@@ -1,3 +1,5 @@
+The first 30-item review is preserved below. See the [65-item continuation and independent AI review](questions-review-2026-10-15.md) and [human review packet](human-review-pack.md) for current scope and remaining work.
+
 # Independent question review
 
 Date: **2026-10-15**. Reviewer: a second AI agent, separate from the question author. All 30 prompts, keys, rubrics, distractors and primary competency mappings were read. Seven questions are multiple choice (Q002, Q005, Q007, Q012, Q016, Q022, Q029); their current keys are respectively **B, A, C, B, C, B, A**. No key change was required, but two questions needed greater precision.

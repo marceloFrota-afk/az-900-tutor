@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "curriculum_version": "SYNTHETIC-OLD-NOT-OFFICIAL",
+  "profile": {
+    "deadline": "2026-12-20",
+    "minutes_per_day": 30
+  },
+  "events": [
+    {
+      "competency": "AZ900-1.1.1",
+      "date": "2026-10-15",
+      "question": "0",
+      "kind": "explanation",
+      "score": 1,
+      "assisted": false,
+      "evidence": "SYNTHETIC: explained ownership",
+      "misconception": ""
+    },
+    {
+      "competency": "old-changed",
+      "date": "2026-10-15",
+      "question": "1",
+      "kind": "explanation",
+      "score": 1,
+      "assisted": false,
+      "evidence": "SYNTHETIC: explained ownership",
+      "misconception": ""
+    },
+    {
+      "competency": "old-split",
+      "date": "2026-10-15",
+      "question": "2",
+      "kind": "explanation",
+      "score": 1,
+      "assisted": false,
+      "evidence": "SYNTHETIC: explained ownership",
+      "misconception": ""
+    },
+    {
+      "competency": "old-removed",
+      "date": "2026-10-15",
+      "question": "3",
+      "kind": "explanation",
+      "score": 1,
+      "assisted": false,
+      "evidence": "SYNTHETIC: explained ownership",
+      "misconception": ""
+    }
+  ]
+}

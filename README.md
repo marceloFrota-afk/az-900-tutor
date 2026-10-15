@@ -12,7 +12,7 @@ Your chosen agent may have its own requirements.
 
 **ChatGPT or another chatbot:** download this repository as a ZIP, extract it,
 and attach `TUTOR.md`, `.agents/skills/az-900-tutor/SKILL.md`, `pedagogy/protocol.md`, `pedagogy/evidence.md`,
-`exam/curriculum.json`, `resources/catalog.json` and `assessments/questions.json`.
+`exam/curriculum.json`, `resources/catalog.json`, `lessons/units.pt-BR.json` and `assessments/questions.json`.
 If uploads are limited, provide the contract and relevant domain first, and ask
 the agent to report which files it can actually read. A repository URL alone does
 not guarantee access. Send:
@@ -49,7 +49,7 @@ Baseline: the [official study guide](https://learn.microsoft.com/en-us/credentia
 effective **July 20, 2026**, checked **October 15, 2026**. Domain ranges are
 25–30% cloud concepts, 35–40% architecture/services, and 30–35% management/governance.
 The source guide and [coverage map](exam/coverage.json) are the scope authority;
-question coverage is intentionally smaller than curriculum coverage. A changing
+57 essential lessons and 65 original questions cover all 57 objectives. A changing
 exam requires reviewed updates, even when the monitor has not reported a change.
 
 ## Keep your progress
@@ -91,8 +91,7 @@ a stable marker to avoid duplicates; semantic changes need human review.
 
 ## Limits and contribution
 
-This MVP supplies full structural scope, not a full course or an item for every
-objective. Questions are original and have not been statistically calibrated or
+This MVP supplies full structural scope, 57 concise teaching units and at least one original question for every objective. It is not a comprehensive course. Questions are original and have not been statistically calibrated or
 reviewed by Microsoft. Agent quality, hallucinations, browsing availability and
 context limits remain relevant. Behavioral fixtures do not prove that all models
 follow the contract. No exam dumps, confidential questions or pass guarantees.
@@ -103,3 +102,5 @@ Labs may incur Azure charges: read the lab prerequisites and clean up resources.
 describe decisions, evidence and remaining work. MIT licenses original project
 code/content; third-party linked material retains its own rights. This is an
 independent project, not affiliated with or endorsed by Microsoft.
+
+See / Veja [completion evidence](docs/completion-report.md), [teaching units](lessons/README.md) and [state migration](docs/state-migration.md).

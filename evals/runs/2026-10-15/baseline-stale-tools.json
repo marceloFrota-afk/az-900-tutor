@@ -1,0 +1,19 @@
+{
+  "factual_files_opened": [
+    "evals/factual-context.md"
+  ],
+  "web_pages_opened": [
+    "https://learn.microsoft.com/en-us/azure/reliability/regions-overview"
+  ],
+  "live_official_lookup_performed": true,
+  "tools_used": [
+    "functions.exec",
+    "tools.exec_command",
+    "tools.web__run"
+  ],
+  "limitations": [
+    "Only one official web page was opened.",
+    "The old blog was not supplied or opened.",
+    "The official page returned article content alongside an authorization notice."
+  ]
+}

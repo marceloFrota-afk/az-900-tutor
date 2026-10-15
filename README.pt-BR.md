@@ -11,7 +11,7 @@ O tutor pode ensinar em português mesmo quando consulta uma fonte em inglês.
 
 **ChatGPT ou chatbot:** baixe o ZIP do repositório, extraia e anexe `TUTOR.md`, `.agents/skills/az-900-tutor/SKILL.md`,
 `pedagogy/protocol.md`, `pedagogy/evidence.md`, `exam/curriculum.json`,
-`resources/catalog.json` e `assessments/questions.json`. Peça ao agente para
+`resources/catalog.json`, `lessons/units.pt-BR.json` e `assessments/questions.json`. Peça ao agente para
 confirmar o que conseguiu ler. Apenas enviar a URL não garante acesso aos arquivos.
 Se houver limite de contexto, envie o contrato e os dados do domínio em estudo.
 
@@ -53,8 +53,7 @@ forneça esse estado na próxima sessão. Ele não deve inventar memória anteri
 
 Currículo baseado no [guia oficial](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-900)
 vigente desde **20/07/2026**, verificado em **15/10/2026**. Todos os objetivos estão
-mapeados estruturalmente; aulas completas e questões para todos ainda são trabalho
-progressivo. As fontes oficiais têm precedência sobre as comunitárias.
+mapeados, com 57 fichas didáticas essenciais e 65 questões autorais cobrindo as 57 competências. As fichas não substituem um curso completo. As fontes oficiais têm precedência sobre as comunitárias.
 
 Acertar uma questão não comprova domínio. O protocolo pede explicação, aplicação
 em outro contexto e evidências espaçadas. Os critérios são heurísticos, não uma
@@ -76,3 +75,5 @@ Veja [CONTRIBUTING.md](CONTRIBUTING.md), [manutenção](docs/maintenance.md) e
 autorais ainda não têm calibração estatística nem revisão da Microsoft. O projeto
 é independente; links externos mantêm seus direitos e licenças. Laboratórios podem
 gerar cobrança no Azure; consulte as instruções e remova os recursos depois.
+
+See / Veja [completion evidence](docs/completion-report.md), [teaching units](lessons/README.md) and [state migration](docs/state-migration.md).

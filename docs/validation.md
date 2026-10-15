@@ -1,3 +1,15 @@
+# Current validation — 2026-10-15
+
+The continuation expanded the bank from 30 to **65 questions**, covering all **57 competencies**, and added **57 essential teaching units**. At integration commit e9ec359, **52 tests passed** locally and the four Windows/Linux Python 3.11/3.13 CI jobs passed. Current final counts/checks are in the [completion report](completion-report.md) and [matrix](completion-matrix.md).
+
+Implemented and tested: transaction locks, duplicate rejection, deterministic ordering, export integrity, reviewed synthetic-version migration, real CLI session and importable tool-less handoff, monitor failure diagnostics and redirects, live synthetic issue lifecycle. The updated two-job monitor [ran successfully on the feature branch](https://github.com/vmenezesdev/az-900-tutor/actions/runs/38749582792); no merge was needed.
+
+Behavioral results and limitations are recorded separately in `evals/runs/2026-10-15/`; see the final [completion report](completion-report.md). Human review, calibrated readiness, real delayed student retrieval and learning-outcome evidence remain pending.
+
+The report below is preserved as **historical evidence from the first delivery**. Its 30-item count and concurrent-writer/migration limitations have been superseded by the continuation above; they do not describe the current implementation.
+
+---
+
 # Validation and adversarial review
 
 Verification date: 2026-10-15. This report separates implemented tools from evidence

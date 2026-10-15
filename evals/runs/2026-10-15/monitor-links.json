@@ -1,0 +1,77 @@
+{
+  "checked_at": "2026-10-15T14:14:54+00:00",
+  "status": "unchanged",
+  "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-900",
+  "baseline_fingerprint": "a5bfd686d941f9f095483c45ef3d8f045c7b6305d6aeea6b50ee34c65b5bdbaa",
+  "candidate_fingerprint": "a5bfd686d941f9f095483c45ef3d8f045c7b6305d6aeea6b50ee34c65b5bdbaa",
+  "differences": {
+    "classifications": [],
+    "added_objective_digests": [],
+    "removed_objective_digests": [],
+    "old_count": 57,
+    "new_count": 57
+  },
+  "links": [
+    {
+      "id": "official-guide",
+      "status": "reachable_html"
+    },
+    {
+      "id": "certification",
+      "status": "reachable_html"
+    },
+    {
+      "id": "learn-cloud",
+      "status": "reachable_html"
+    },
+    {
+      "id": "learn-architecture",
+      "status": "reachable_html"
+    },
+    {
+      "id": "learn-governance",
+      "status": "reachable_html"
+    },
+    {
+      "id": "azure-docs",
+      "status": "reachable_html"
+    },
+    {
+      "id": "official-practice",
+      "status": "reachable_html"
+    },
+    {
+      "id": "official-labs",
+      "status": "reachable_html"
+    },
+    {
+      "id": "savill-course",
+      "status": "review",
+      "error": "HTTP Error 504: Gateway Time-out"
+    },
+    {
+      "id": "ricardo-pt",
+      "status": "reachable_html"
+    },
+    {
+      "id": "readiness-zone",
+      "status": "reachable_html"
+    },
+    {
+      "id": "scoring",
+      "status": "reachable_html"
+    },
+    {
+      "id": "azure-regions",
+      "status": "reachable_html"
+    },
+    {
+      "id": "azure-tags",
+      "status": "reachable_html"
+    },
+    {
+      "id": "azure-locks",
+      "status": "reachable_html"
+    }
+  ]
+}

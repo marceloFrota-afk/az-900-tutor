@@ -1,0 +1,45 @@
+{
+  "from_version": "SYNTHETIC-OLD-NOT-OFFICIAL",
+  "to_version": "2026-07-20",
+  "reviewer": "AI synthetic fixture; not official history",
+  "reviewed_at": "2026-10-15",
+  "source_competencies": [
+    "AZ900-1.1.1",
+    "old-changed",
+    "old-split",
+    "old-removed"
+  ],
+  "mappings": [
+    {
+      "source": "AZ900-1.1.1",
+      "change": "preserved",
+      "targets": [
+        "AZ900-1.1.1"
+      ],
+      "reason": "Synthetic identical scope"
+    },
+    {
+      "source": "old-changed",
+      "change": "changed",
+      "targets": [
+        "AZ900-1.1.2"
+      ],
+      "reason": "Synthetic changed scope"
+    },
+    {
+      "source": "old-split",
+      "change": "split",
+      "targets": [
+        "AZ900-1.1.3",
+        "AZ900-1.1.4"
+      ],
+      "reason": "Synthetic split"
+    },
+    {
+      "source": "old-removed",
+      "change": "removed",
+      "targets": [],
+      "reason": "Synthetic removal"
+    }
+  ]
+}

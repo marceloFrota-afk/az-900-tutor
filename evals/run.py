@@ -39,12 +39,16 @@ def summarize(args):
     if len(rows) != len(expected) or {r["id"] for r in rows} != set(expected):
         raise ValueError("Run must contain each scenario exactly once")
     outcomes = []
+    prompts = {c["id"]: c["learner_prompt"] for c in fixtures}
+    def recorded(value):
+        return isinstance(value, str) and bool(value.strip()) and not value.strip().startswith("FILL")
     for row in rows:
         judgments = row.get("judgments", [])
         if len(judgments) != len(expected[row["id"]]) or {j["id"] for j in judgments} != expected[row["id"]]:
             raise ValueError("Criteria differ from fixtures")
-        complete = bool(run.get("evaluator") and run.get("executed_at") and row.get("transcript", "").strip())
-        complete = complete and all(type(j.get("pass")) is bool and j.get("evidence", "").strip() for j in judgments)
+        complete = all(recorded(run.get(k)) for k in ("model", "model_settings", "evaluator", "executed_at"))
+        complete = complete and recorded(row.get("transcript")) and row.get("learner_prompt") == prompts[row["id"]]
+        complete = complete and all(type(j.get("pass")) is bool and recorded(j.get("evidence")) for j in judgments)
         outcome = "not_evaluated" if not complete else ("passed" if all(j["pass"] for j in judgments) else "failed")
         outcomes.append({"id": row["id"], "outcome": outcome})
     return {"condition": run["condition"], "model": run.get("model"),
