@@ -1,0 +1,875 @@
+{
+  "schema_version": "1.0",
+  "provenance": {
+    "authorship": "Original scenarios authored for AZ-900 Tutor; no real exam questions reproduced.",
+    "license": "MIT",
+    "concept_sources": "Microsoft Learn modules/paths; source content does not supply these questions.",
+    "reviewed_at": "2026-10-15",
+    "limitations": "Independent second-agent editorial review completed; not a human Azure SME certification, learner trial, psychometric calibration or exam predictor.",
+    "independent_editorial_review": {
+      "date": "2026-10-15",
+      "method": "Second agent read all prompts, keys, rubrics, distractors and primary competency mappings; checked official conceptual documentation, with targeted verification of ambiguous storage and RBAC cases.",
+      "changes": [
+        "Q016 specifies SMB and acknowledges Blob NFS support.",
+        "Q021 explicitly tests Reader control-plane access, not data-plane access.",
+        "Q030 minor Portuguese correction."
+      ],
+      "limits": "Official modules and conceptual source families were reviewed; not every source leaf page or real Azure configuration was tested. No human subject-matter review or learner performance study."
+    }
+  },
+  "questions": [
+    {
+      "id": "Q001",
+      "competency_id": "AZ900-1.1.2",
+      "domain_id": "D1",
+      "type": "explanation",
+      "difficulty": "foundation",
+      "language": "pt-BR",
+      "prompt": "Uma equipe migrou de servidores locais para VMs Azure. Ela afirma: 'Agora a Microsoft deve instalar as correções do sistema operacional convidado'. Explique o erro e cite uma responsabilidade que continua com a equipe.",
+      "answer": "A equipe continua responsável pelas atualizações do SO convidado em IaaS, além de seus dados e configurações de acesso. A Microsoft cuida da infraestrutura física.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Distingue camadas da infraestrutura e do SO; não presume que toda segurança é terceirizada.",
+        "full_credit": 3,
+        "partial_credit": "1: recognizes a relevant concept but misses a key distinction; 2: correct key distinction without transfer; 3: complete explanation and application.",
+        "no_credit": "Incorrect, absent, or contradictory explanation. A correct option with incorrect reasoning is inconclusive."
+      },
+      "rationale": "O modelo de responsabilidade compartilhada muda conforme o serviço; uma VM oferece controle do SO e transfere essa operação ao cliente.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/paths/microsoft-azure-fundamentals-describe-cloud-concepts/"
+      ],
+      "skill_type": "explanation",
+      "original": true,
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q002",
+      "competency_id": "AZ900-1.1.3",
+      "domain_id": "D1",
+      "type": "multiple_choice",
+      "difficulty": "foundation",
+      "language": "pt-BR",
+      "prompt": "Uma empresa mantém um sistema em seu datacenter e integra a ele recursos em uma nuvem pública. Que modelo descreve esse arranjo? Justifique.",
+      "options": {
+        "A": "Nuvem pública sem componentes locais",
+        "B": "Nuvem híbrida",
+        "C": "SaaS",
+        "D": "Nuvem privada apenas"
+      },
+      "answer": "B",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Identifica híbrida e explica a combinação integrada de infraestrutura local e pública.",
+        "full_credit": 3,
+        "partial_credit": "1: recognizes a relevant concept but misses a key distinction; 2: correct key distinction without transfer; 3: complete explanation and application.",
+        "no_credit": "Incorrect, absent, or contradictory explanation. A correct option with incorrect reasoning is inconclusive."
+      },
+      "rationale": "O cenário mantém os dois ambientes conectados; o modelo de implantação é híbrido.",
+      "distractor_rationales": {
+        "A": "Ignora o componente local.",
+        "C": "É um modelo de serviço, não descreve a implantação integrada.",
+        "D": "Ignora os recursos da nuvem pública."
+      },
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/paths/microsoft-azure-fundamentals-describe-cloud-concepts/"
+      ],
+      "skill_type": "recognition_with_explanation",
+      "original": true,
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q003",
+      "competency_id": "AZ900-1.1.5",
+      "domain_id": "D1",
+      "type": "application",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "Uma loja compra capacidade fixa para seu próprio datacenter e compara isso a pagar pelos recursos de nuvem consumidos durante campanhas. Explique a mudança econômica e um motivo pelo qual a conta de nuvem ainda pode aumentar.",
+      "answer": "Passa de investimento inicial em capacidade para despesa operacional baseada em consumo; tráfego, armazenamento, recursos ociosos e configuração podem aumentar gastos.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Relaciona consumo ao gasto operacional e dá um fator concreto de custo sem prometer economia automática.",
+        "full_credit": 3,
+        "partial_credit": "1: recognizes a relevant concept but misses a key distinction; 2: correct key distinction without transfer; 3: complete explanation and application.",
+        "no_credit": "Incorrect, absent, or contradictory explanation. A correct option with incorrect reasoning is inconclusive."
+      },
+      "rationale": "Elasticidade pode alinhar capacidade à demanda, mas o consumo e a configuração precisam ser geridos.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/paths/microsoft-azure-fundamentals-describe-cloud-concepts/"
+      ],
+      "skill_type": "application",
+      "original": true,
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q004",
+      "competency_id": "AZ900-1.1.7",
+      "domain_id": "D1",
+      "type": "explanation",
+      "difficulty": "foundation",
+      "language": "pt-BR",
+      "prompt": "Um colega diz: 'Serverless significa que não há servidores e que cada execução é gratuita'. Corrija as duas afirmações.",
+      "answer": "Servidores existem e são gerenciados pelo provedor. O modelo abstrai a gestão de servidores; preços dependem do serviço/plano/consumo e não são universalmente gratuitos.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Corrige ausência física de servidores e gratuidade automática.",
+        "full_credit": 3,
+        "partial_credit": "1: recognizes a relevant concept but misses a key distinction; 2: correct key distinction without transfer; 3: complete explanation and application.",
+        "no_credit": "Incorrect, absent, or contradictory explanation. A correct option with incorrect reasoning is inconclusive."
+      },
+      "rationale": "Serverless descreve a experiência operacional, não inexistência de infraestrutura nem preço zero.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/paths/microsoft-azure-fundamentals-describe-cloud-concepts/"
+      ],
+      "skill_type": "explanation",
+      "original": true,
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q005",
+      "competency_id": "AZ900-1.2.1",
+      "domain_id": "D1",
+      "type": "multiple_choice",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "Um aplicativo adiciona mais instâncias durante o pico e as remove depois. Qual característica está diretamente demonstrada? Explique.",
+      "options": {
+        "A": "Elasticidade por escala horizontal",
+        "B": "Backup permanente",
+        "C": "Soberania de dados",
+        "D": "Autenticação multifator"
+      },
+      "answer": "A",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Identifica ajuste ao longo da demanda e distingue adicionar instâncias de ampliar uma única máquina.",
+        "full_credit": 3,
+        "partial_credit": "1: recognizes a relevant concept but misses a key distinction; 2: correct key distinction without transfer; 3: complete explanation and application.",
+        "no_credit": "Incorrect, absent, or contradictory explanation. A correct option with incorrect reasoning is inconclusive."
+      },
+      "rationale": "A capacidade cresce e diminui com a carga; mais instâncias é escala horizontal.",
+      "distractor_rationales": {
+        "B": "Não há operação de recuperação de dados descrita.",
+        "C": "Não se trata de localização ou jurisdição dos dados.",
+        "D": "Não há verificação de identidade no cenário."
+      },
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/paths/microsoft-azure-fundamentals-describe-cloud-concepts/"
+      ],
+      "skill_type": "recognition_with_explanation",
+      "original": true,
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q006",
+      "competency_id": "AZ900-1.2.2",
+      "domain_id": "D1",
+      "type": "application",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "A equipe tornou a resposta do serviço previsível sob carga, mas nunca testou restauração após falha. Isso demonstra recuperação confiável? Compare os dois aspectos.",
+      "answer": "Não. Previsibilidade de desempenho não prova recuperação. Confiabilidade envolve resistir a falhas e recuperar a operação; deve-se validar redundância, recuperação e testes apropriados.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Distingue desempenho previsível de recuperação e propõe validação concreta.",
+        "full_credit": 3,
+        "partial_credit": "1: recognizes a relevant concept but misses a key distinction; 2: correct key distinction without transfer; 3: complete explanation and application.",
+        "no_credit": "Incorrect, absent, or contradictory explanation. A correct option with incorrect reasoning is inconclusive."
+      },
+      "rationale": "Benefícios de nuvem são relacionados, mas uma evidência de desempenho não prova todos os benefícios.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/paths/microsoft-azure-fundamentals-describe-cloud-concepts/"
+      ],
+      "skill_type": "application",
+      "original": true,
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q007",
+      "competency_id": "AZ900-1.3.1",
+      "domain_id": "D1",
+      "type": "multiple_choice",
+      "difficulty": "foundation",
+      "language": "pt-BR",
+      "prompt": "Um aplicativo legado exige que a equipe controle o SO convidado e instale componentes específicos. Qual modelo tende a atender melhor? Justifique.",
+      "options": {
+        "A": "SaaS",
+        "B": "PaaS com acesso ao SO garantido",
+        "C": "IaaS",
+        "D": "Somente armazenamento de objetos"
+      },
+      "answer": "C",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Escolhe IaaS pelo controle do SO e reconhece a responsabilidade operacional correspondente.",
+        "full_credit": 3,
+        "partial_credit": "1: recognizes a relevant concept but misses a key distinction; 2: correct key distinction without transfer; 3: complete explanation and application.",
+        "no_credit": "Incorrect, absent, or contradictory explanation. A correct option with incorrect reasoning is inconclusive."
+      },
+      "rationale": "VMs em IaaS permitem gerir o SO e software instalado, com maior responsabilidade do cliente.",
+      "distractor_rationales": {
+        "A": "Normalmente fornece um aplicativo pronto sem controle do SO.",
+        "B": "PaaS abstrai o SO; acesso administrativo não é uma garantia do modelo.",
+        "D": "Armazenamento de objetos não hospeda esse ambiente de execução."
+      },
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/paths/microsoft-azure-fundamentals-describe-cloud-concepts/"
+      ],
+      "skill_type": "recognition_with_explanation",
+      "original": true,
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q008",
+      "competency_id": "AZ900-1.3.2",
+      "domain_id": "D1",
+      "type": "comparison",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "Compare hospedar uma API em uma VM e em um serviço PaaS gerenciado. Quem normalmente mantém o SO? Que responsabilidade de segurança permanece nos dois casos?",
+      "answer": "Na VM o cliente mantém o SO convidado; em PaaS o provedor gerencia a plataforma/SO. Dados, identidades e configuração de acesso continuam exigindo gestão do cliente.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Compara as camadas e cita uma responsabilidade comum sem dizer que PaaS elimina todo trabalho de segurança.",
+        "full_credit": 3,
+        "partial_credit": "1: recognizes a relevant concept but misses a key distinction; 2: correct key distinction without transfer; 3: complete explanation and application.",
+        "no_credit": "Incorrect, absent, or contradictory explanation. A correct option with incorrect reasoning is inconclusive."
+      },
+      "rationale": "A abstração reduz gestão de infraestrutura, mas não transfere toda responsabilidade por dados e acessos.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/paths/microsoft-azure-fundamentals-describe-cloud-concepts/"
+      ],
+      "skill_type": "comparison",
+      "original": true,
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q009",
+      "competency_id": "AZ900-1.3.3",
+      "domain_id": "D1",
+      "type": "application",
+      "difficulty": "foundation",
+      "language": "pt-BR",
+      "prompt": "Uma pequena equipe quer usar e-mail corporativo pronto, sem desenvolver nem administrar a plataforma. Que modelo de serviço é adequado? Explique.",
+      "answer": "SaaS; utiliza um aplicativo pronto gerido pelo provedor, mantendo responsabilidades como usuários, acesso e dados.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Escolhe SaaS e explica aplicativo pronto versus construção de plataforma.",
+        "full_credit": 3,
+        "partial_credit": "1: recognizes a relevant concept but misses a key distinction; 2: correct key distinction without transfer; 3: complete explanation and application.",
+        "no_credit": "Incorrect, absent, or contradictory explanation. A correct option with incorrect reasoning is inconclusive."
+      },
+      "rationale": "O requisito é consumir software, não administrar SO nem desenvolver a aplicação.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/paths/microsoft-azure-fundamentals-describe-cloud-concepts/"
+      ],
+      "skill_type": "application",
+      "original": true,
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q010",
+      "competency_id": "AZ900-2.1.2",
+      "domain_id": "D2",
+      "type": "comparison",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "Diferencie Availability Zones e regiões Azure. Distribuir instâncias entre zonas da mesma região é igual a distribuir entre regiões?",
+      "answer": "Zonas são locais fisicamente separados dentro de uma região com infraestrutura independente. Regiões são áreas geográficas distintas. Zonas ajudam contra falhas de local na região; uma indisponibilidade regional exige outra estratégia.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Distingue os dois níveis e não promete que zonas eliminam qualquer falha regional.",
+        "full_credit": 3,
+        "partial_credit": "1: recognizes a relevant concept but misses a key distinction; 2: correct key distinction without transfer; 3: complete explanation and application.",
+        "no_credit": "Incorrect, absent, or contradictory explanation. A correct option with incorrect reasoning is inconclusive."
+      },
+      "rationale": "O limite de falha importa: redundância zonal e implantação entre regiões protegem contra cenários diferentes.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/"
+      ],
+      "skill_type": "comparison",
+      "original": true,
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q011",
+      "competency_id": "AZ900-2.1.7",
+      "domain_id": "D2",
+      "type": "application",
+      "difficulty": "foundation",
+      "language": "pt-BR",
+      "prompt": "Organize recurso, resource group, assinatura e management group do mais amplo ao mais específico. Uma mesma VM pode pertencer simultaneamente a dois resource groups?",
+      "answer": "Management group > assinatura > resource group > recurso. Uma VM pertence a um resource group por vez.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Ordena os quatro níveis e rejeita associação simultânea a múltiplos grupos.",
+        "full_credit": 3,
+        "partial_credit": "1: recognizes a relevant concept but misses a key distinction; 2: correct key distinction without transfer; 3: complete explanation and application.",
+        "no_credit": "Incorrect, absent, or contradictory explanation. A correct option with incorrect reasoning is inconclusive."
+      },
+      "rationale": "A hierarquia organiza governança e escopo; associação a um grupo não é uma etiqueta múltipla.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/"
+      ],
+      "skill_type": "application",
+      "original": true,
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q012",
+      "competency_id": "AZ900-2.2.1",
+      "domain_id": "D2",
+      "type": "multiple_choice",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "Uma rotina curta deve reagir à chegada de uma mensagem, sem a equipe administrar VMs. Qual opção é a correspondência mais direta entre estas? Explique.",
+      "options": {
+        "A": "Azure Virtual Machines",
+        "B": "Azure Functions",
+        "C": "Azure DNS",
+        "D": "Azure Files"
+      },
+      "answer": "B",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Relaciona execução de código orientada a eventos ao requisito e não garante custos ou escala sem considerar plano.",
+        "full_credit": 3,
+        "partial_credit": "1: recognizes a relevant concept but misses a key distinction; 2: correct key distinction without transfer; 3: complete explanation and application.",
+        "no_credit": "Incorrect, absent, or contradictory explanation. A correct option with incorrect reasoning is inconclusive."
+      },
+      "rationale": "Functions oferece execução de funções acionadas por eventos com infraestrutura abstraída.",
+      "distractor_rationales": {
+        "A": "Pode executar código, mas exige administração de VMs contrária à preferência.",
+        "C": "Resolve nomes; não executa a rotina.",
+        "D": "Fornece compartilhamentos de arquivos; não é a execução orientada a eventos."
+      },
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/"
+      ],
+      "skill_type": "recognition_with_explanation",
+      "original": true,
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q013",
+      "competency_id": "AZ900-2.2.4",
+      "domain_id": "D2",
+      "type": "application",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "Você precisa publicar uma API web convencional e prefere que a plataforma cuide do SO. Indique uma opção Azure e uma condição que faria VMs serem mais adequadas.",
+      "answer": "Azure App Service/Web Apps é uma opção PaaS. VMs podem ser mais adequadas se houver dependência de configuração privilegiada do SO ou software não suportado pela plataforma.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Propõe App Service e justifica uma limitação concreta sem declarar que é sempre superior.",
+        "full_credit": 3,
+        "partial_credit": "1: recognizes a relevant concept but misses a key distinction; 2: correct key distinction without transfer; 3: complete explanation and application.",
+        "no_credit": "Incorrect, absent, or contradictory explanation. A correct option with incorrect reasoning is inconclusive."
+      },
+      "rationale": "Escolher hospedagem depende do grau de controle exigido e das responsabilidades que a equipe aceita.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/"
+      ],
+      "skill_type": "application",
+      "original": true,
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q014",
+      "competency_id": "AZ900-2.2.5",
+      "domain_id": "D2",
+      "type": "comparison",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "Uma filial precisa de conexão criptografada pela internet com Azure. Outra exige conectividade privada dedicada sem transitar pela internet pública. Compare VPN Gateway e ExpressRoute.",
+      "answer": "VPN Gateway fornece túnel criptografado pela internet; ExpressRoute oferece conectividade privada por provedor de conectividade. Privado não significa criptografado por padrão em todos os casos.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Relaciona cada opção ao requisito e não confunde privacidade da rota com criptografia automática.",
+        "full_credit": 3,
+        "partial_credit": "1: recognizes a relevant concept but misses a key distinction; 2: correct key distinction without transfer; 3: complete explanation and application.",
+        "no_credit": "Incorrect, absent, or contradictory explanation. A correct option with incorrect reasoning is inconclusive."
+      },
+      "rationale": "A escolha distingue transporte pela internet e conectividade privada dedicada.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/modules/describe-azure-networking-services/"
+      ],
+      "skill_type": "comparison",
+      "original": true,
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q015",
+      "competency_id": "AZ900-2.2.6",
+      "domain_id": "D2",
+      "type": "explanation",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "O que muda quando um serviço PaaS usa um private endpoint na rede virtual? Isso, por si só, autoriza qualquer usuário a ler os dados?",
+      "answer": "O endpoint disponibiliza uma interface/IP privado na VNet para acesso ao serviço. Autenticação e autorização ainda são necessárias; a configuração do acesso público precisa ser tratada conforme o serviço.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Distingue caminho de rede privado de permissão e evita alegar que criar endpoint fecha automaticamente todo acesso público.",
+        "full_credit": 3,
+        "partial_credit": "1: recognizes a relevant concept but misses a key distinction; 2: correct key distinction without transfer; 3: complete explanation and application.",
+        "no_credit": "Incorrect, absent, or contradictory explanation. A correct option with incorrect reasoning is inconclusive."
+      },
+      "rationale": "Controles de rede e identidade são camadas diferentes.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/modules/describe-azure-networking-services/"
+      ],
+      "skill_type": "explanation",
+      "original": true,
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q016",
+      "competency_id": "AZ900-2.3.1",
+      "domain_id": "D2",
+      "type": "multiple_choice",
+      "difficulty": "foundation",
+      "language": "pt-BR",
+      "prompt": "Uma aplicação exige um compartilhamento de arquivos SMB gerenciado que clientes Windows possam montar, sem administrar um servidor de arquivos. Qual serviço é a correspondência direta entre estas opções? Explique.",
+      "options": {
+        "A": "Azure Blob Storage",
+        "B": "Azure Queue Storage",
+        "C": "Azure Files",
+        "D": "Azure DNS"
+      },
+      "answer": "C",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Escolhe Azure Files por compartilhamentos montáveis e distingue objetos e filas.",
+        "full_credit": 3,
+        "partial_credit": "1: recognizes a relevant concept but misses a key distinction; 2: correct key distinction without transfer; 3: complete explanation and application.",
+        "no_credit": "Incorrect, absent, or contradictory explanation. A correct option with incorrect reasoning is inconclusive."
+      },
+      "rationale": "Azure Files oferece compartilhamentos SMB gerenciados. O requisito explícito de SMB evita confundir esse serviço com suporte NFS de Blob Storage.",
+      "distractor_rationales": {
+        "A": "Blob Storage pode oferecer montagem NFS 3.0 em configurações específicas, mas não fornece o compartilhamento SMB exigido pelo cenário.",
+        "B": "Filas armazenam mensagens para processamento.",
+        "D": "DNS trata resolução de nomes."
+      },
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/",
+        "https://learn.microsoft.com/en-us/azure/storage/files/storage-files-introduction",
+        "https://learn.microsoft.com/en-us/azure/storage/blobs/network-file-system-protocol-support"
+      ],
+      "skill_type": "recognition_with_explanation",
+      "original": true,
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q017",
+      "competency_id": "AZ900-2.3.2",
+      "domain_id": "D2",
+      "type": "application",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "Uma equipe quer colocar logs usados todos os dias na camada Archive porque o armazenamento parece mais barato. Que fator pode tornar isso inadequado?",
+      "answer": "Archive é uma camada offline com necessidade de reidratação e latência/custos de recuperação; uso diário normalmente exige camada online e análise do custo total.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Explica disponibilidade/recuperação e custo total, sem inventar preço ou prazo exato.",
+        "full_credit": 3,
+        "partial_credit": "1: recognizes a relevant concept but misses a key distinction; 2: correct key distinction without transfer; 3: complete explanation and application.",
+        "no_credit": "Incorrect, absent, or contradictory explanation. A correct option with incorrect reasoning is inconclusive."
+      },
+      "rationale": "Menor custo de armazenamento não implica melhor custo nem latência para acesso frequente.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/"
+      ],
+      "skill_type": "application",
+      "original": true,
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q018",
+      "competency_id": "AZ900-2.3.3",
+      "domain_id": "D2",
+      "type": "explanation",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "Uma conta usa redundância local (LRS). O responsável afirma que isso garante disponibilidade se a região inteira falhar. Avalie.",
+      "answer": "LRS replica em um local físico na região principal; não fornece por si cópia em outra região. É preciso avaliar opções georredundantes e estratégia de recuperação, sem confundi-las com backup.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Rejeita garantia regional e diferencia redundância de backup/recuperação.",
+        "full_credit": 3,
+        "partial_credit": "1: recognizes a relevant concept but misses a key distinction; 2: correct key distinction without transfer; 3: complete explanation and application.",
+        "no_credit": "Incorrect, absent, or contradictory explanation. A correct option with incorrect reasoning is inconclusive."
+      },
+      "rationale": "A localização das réplicas define o tipo de falha contra o qual a opção ajuda.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/"
+      ],
+      "skill_type": "explanation",
+      "original": true,
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q019",
+      "competency_id": "AZ900-2.3.6",
+      "domain_id": "D2",
+      "type": "application",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "Uma empresa deve mover grande volume de arquivos para Azure, mas a conexão não consegue transferi-los no prazo. Que opção de migração física deve avaliar? O que Azure Migrate acrescenta em outro tipo de migração?",
+      "answer": "Avaliar Azure Data Box para transferência física offline conforme disponibilidade e requisitos. Azure Migrate auxilia descoberta, avaliação e migração de cargas; não é simplesmente um disco enviado.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Distingue transferência física e plataforma de avaliação/migração.",
+        "full_credit": 3,
+        "partial_credit": "1: recognizes a relevant concept but misses a key distinction; 2: correct key distinction without transfer; 3: complete explanation and application.",
+        "no_credit": "Incorrect, absent, or contradictory explanation. A correct option with incorrect reasoning is inconclusive."
+      },
+      "rationale": "Ferramentas de migração resolvem restrições diferentes; volume e conectividade orientam a escolha.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/"
+      ],
+      "skill_type": "application",
+      "original": true,
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q020",
+      "competency_id": "AZ900-2.4.2",
+      "domain_id": "D2",
+      "type": "comparison",
+      "difficulty": "foundation",
+      "language": "pt-BR",
+      "prompt": "Compare SSO e MFA. Um único login bem-sucedido para vários aplicativos prova que houve dois fatores independentes?",
+      "answer": "SSO reduz repetição de login entre aplicativos; MFA exige fatores distintos. SSO pode ser combinado com MFA, mas um não implica automaticamente o outro.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Define cada conceito e rejeita equivalência.",
+        "full_credit": 3,
+        "partial_credit": "1: recognizes a relevant concept but misses a key distinction; 2: correct key distinction without transfer; 3: complete explanation and application.",
+        "no_credit": "Incorrect, absent, or contradictory explanation. A correct option with incorrect reasoning is inconclusive."
+      },
+      "rationale": "Experiência de login e força de autenticação são propriedades diferentes.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/"
+      ],
+      "skill_type": "comparison",
+      "original": true,
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q021",
+      "competency_id": "AZ900-2.4.5",
+      "domain_id": "D2",
+      "type": "application",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "Um analista só deve visualizar a configuração dos recursos de um resource group, sem alterar recursos nem ler seu conteúdo de dados. Qual mecanismo Azure define a permissão e em que escopo? Uma tag 'Reader' concederia esse acesso?",
+      "answer": "Uma atribuição Azure RBAC com o papel Reader no escopo do resource group permite ler informações do plano de controle. Esse papel não inclui DataActions para ler o conteúdo dos dados. Tags são metadados e não concedem autorização.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Identifica papel Reader + escopo, distingue leitura da configuração de leitura dos dados e explica que tag não é permissão.",
+        "full_credit": 3,
+        "partial_credit": "1: recognizes a relevant concept but misses a key distinction; 2: correct key distinction without transfer; 3: complete explanation and application.",
+        "no_credit": "Incorrect, absent, or contradictory explanation. A correct option with incorrect reasoning is inconclusive."
+      },
+      "rationale": "RBAC controla quem faz o quê e em qual escopo; tags ajudam organização e custos.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/",
+        "https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/general#reader"
+      ],
+      "skill_type": "application",
+      "original": true,
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q022",
+      "competency_id": "AZ900-3.1.2",
+      "domain_id": "D3",
+      "type": "multiple_choice",
+      "difficulty": "foundation",
+      "language": "pt-BR",
+      "prompt": "Antes de criar uma solução, a equipe precisa estimar o custo de VMs com configurações e regiões diferentes. Qual ferramenta atende diretamente a essa comparação? Justifique.",
+      "options": {
+        "A": "Azure Service Health",
+        "B": "Calculadora de preços do Azure",
+        "C": "Resource locks",
+        "D": "Microsoft Entra SSO"
+      },
+      "answer": "B",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Relaciona calculadora a estimativa e observa que a conta real depende do uso e condições aplicáveis.",
+        "full_credit": 3,
+        "partial_credit": "1: recognizes a relevant concept but misses a key distinction; 2: correct key distinction without transfer; 3: complete explanation and application.",
+        "no_credit": "Incorrect, absent, or contradictory explanation. A correct option with incorrect reasoning is inconclusive."
+      },
+      "rationale": "A calculadora estima componentes planejados; não é garantia de fatura futura.",
+      "distractor_rationales": {
+        "A": "Informa incidentes e manutenção que afetam serviços.",
+        "C": "Ajuda a evitar alterações/exclusão; não estima preços.",
+        "D": "Trata autenticação entre aplicativos."
+      },
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/paths/describe-azure-management-governance/"
+      ],
+      "skill_type": "recognition_with_explanation",
+      "original": true,
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q023",
+      "competency_id": "AZ900-3.1.3",
+      "domain_id": "D3",
+      "type": "explanation",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "Foi criado um orçamento com alerta de 80%. O gerente acredita que todo recurso será automaticamente desligado nesse ponto. O que explicar?",
+      "answer": "Orçamentos e alertas acompanham gastos e notificam; não impõem desligamento universal automático. Ações automatizadas exigem configuração explícita e avaliação de impacto.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Distingue alerta de controle rígido e não promete interrupção automática do consumo.",
+        "full_credit": 3,
+        "partial_credit": "1: recognizes a relevant concept but misses a key distinction; 2: correct key distinction without transfer; 3: complete explanation and application.",
+        "no_credit": "Incorrect, absent, or contradictory explanation. A correct option with incorrect reasoning is inconclusive."
+      },
+      "rationale": "Um sinal de orçamento não é um limite universal de gastos.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/paths/describe-azure-management-governance/"
+      ],
+      "skill_type": "explanation",
+      "original": true,
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q024",
+      "competency_id": "AZ900-3.1.4",
+      "domain_id": "D3",
+      "type": "application",
+      "difficulty": "foundation",
+      "language": "pt-BR",
+      "prompt": "Duas equipes compartilham uma assinatura e querem analisar gastos por projeto sem mover os recursos. Como tags podem ajudar e qual cuidado é necessário?",
+      "answer": "Aplicar tags consistentes de projeto aos recursos suportados e usá-las em análise de custos. Nem todo custo/recurso oferece tags da mesma forma; tags não são automaticamente herdadas só por estarem no resource group.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Propõe esquema de tags e reconhece limites/necessidade de aplicação consistente.",
+        "full_credit": 3,
+        "partial_credit": "1: recognizes a relevant concept but misses a key distinction; 2: correct key distinction without transfer; 3: complete explanation and application.",
+        "no_credit": "Incorrect, absent, or contradictory explanation. A correct option with incorrect reasoning is inconclusive."
+      },
+      "rationale": "Tags adicionam metadados úteis, mas precisam de governança e cobertura explícita.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/paths/describe-azure-management-governance/"
+      ],
+      "skill_type": "application",
+      "original": true,
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q025",
+      "competency_id": "AZ900-3.2.2",
+      "domain_id": "D3",
+      "type": "comparison",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "Compare Azure Policy e Azure RBAC em uma regra que impede criação fora de regiões aprovadas. Qual mecanismo estabelece a conformidade do recurso e qual controla quem pode criá-lo?",
+      "answer": "Policy avalia/aplica regras sobre propriedades e conformidade, podendo negar criação fora das regiões. RBAC controla as ações permitidas a identidades em escopos.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Distingue o que é permitido configurar de quem tem autorização para agir.",
+        "full_credit": 3,
+        "partial_credit": "1: recognizes a relevant concept but misses a key distinction; 2: correct key distinction without transfer; 3: complete explanation and application.",
+        "no_credit": "Incorrect, absent, or contradictory explanation. A correct option with incorrect reasoning is inconclusive."
+      },
+      "rationale": "Uma identidade autorizada ainda pode ter uma implantação negada por Policy.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/paths/describe-azure-management-governance/"
+      ],
+      "skill_type": "comparison",
+      "original": true,
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q026",
+      "competency_id": "AZ900-3.2.3",
+      "domain_id": "D3",
+      "type": "application",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "Um operador tem permissão para excluir uma VM, mas a exclusão é bloqueada por um lock CanNotDelete. O lock deu ou retirou o papel RBAC do operador? Explique.",
+      "answer": "Não alterou o papel. O lock adiciona proteção no plano de controle e impede a exclusão enquanto aplicável; remoção do lock exige permissão adequada.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Distingue proteção por lock e atribuição de autorização sem dizer que lock substitui RBAC.",
+        "full_credit": 3,
+        "partial_credit": "1: recognizes a relevant concept but misses a key distinction; 2: correct key distinction without transfer; 3: complete explanation and application.",
+        "no_credit": "Incorrect, absent, or contradictory explanation. A correct option with incorrect reasoning is inconclusive."
+      },
+      "rationale": "Locks protegem contra determinadas alterações mesmo de usuários autorizados.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/paths/describe-azure-management-governance/"
+      ],
+      "skill_type": "application",
+      "original": true,
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q027",
+      "competency_id": "AZ900-3.3.3",
+      "domain_id": "D3",
+      "type": "explanation",
+      "difficulty": "foundation",
+      "language": "pt-BR",
+      "prompt": "Uma organização quer gerenciar e governar servidores que continuam fora do Azure. Que papel tem Azure Arc? Ele exige migrar toda carga para VMs Azure?",
+      "answer": "Arc estende capacidades de gerenciamento e governança a recursos fora de Azure, inclusive locais e outras nuvens. Não exige migrar toda carga para Azure.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Explica extensão de gestão sem equivaler integração a migração.",
+        "full_credit": 3,
+        "partial_credit": "1: recognizes a relevant concept but misses a key distinction; 2: correct key distinction without transfer; 3: complete explanation and application.",
+        "no_credit": "Incorrect, absent, or contradictory explanation. A correct option with incorrect reasoning is inconclusive."
+      },
+      "rationale": "Azure Arc permite uma abordagem de gestão para ambientes distribuídos.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/paths/describe-azure-management-governance/"
+      ],
+      "skill_type": "explanation",
+      "original": true,
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q028",
+      "competency_id": "AZ900-3.3.5",
+      "domain_id": "D3",
+      "type": "application",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "Uma equipe cria ambientes manualmente e obtém configurações diferentes. Como um template ARM ajuda? Ele substitui a necessidade de permissões para implantar?",
+      "answer": "Define recursos declarativamente como código para implantações reproduzíveis e revisão de mudanças. A execução ainda depende de permissões e regras de governança.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Relaciona declaração e repetibilidade e preserva autorização.",
+        "full_credit": 3,
+        "partial_credit": "1: recognizes a relevant concept but misses a key distinction; 2: correct key distinction without transfer; 3: complete explanation and application.",
+        "no_credit": "Incorrect, absent, or contradictory explanation. A correct option with incorrect reasoning is inconclusive."
+      },
+      "rationale": "IaC reduz divergência manual, mas não ignora RBAC nem Policy.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/paths/describe-azure-management-governance/"
+      ],
+      "skill_type": "application",
+      "original": true,
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q029",
+      "competency_id": "AZ900-3.4.2",
+      "domain_id": "D3",
+      "type": "multiple_choice",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "A equipe suspeita de um incidente Azure que afeta sua assinatura e quer informações e orientações personalizadas. Qual opção é mais direta? Explique.",
+      "options": {
+        "A": "Azure Service Health",
+        "B": "Azure Pricing Calculator",
+        "C": "Azure Policy",
+        "D": "Azure Files"
+      },
+      "answer": "A",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Identifica Service Health para eventos relevantes à assinatura, distinguindo monitoramento do próprio aplicativo.",
+        "full_credit": 3,
+        "partial_credit": "1: recognizes a relevant concept but misses a key distinction; 2: correct key distinction without transfer; 3: complete explanation and application.",
+        "no_credit": "Incorrect, absent, or contradictory explanation. A correct option with incorrect reasoning is inconclusive."
+      },
+      "rationale": "Service Health informa incidentes, manutenção e avisos de saúde relevantes ao ambiente Azure.",
+      "distractor_rationales": {
+        "B": "Estima preços; não informa incidentes personalizados.",
+        "C": "Avalia conformidade de recursos; não é o canal de incidentes.",
+        "D": "É armazenamento de arquivos."
+      },
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/paths/describe-azure-management-governance/"
+      ],
+      "skill_type": "recognition_with_explanation",
+      "original": true,
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    },
+    {
+      "id": "Q030",
+      "competency_id": "AZ900-3.4.3",
+      "domain_id": "D3",
+      "type": "comparison",
+      "difficulty": "intermediate",
+      "language": "pt-BR",
+      "prompt": "A API está lenta, mas não há incidente anunciado. Compare usar Service Health com usar Azure Monitor/Application Insights para investigar.",
+      "answer": "Service Health trata problemas do serviço Azure e manutenção relevantes ao ambiente. Monitor coleta e analisa telemetria; Application Insights observa desempenho, solicitações e falhas da aplicação. Sem incidente anunciado, ainda pode haver problema no código/configuração.",
+      "rubric": {
+        "scale": "0..3",
+        "criterion": "Distingue saúde da plataforma e observabilidade da aplicação; propõe telemetria para a API.",
+        "full_credit": 3,
+        "partial_credit": "1: recognizes a relevant concept but misses a key distinction; 2: correct key distinction without transfer; 3: complete explanation and application.",
+        "no_credit": "Incorrect, absent, or contradictory explanation. A correct option with incorrect reasoning is inconclusive."
+      },
+      "rationale": "Saúde da plataforma não garante desempenho correto de cada aplicativo.",
+      "distractor_rationales": {},
+      "source_urls": [
+        "https://learn.microsoft.com/en-us/training/paths/describe-azure-management-governance/"
+      ],
+      "skill_type": "comparison",
+      "original": true,
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
+      "verified_at": "2026-10-15"
+    }
+  ]
+}
