@@ -1,0 +1,523 @@
+{
+  "schema_version": "1.0",
+  "exam_version": "2026-07-20",
+  "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-900",
+  "verified_on": "2026-10-15",
+  "mapping_method": "Full official English skills section reviewed; ordered bullets matched one-to-one to editorial competencies. Hashes use monitor.normalized and SHA-256; no source question bank or full source wording retained.",
+  "approved_baseline": "exam/versions/monitor-baseline.json",
+  "objectives": [
+    {
+      "competency_id": "AZ900-1.1.1",
+      "source_anchor": "describe-cloud-computing:bullet-1",
+      "domain_id": "D1",
+      "source_domain": "Describe cloud concepts (25–30%)",
+      "source_subdomain": "Describe cloud computing",
+      "source_bullet": 1,
+      "normalized_source_hash": "bbdece2bbe78fa2e0d6b3ddc7c8e256067fcd3455b72047d52bf0fbe9e0bb993"
+    },
+    {
+      "competency_id": "AZ900-1.1.2",
+      "source_anchor": "describe-cloud-computing:bullet-2",
+      "domain_id": "D1",
+      "source_domain": "Describe cloud concepts (25–30%)",
+      "source_subdomain": "Describe cloud computing",
+      "source_bullet": 2,
+      "normalized_source_hash": "41aaad301ad8eaa0897db543c4b5bdf19df3c6146feac8998a8821a629cc6dcb"
+    },
+    {
+      "competency_id": "AZ900-1.1.3",
+      "source_anchor": "describe-cloud-computing:bullet-3",
+      "domain_id": "D1",
+      "source_domain": "Describe cloud concepts (25–30%)",
+      "source_subdomain": "Describe cloud computing",
+      "source_bullet": 3,
+      "normalized_source_hash": "9f65062f56aa109a3921c2d3179303a7f713c19dfb6f9e1c8352fd1d925ca1ad"
+    },
+    {
+      "competency_id": "AZ900-1.1.4",
+      "source_anchor": "describe-cloud-computing:bullet-4",
+      "domain_id": "D1",
+      "source_domain": "Describe cloud concepts (25–30%)",
+      "source_subdomain": "Describe cloud computing",
+      "source_bullet": 4,
+      "normalized_source_hash": "774a8db801c71ee62712fa6ec806a49f68eb5e5ced0faff79f406aa16b2f68ef"
+    },
+    {
+      "competency_id": "AZ900-1.1.5",
+      "source_anchor": "describe-cloud-computing:bullet-5",
+      "domain_id": "D1",
+      "source_domain": "Describe cloud concepts (25–30%)",
+      "source_subdomain": "Describe cloud computing",
+      "source_bullet": 5,
+      "normalized_source_hash": "3ac54f25de8e9db1d31710e0574d6581c91e52f4648b4f073013bf85abb0d01a"
+    },
+    {
+      "competency_id": "AZ900-1.1.6",
+      "source_anchor": "describe-cloud-computing:bullet-6",
+      "domain_id": "D1",
+      "source_domain": "Describe cloud concepts (25–30%)",
+      "source_subdomain": "Describe cloud computing",
+      "source_bullet": 6,
+      "normalized_source_hash": "e067d9e3c44a30c212f19af84be1c07f246af3be219591f30312c37847e8eaff"
+    },
+    {
+      "competency_id": "AZ900-1.1.7",
+      "source_anchor": "describe-cloud-computing:bullet-7",
+      "domain_id": "D1",
+      "source_domain": "Describe cloud concepts (25–30%)",
+      "source_subdomain": "Describe cloud computing",
+      "source_bullet": 7,
+      "normalized_source_hash": "9151f219189b2e0beaea40b4e4eb3195c4f04637ff0220c46edaab4f3393f0fb"
+    },
+    {
+      "competency_id": "AZ900-1.2.1",
+      "source_anchor": "describe-the-benefits-of-using-cloud-services:bullet-1",
+      "domain_id": "D1",
+      "source_domain": "Describe cloud concepts (25–30%)",
+      "source_subdomain": "Describe the benefits of using cloud services",
+      "source_bullet": 1,
+      "normalized_source_hash": "36126ba0999717a98c585142b3da31bc9d648fcabcef20ead160de296450874c"
+    },
+    {
+      "competency_id": "AZ900-1.2.2",
+      "source_anchor": "describe-the-benefits-of-using-cloud-services:bullet-2",
+      "domain_id": "D1",
+      "source_domain": "Describe cloud concepts (25–30%)",
+      "source_subdomain": "Describe the benefits of using cloud services",
+      "source_bullet": 2,
+      "normalized_source_hash": "11601244ec01193f9db510bb2fa9465cb922c18ad533d4b653fe968811531033"
+    },
+    {
+      "competency_id": "AZ900-1.2.3",
+      "source_anchor": "describe-the-benefits-of-using-cloud-services:bullet-3",
+      "domain_id": "D1",
+      "source_domain": "Describe cloud concepts (25–30%)",
+      "source_subdomain": "Describe the benefits of using cloud services",
+      "source_bullet": 3,
+      "normalized_source_hash": "c3fd38482c4e5f1570539be1cc5948bec85f89a364d6995f47a54c0fe8ee5acb"
+    },
+    {
+      "competency_id": "AZ900-1.2.4",
+      "source_anchor": "describe-the-benefits-of-using-cloud-services:bullet-4",
+      "domain_id": "D1",
+      "source_domain": "Describe cloud concepts (25–30%)",
+      "source_subdomain": "Describe the benefits of using cloud services",
+      "source_bullet": 4,
+      "normalized_source_hash": "d931677abf3c3202e3e797878ac14c49ed739959ac901f65b841a3c99928b13f"
+    },
+    {
+      "competency_id": "AZ900-1.3.1",
+      "source_anchor": "describe-cloud-service-types:bullet-1",
+      "domain_id": "D1",
+      "source_domain": "Describe cloud concepts (25–30%)",
+      "source_subdomain": "Describe cloud service types",
+      "source_bullet": 1,
+      "normalized_source_hash": "f10d85c3246dde1a6a13aa2480cc270d89fd0393c4c0cc3300dc767cd660617c"
+    },
+    {
+      "competency_id": "AZ900-1.3.2",
+      "source_anchor": "describe-cloud-service-types:bullet-2",
+      "domain_id": "D1",
+      "source_domain": "Describe cloud concepts (25–30%)",
+      "source_subdomain": "Describe cloud service types",
+      "source_bullet": 2,
+      "normalized_source_hash": "644bc7601864aec8d6b0ec211df381125928a49f43a99d8a485db9a1adc5d1af"
+    },
+    {
+      "competency_id": "AZ900-1.3.3",
+      "source_anchor": "describe-cloud-service-types:bullet-3",
+      "domain_id": "D1",
+      "source_domain": "Describe cloud concepts (25–30%)",
+      "source_subdomain": "Describe cloud service types",
+      "source_bullet": 3,
+      "normalized_source_hash": "f0fc79696122753b9a4d1f71e5e3c687a7aa868e4af9bf2debeec442b8af6366"
+    },
+    {
+      "competency_id": "AZ900-1.3.4",
+      "source_anchor": "describe-cloud-service-types:bullet-4",
+      "domain_id": "D1",
+      "source_domain": "Describe cloud concepts (25–30%)",
+      "source_subdomain": "Describe cloud service types",
+      "source_bullet": 4,
+      "normalized_source_hash": "6a1e9f4d1b0115e3d182aae1f43786ce73fea1f4859a42af96ed722f464e9483"
+    },
+    {
+      "competency_id": "AZ900-2.1.1",
+      "source_anchor": "describe-the-core-architectural-components-of-azure:bullet-1",
+      "domain_id": "D2",
+      "source_domain": "Describe Azure architecture and services (35–40%)",
+      "source_subdomain": "Describe the core architectural components of Azure",
+      "source_bullet": 1,
+      "normalized_source_hash": "bfd346b95c6655315cced808dbc5104638d678808e815f4e271cb34bf2fb57bd"
+    },
+    {
+      "competency_id": "AZ900-2.1.2",
+      "source_anchor": "describe-the-core-architectural-components-of-azure:bullet-2",
+      "domain_id": "D2",
+      "source_domain": "Describe Azure architecture and services (35–40%)",
+      "source_subdomain": "Describe the core architectural components of Azure",
+      "source_bullet": 2,
+      "normalized_source_hash": "0809f7cfa5a93326df21a96ba9266a86297d11741a08d580b2b05d795b2e796d"
+    },
+    {
+      "competency_id": "AZ900-2.1.3",
+      "source_anchor": "describe-the-core-architectural-components-of-azure:bullet-3",
+      "domain_id": "D2",
+      "source_domain": "Describe Azure architecture and services (35–40%)",
+      "source_subdomain": "Describe the core architectural components of Azure",
+      "source_bullet": 3,
+      "normalized_source_hash": "cc5d7c4f3f0fc3140a21009c4cc607cd9856b53f315fc78d8aac65a75b62c58a"
+    },
+    {
+      "competency_id": "AZ900-2.1.4",
+      "source_anchor": "describe-the-core-architectural-components-of-azure:bullet-4",
+      "domain_id": "D2",
+      "source_domain": "Describe Azure architecture and services (35–40%)",
+      "source_subdomain": "Describe the core architectural components of Azure",
+      "source_bullet": 4,
+      "normalized_source_hash": "025976d7baf49a101e53d13464a47448deef394e0b9bfc9d371e59de7add65cc"
+    },
+    {
+      "competency_id": "AZ900-2.1.5",
+      "source_anchor": "describe-the-core-architectural-components-of-azure:bullet-5",
+      "domain_id": "D2",
+      "source_domain": "Describe Azure architecture and services (35–40%)",
+      "source_subdomain": "Describe the core architectural components of Azure",
+      "source_bullet": 5,
+      "normalized_source_hash": "e16f23b8e3f44a2960f32432f643236f7c02b453e712f5b800bc5681329e3bea"
+    },
+    {
+      "competency_id": "AZ900-2.1.6",
+      "source_anchor": "describe-the-core-architectural-components-of-azure:bullet-6",
+      "domain_id": "D2",
+      "source_domain": "Describe Azure architecture and services (35–40%)",
+      "source_subdomain": "Describe the core architectural components of Azure",
+      "source_bullet": 6,
+      "normalized_source_hash": "1288dc4031d9bb495f63178156869344e233704a9e389b3f0f8a40c61122a872"
+    },
+    {
+      "competency_id": "AZ900-2.1.7",
+      "source_anchor": "describe-the-core-architectural-components-of-azure:bullet-7",
+      "domain_id": "D2",
+      "source_domain": "Describe Azure architecture and services (35–40%)",
+      "source_subdomain": "Describe the core architectural components of Azure",
+      "source_bullet": 7,
+      "normalized_source_hash": "1d77687240efb131eabe27dab681714a4e3cf5f50b33703aa3732f0c07ac1386"
+    },
+    {
+      "competency_id": "AZ900-2.2.1",
+      "source_anchor": "describe-azure-compute-and-networking-services:bullet-1",
+      "domain_id": "D2",
+      "source_domain": "Describe Azure architecture and services (35–40%)",
+      "source_subdomain": "Describe Azure compute and networking services",
+      "source_bullet": 1,
+      "normalized_source_hash": "17b216b19ec623abbc0f1f59099d1382598abbc9470b68982c00d184385e1fae"
+    },
+    {
+      "competency_id": "AZ900-2.2.2",
+      "source_anchor": "describe-azure-compute-and-networking-services:bullet-2",
+      "domain_id": "D2",
+      "source_domain": "Describe Azure architecture and services (35–40%)",
+      "source_subdomain": "Describe Azure compute and networking services",
+      "source_bullet": 2,
+      "normalized_source_hash": "7165c322ad142ab0a8005900fad641c70489a06808553fc30d817fcd10d28f96"
+    },
+    {
+      "competency_id": "AZ900-2.2.3",
+      "source_anchor": "describe-azure-compute-and-networking-services:bullet-3",
+      "domain_id": "D2",
+      "source_domain": "Describe Azure architecture and services (35–40%)",
+      "source_subdomain": "Describe Azure compute and networking services",
+      "source_bullet": 3,
+      "normalized_source_hash": "46f43ba41f888d7af49fe18025046048bba145eeb4318048f55e36028ea565cd"
+    },
+    {
+      "competency_id": "AZ900-2.2.4",
+      "source_anchor": "describe-azure-compute-and-networking-services:bullet-4",
+      "domain_id": "D2",
+      "source_domain": "Describe Azure architecture and services (35–40%)",
+      "source_subdomain": "Describe Azure compute and networking services",
+      "source_bullet": 4,
+      "normalized_source_hash": "87c0e180105b033c12deef429d86cab19dccbd4d36602381116d7a2bf8a2548b"
+    },
+    {
+      "competency_id": "AZ900-2.2.5",
+      "source_anchor": "describe-azure-compute-and-networking-services:bullet-5",
+      "domain_id": "D2",
+      "source_domain": "Describe Azure architecture and services (35–40%)",
+      "source_subdomain": "Describe Azure compute and networking services",
+      "source_bullet": 5,
+      "normalized_source_hash": "a4ab15068f31ae754ced545f3dc47972b637496f904917e69231651f66e4680a"
+    },
+    {
+      "competency_id": "AZ900-2.2.6",
+      "source_anchor": "describe-azure-compute-and-networking-services:bullet-6",
+      "domain_id": "D2",
+      "source_domain": "Describe Azure architecture and services (35–40%)",
+      "source_subdomain": "Describe Azure compute and networking services",
+      "source_bullet": 6,
+      "normalized_source_hash": "898626c5a359075979248ed307c2dd2e481eebae81a42e746b4866f75057ad05"
+    },
+    {
+      "competency_id": "AZ900-2.3.1",
+      "source_anchor": "describe-azure-storage-services:bullet-1",
+      "domain_id": "D2",
+      "source_domain": "Describe Azure architecture and services (35–40%)",
+      "source_subdomain": "Describe Azure storage services",
+      "source_bullet": 1,
+      "normalized_source_hash": "5011e0f732402b119e9f61e5b3273ddfe022a2ee9f011312f9ef961f71e988ab"
+    },
+    {
+      "competency_id": "AZ900-2.3.2",
+      "source_anchor": "describe-azure-storage-services:bullet-2",
+      "domain_id": "D2",
+      "source_domain": "Describe Azure architecture and services (35–40%)",
+      "source_subdomain": "Describe Azure storage services",
+      "source_bullet": 2,
+      "normalized_source_hash": "97af935b3d7dc7a077b60a0e378de997cdfd38676a0316763d724e8c58530f8b"
+    },
+    {
+      "competency_id": "AZ900-2.3.3",
+      "source_anchor": "describe-azure-storage-services:bullet-3",
+      "domain_id": "D2",
+      "source_domain": "Describe Azure architecture and services (35–40%)",
+      "source_subdomain": "Describe Azure storage services",
+      "source_bullet": 3,
+      "normalized_source_hash": "b20d62da7ab45e3bbbbbd6f10731e3f31b61834850989bd07fcad80342c511c2"
+    },
+    {
+      "competency_id": "AZ900-2.3.4",
+      "source_anchor": "describe-azure-storage-services:bullet-4",
+      "domain_id": "D2",
+      "source_domain": "Describe Azure architecture and services (35–40%)",
+      "source_subdomain": "Describe Azure storage services",
+      "source_bullet": 4,
+      "normalized_source_hash": "be3ef68bbdbdebb0f9da5a7f1a806bc17636f9ea78a302a8cecd9522d91eb852"
+    },
+    {
+      "competency_id": "AZ900-2.3.5",
+      "source_anchor": "describe-azure-storage-services:bullet-5",
+      "domain_id": "D2",
+      "source_domain": "Describe Azure architecture and services (35–40%)",
+      "source_subdomain": "Describe Azure storage services",
+      "source_bullet": 5,
+      "normalized_source_hash": "d9c3b999d33a2fcca1cc16f5a1c7f1e7987747b45207165f11a4d6a77f4ebfd3"
+    },
+    {
+      "competency_id": "AZ900-2.3.6",
+      "source_anchor": "describe-azure-storage-services:bullet-6",
+      "domain_id": "D2",
+      "source_domain": "Describe Azure architecture and services (35–40%)",
+      "source_subdomain": "Describe Azure storage services",
+      "source_bullet": 6,
+      "normalized_source_hash": "29f75a950e76cd9cdd51835e1e14d8a3bdee99723e072304791679bf45e3eeaf"
+    },
+    {
+      "competency_id": "AZ900-2.4.1",
+      "source_anchor": "describe-azure-identity,-access,-and-security:bullet-1",
+      "domain_id": "D2",
+      "source_domain": "Describe Azure architecture and services (35–40%)",
+      "source_subdomain": "Describe Azure identity, access, and security",
+      "source_bullet": 1,
+      "normalized_source_hash": "ae66493eb92754147618f614e536153e56c5d46865ce2f374a07f6373578a74b"
+    },
+    {
+      "competency_id": "AZ900-2.4.2",
+      "source_anchor": "describe-azure-identity,-access,-and-security:bullet-2",
+      "domain_id": "D2",
+      "source_domain": "Describe Azure architecture and services (35–40%)",
+      "source_subdomain": "Describe Azure identity, access, and security",
+      "source_bullet": 2,
+      "normalized_source_hash": "907fe3b7fc3240b1dffd8b6515aca0c327e80061fec3d2af9503d7fc6dc36225"
+    },
+    {
+      "competency_id": "AZ900-2.4.3",
+      "source_anchor": "describe-azure-identity,-access,-and-security:bullet-3",
+      "domain_id": "D2",
+      "source_domain": "Describe Azure architecture and services (35–40%)",
+      "source_subdomain": "Describe Azure identity, access, and security",
+      "source_bullet": 3,
+      "normalized_source_hash": "d9a1c30e5e4175260c8f7df72c5a77b728a549ba3d87358cba2d4e79e780978c"
+    },
+    {
+      "competency_id": "AZ900-2.4.4",
+      "source_anchor": "describe-azure-identity,-access,-and-security:bullet-4",
+      "domain_id": "D2",
+      "source_domain": "Describe Azure architecture and services (35–40%)",
+      "source_subdomain": "Describe Azure identity, access, and security",
+      "source_bullet": 4,
+      "normalized_source_hash": "10c82f13220e7949dc5538c098b40a9a7d03d53d3932efe8aede0db48fe3b7b9"
+    },
+    {
+      "competency_id": "AZ900-2.4.5",
+      "source_anchor": "describe-azure-identity,-access,-and-security:bullet-5",
+      "domain_id": "D2",
+      "source_domain": "Describe Azure architecture and services (35–40%)",
+      "source_subdomain": "Describe Azure identity, access, and security",
+      "source_bullet": 5,
+      "normalized_source_hash": "adde9dfd0ac495936eed91024f6ea19ba7ab444e60e42d645bdce8fc04a28987"
+    },
+    {
+      "competency_id": "AZ900-2.4.6",
+      "source_anchor": "describe-azure-identity,-access,-and-security:bullet-6",
+      "domain_id": "D2",
+      "source_domain": "Describe Azure architecture and services (35–40%)",
+      "source_subdomain": "Describe Azure identity, access, and security",
+      "source_bullet": 6,
+      "normalized_source_hash": "8fc4a98aefeb395ab5af8278357fc1370760836db200a29ea6e59a0ee05f1ddd"
+    },
+    {
+      "competency_id": "AZ900-2.4.7",
+      "source_anchor": "describe-azure-identity,-access,-and-security:bullet-7",
+      "domain_id": "D2",
+      "source_domain": "Describe Azure architecture and services (35–40%)",
+      "source_subdomain": "Describe Azure identity, access, and security",
+      "source_bullet": 7,
+      "normalized_source_hash": "66c38b329c77a12334f075095a8ad35df41424dcbb7da9a25587b6f1aa60e558"
+    },
+    {
+      "competency_id": "AZ900-2.4.8",
+      "source_anchor": "describe-azure-identity,-access,-and-security:bullet-8",
+      "domain_id": "D2",
+      "source_domain": "Describe Azure architecture and services (35–40%)",
+      "source_subdomain": "Describe Azure identity, access, and security",
+      "source_bullet": 8,
+      "normalized_source_hash": "81425cc0c1ed6435e04f61f92ecaec7bb4ebc36775d451dff69b85fe242a5dd9"
+    },
+    {
+      "competency_id": "AZ900-3.1.1",
+      "source_anchor": "describe-cost-management-in-azure:bullet-1",
+      "domain_id": "D3",
+      "source_domain": "Describe Azure management and governance (30–35%)",
+      "source_subdomain": "Describe cost management in Azure",
+      "source_bullet": 1,
+      "normalized_source_hash": "6974d511ec5d4f27de0b3320843921862510350d9347be31c9c8617621ffa404"
+    },
+    {
+      "competency_id": "AZ900-3.1.2",
+      "source_anchor": "describe-cost-management-in-azure:bullet-2",
+      "domain_id": "D3",
+      "source_domain": "Describe Azure management and governance (30–35%)",
+      "source_subdomain": "Describe cost management in Azure",
+      "source_bullet": 2,
+      "normalized_source_hash": "7795927444a06880fb7095ddddce6e79a755aeab201e897729f1b98120e0c15c"
+    },
+    {
+      "competency_id": "AZ900-3.1.3",
+      "source_anchor": "describe-cost-management-in-azure:bullet-3",
+      "domain_id": "D3",
+      "source_domain": "Describe Azure management and governance (30–35%)",
+      "source_subdomain": "Describe cost management in Azure",
+      "source_bullet": 3,
+      "normalized_source_hash": "1a258a9e27ac527abcf6bbcf844311a0c6765441fd4c5cb4b38cfae17f354cb8"
+    },
+    {
+      "competency_id": "AZ900-3.1.4",
+      "source_anchor": "describe-cost-management-in-azure:bullet-4",
+      "domain_id": "D3",
+      "source_domain": "Describe Azure management and governance (30–35%)",
+      "source_subdomain": "Describe cost management in Azure",
+      "source_bullet": 4,
+      "normalized_source_hash": "aa1f06881ded611a97bef3e8d33b7a0f751796c888eea08248e34a5838510c22"
+    },
+    {
+      "competency_id": "AZ900-3.2.1",
+      "source_anchor": "describe-features-and-tools-in-azure-for-governance-and-compliance:bullet-1",
+      "domain_id": "D3",
+      "source_domain": "Describe Azure management and governance (30–35%)",
+      "source_subdomain": "Describe features and tools in Azure for governance and compliance",
+      "source_bullet": 1,
+      "normalized_source_hash": "76af6d7e72bb81f3033d29facebefbf735415c1df52fb5bd535302ba69787f31"
+    },
+    {
+      "competency_id": "AZ900-3.2.2",
+      "source_anchor": "describe-features-and-tools-in-azure-for-governance-and-compliance:bullet-2",
+      "domain_id": "D3",
+      "source_domain": "Describe Azure management and governance (30–35%)",
+      "source_subdomain": "Describe features and tools in Azure for governance and compliance",
+      "source_bullet": 2,
+      "normalized_source_hash": "b4ab93adb3a5cabee59735ac53f460b7b75747b0ac1997883e67244b627c49a8"
+    },
+    {
+      "competency_id": "AZ900-3.2.3",
+      "source_anchor": "describe-features-and-tools-in-azure-for-governance-and-compliance:bullet-3",
+      "domain_id": "D3",
+      "source_domain": "Describe Azure management and governance (30–35%)",
+      "source_subdomain": "Describe features and tools in Azure for governance and compliance",
+      "source_bullet": 3,
+      "normalized_source_hash": "7822f2bd9112174490f723fee61528ee9df8d45d19190979be09ff49553ff4bc"
+    },
+    {
+      "competency_id": "AZ900-3.3.1",
+      "source_anchor": "describe-features-and-tools-for-managing-and-deploying-azure-resources:bullet-1",
+      "domain_id": "D3",
+      "source_domain": "Describe Azure management and governance (30–35%)",
+      "source_subdomain": "Describe features and tools for managing and deploying Azure resources",
+      "source_bullet": 1,
+      "normalized_source_hash": "5fa54a4e1f964a3bd61793684881b215c1f6bf8b72a6e309f2e3605d375217bd"
+    },
+    {
+      "competency_id": "AZ900-3.3.2",
+      "source_anchor": "describe-features-and-tools-for-managing-and-deploying-azure-resources:bullet-2",
+      "domain_id": "D3",
+      "source_domain": "Describe Azure management and governance (30–35%)",
+      "source_subdomain": "Describe features and tools for managing and deploying Azure resources",
+      "source_bullet": 2,
+      "normalized_source_hash": "ff5b47a34008e572e021f98b65daeadbec461fa0cc4abda22f1526e3fc65e11b"
+    },
+    {
+      "competency_id": "AZ900-3.3.3",
+      "source_anchor": "describe-features-and-tools-for-managing-and-deploying-azure-resources:bullet-3",
+      "domain_id": "D3",
+      "source_domain": "Describe Azure management and governance (30–35%)",
+      "source_subdomain": "Describe features and tools for managing and deploying Azure resources",
+      "source_bullet": 3,
+      "normalized_source_hash": "d674c6b47ef6c0df8ca45298d7fe65f132a72d2404d973891f24aac2b11d3523"
+    },
+    {
+      "competency_id": "AZ900-3.3.4",
+      "source_anchor": "describe-features-and-tools-for-managing-and-deploying-azure-resources:bullet-4",
+      "domain_id": "D3",
+      "source_domain": "Describe Azure management and governance (30–35%)",
+      "source_subdomain": "Describe features and tools for managing and deploying Azure resources",
+      "source_bullet": 4,
+      "normalized_source_hash": "32b5ec353e620f2a62e329582bb6515304c299c56b9be20198aa291fd52de2dc"
+    },
+    {
+      "competency_id": "AZ900-3.3.5",
+      "source_anchor": "describe-features-and-tools-for-managing-and-deploying-azure-resources:bullet-5",
+      "domain_id": "D3",
+      "source_domain": "Describe Azure management and governance (30–35%)",
+      "source_subdomain": "Describe features and tools for managing and deploying Azure resources",
+      "source_bullet": 5,
+      "normalized_source_hash": "fc0cbf05900dab41e6ca8dd52ffa2f1830185353fd45995d8e6218db94bca965"
+    },
+    {
+      "competency_id": "AZ900-3.4.1",
+      "source_anchor": "describe-monitoring-tools-in-azure:bullet-1",
+      "domain_id": "D3",
+      "source_domain": "Describe Azure management and governance (30–35%)",
+      "source_subdomain": "Describe monitoring tools in Azure",
+      "source_bullet": 1,
+      "normalized_source_hash": "c10e2e84fa8e7440f37a568e3e0df2b58825f7fd9cda97e60e36fc49dea335b6"
+    },
+    {
+      "competency_id": "AZ900-3.4.2",
+      "source_anchor": "describe-monitoring-tools-in-azure:bullet-2",
+      "domain_id": "D3",
+      "source_domain": "Describe Azure management and governance (30–35%)",
+      "source_subdomain": "Describe monitoring tools in Azure",
+      "source_bullet": 2,
+      "normalized_source_hash": "7d8564fb5a6c05e31c0618e552bce55b4a5c0ffa773394a4ea4c655b350e81fc"
+    },
+    {
+      "competency_id": "AZ900-3.4.3",
+      "source_anchor": "describe-monitoring-tools-in-azure:bullet-3",
+      "domain_id": "D3",
+      "source_domain": "Describe Azure management and governance (30–35%)",
+      "source_subdomain": "Describe monitoring tools in Azure",
+      "source_bullet": 3,
+      "normalized_source_hash": "d34ade902d259407b9d9f1fa0b42368faa53e604a9adfcab515bc90ad5e7daf5"
+    }
+  ]
+}

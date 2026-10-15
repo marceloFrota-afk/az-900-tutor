@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/vmenezesdev/az-900-tutor/schemas/catalog.schema.json",
+  "title": "Curated learning-resource catalog",
+  "type": "object",
+  "required": ["schema_version", "verified_on", "authority_order", "resources"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "verified_on": {"type": "string", "format": "date"},
+    "authority_order": {"type": "array", "minItems": 4, "maxItems": 4, "items": {"type": "string"}, "uniqueItems": true},
+    "resources": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/resource"}}
+  },
+  "$defs": {
+    "resource": {
+      "type": "object",
+      "required": ["id", "name", "url", "author", "type", "language", "cost", "domains", "competencies", "published_on", "last_verified", "verification", "authority", "editorial_notes", "limitations"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^[a-z0-9-]+$"},
+        "name": {"type": "string", "minLength": 1},
+        "url": {"type": "string", "format": "uri", "pattern": "^https://"},
+        "author": {"type": "string", "minLength": 1},
+        "type": {"type": "string", "minLength": 1},
+        "language": {"type": "string", "minLength": 2},
+        "cost": {"enum": ["free", "paid", "mixed"]},
+        "domains": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+        "competencies": {"type": "array", "uniqueItems": true, "items": {"type": "string"}},
+        "published_on": {"type": ["string", "null"], "format": "date"},
+        "last_verified": {"type": "string", "format": "date"},
+        "verification": {"type": "string", "minLength": 1},
+        "authority": {"enum": ["1-official-exam", "2-official-learning", "3-curated-community", "4-unverified-auxiliary"]},
+        "editorial_notes": {"type": "string", "minLength": 1},
+        "limitations": {"type": "string", "minLength": 1}
+      }
+    }
+  }
+}

@@ -1,0 +1,2739 @@
+{
+  "$schema": "../schemas/curriculum.schema.json",
+  "schema_version": "1.0",
+  "version": "2026-07-20",
+  "verified_on": "2026-10-15",
+  "language": "en",
+  "domains": [
+    {
+      "id": "D1",
+      "name": "Cloud concepts",
+      "weight_min": 25,
+      "weight_max": 30
+    },
+    {
+      "id": "D2",
+      "name": "Azure architecture and services",
+      "weight_min": 35,
+      "weight_max": 40
+    },
+    {
+      "id": "D3",
+      "name": "Azure management and governance",
+      "weight_min": 30,
+      "weight_max": 35
+    }
+  ],
+  "subdomains": [
+    {
+      "id": "D1.1",
+      "domain_id": "D1",
+      "name": "Cloud computing",
+      "expected_objectives": 7
+    },
+    {
+      "id": "D1.2",
+      "domain_id": "D1",
+      "name": "Cloud benefits",
+      "expected_objectives": 4
+    },
+    {
+      "id": "D1.3",
+      "domain_id": "D1",
+      "name": "Cloud service models",
+      "expected_objectives": 4
+    },
+    {
+      "id": "D2.1",
+      "domain_id": "D2",
+      "name": "Azure architecture",
+      "expected_objectives": 7
+    },
+    {
+      "id": "D2.2",
+      "domain_id": "D2",
+      "name": "Compute and networking",
+      "expected_objectives": 6
+    },
+    {
+      "id": "D2.3",
+      "domain_id": "D2",
+      "name": "Storage and migration",
+      "expected_objectives": 6
+    },
+    {
+      "id": "D2.4",
+      "domain_id": "D2",
+      "name": "Identity and security",
+      "expected_objectives": 8
+    },
+    {
+      "id": "D3.1",
+      "domain_id": "D3",
+      "name": "Costs",
+      "expected_objectives": 4
+    },
+    {
+      "id": "D3.2",
+      "domain_id": "D3",
+      "name": "Governance",
+      "expected_objectives": 3
+    },
+    {
+      "id": "D3.3",
+      "domain_id": "D3",
+      "name": "Management and deployment",
+      "expected_objectives": 5
+    },
+    {
+      "id": "D3.4",
+      "domain_id": "D3",
+      "name": "Monitoring",
+      "expected_objectives": 3
+    }
+  ],
+  "competencies": [
+    {
+      "id": "AZ900-1.1.1",
+      "name": "Cloud foundations",
+      "description": "Explain on-demand access to shared compute, network and storage capacity.",
+      "domain_id": "D1",
+      "subdomain_id": "D1.1",
+      "learning_objectives": [
+        "Explain on-demand access to shared compute, network and storage capacity.",
+        "Explain cloud foundations in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "cloud computing",
+        "on-demand",
+        "resource pooling"
+      ],
+      "prerequisites": [],
+      "sources": [
+        "official-guide",
+        "learn-cloud"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "Cloud means only storing files remotely."
+      ],
+      "evaluation_criteria": [
+        "Explain what changes when a local workload moves to an on-demand provider.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe cloud computing",
+        "source_bullet": 1,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-1.1.2",
+      "name": "Shared responsibility",
+      "description": "Allocate provider and customer duties as the service abstraction changes.",
+      "domain_id": "D1",
+      "subdomain_id": "D1.1",
+      "learning_objectives": [
+        "Allocate provider and customer duties as the service abstraction changes.",
+        "Explain shared responsibility in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "shared responsibility",
+        "data",
+        "operating system"
+      ],
+      "prerequisites": [
+        "AZ900-1.1.1"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-cloud"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "The cloud provider secures all customer data and configuration."
+      ],
+      "evaluation_criteria": [
+        "Assign data, operating-system and datacenter responsibilities for IaaS, PaaS and SaaS.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe cloud computing",
+        "source_bullet": 2,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-1.1.3",
+      "name": "Deployment models",
+      "description": "Distinguish publicly offered cloud capacity, a private cloud and a connected hybrid environment.",
+      "domain_id": "D1",
+      "subdomain_id": "D1.1",
+      "learning_objectives": [
+        "Distinguish publicly offered cloud capacity, a private cloud and a connected hybrid environment.",
+        "Explain deployment models in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "public cloud",
+        "private cloud",
+        "hybrid cloud"
+      ],
+      "prerequisites": [
+        "AZ900-1.1.1"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-cloud"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "A public cloud makes every customer workload publicly accessible."
+      ],
+      "evaluation_criteria": [
+        "Compare ownership, access and integration across the three deployment models.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe cloud computing",
+        "source_bullet": 3,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-1.1.4",
+      "name": "Deployment model selection",
+      "description": "Choose public, private or hybrid deployment from business and technical constraints.",
+      "domain_id": "D1",
+      "subdomain_id": "D1.1",
+      "learning_objectives": [
+        "Choose public, private or hybrid deployment from business and technical constraints.",
+        "Explain deployment model selection in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "public cloud",
+        "private cloud",
+        "hybrid cloud"
+      ],
+      "prerequisites": [
+        "AZ900-1.1.3"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-cloud"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "Hybrid means using two public providers."
+      ],
+      "evaluation_criteria": [
+        "Justify a model for a legacy workload with on-premises dependencies.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe cloud computing",
+        "source_bullet": 4,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-1.1.5",
+      "name": "Consumption economics",
+      "description": "Relate metered resource use to operating expenditure and variable demand.",
+      "domain_id": "D1",
+      "subdomain_id": "D1.1",
+      "learning_objectives": [
+        "Relate metered resource use to operating expenditure and variable demand.",
+        "Explain consumption economics in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "consumption",
+        "OpEx",
+        "CapEx"
+      ],
+      "prerequisites": [
+        "AZ900-1.1.1"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-cloud"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "A stopped workload can never incur any cloud charges."
+      ],
+      "evaluation_criteria": [
+        "Explain why unused attached capacity can still incur costs.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe cloud computing",
+        "source_bullet": 5,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-1.1.6",
+      "name": "Pricing choices",
+      "description": "Compare metered payment and commitment or interruptible pricing trade-offs.",
+      "domain_id": "D1",
+      "subdomain_id": "D1.1",
+      "learning_objectives": [
+        "Compare metered payment and commitment or interruptible pricing trade-offs.",
+        "Explain pricing choices in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "pay-as-you-go",
+        "reservations",
+        "savings plans",
+        "spot"
+      ],
+      "prerequisites": [
+        "AZ900-1.1.1"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-cloud"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "The lowest advertised unit price is always the lowest total workload cost."
+      ],
+      "evaluation_criteria": [
+        "Compare flexibility, commitment and interruption tolerance in two pricing scenarios.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe cloud computing",
+        "source_bullet": 6,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-1.1.7",
+      "name": "Serverless execution",
+      "description": "Explain provider-managed execution and event-driven scaling without assuming servers disappear.",
+      "domain_id": "D1",
+      "subdomain_id": "D1.1",
+      "learning_objectives": [
+        "Explain provider-managed execution and event-driven scaling without assuming servers disappear.",
+        "Explain serverless execution in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "serverless",
+        "events",
+        "Azure Functions"
+      ],
+      "prerequisites": [
+        "AZ900-1.1.1"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-cloud"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "Serverless means no physical servers or customer responsibilities exist."
+      ],
+      "evaluation_criteria": [
+        "Explain what the provider manages and give an event-driven workload example.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe cloud computing",
+        "source_bullet": 7,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-1.2.1",
+      "name": "Availability and scaling",
+      "description": "Relate service continuity to capacity changes and distinguish scaling up from scaling out.",
+      "domain_id": "D1",
+      "subdomain_id": "D1.2",
+      "learning_objectives": [
+        "Relate service continuity to capacity changes and distinguish scaling up from scaling out.",
+        "Explain availability and scaling in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "high availability",
+        "vertical scaling",
+        "horizontal scaling"
+      ],
+      "prerequisites": [
+        "AZ900-1.1.1"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-cloud"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "Adding capacity automatically removes every failure point."
+      ],
+      "evaluation_criteria": [
+        "Separate a capacity bottleneck from an availability problem and propose suitable responses.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe the benefits of using cloud services",
+        "source_bullet": 1,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-1.2.2",
+      "name": "Reliability and predictability",
+      "description": "Explain how resilient design and measurable capacity or costs support dependable operation.",
+      "domain_id": "D1",
+      "subdomain_id": "D1.2",
+      "learning_objectives": [
+        "Explain how resilient design and measurable capacity or costs support dependable operation.",
+        "Explain reliability and predictability in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "reliability",
+        "predictability",
+        "resilience"
+      ],
+      "prerequisites": [
+        "AZ900-1.1.1"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-cloud"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "Hosting in a cloud guarantees no outages."
+      ],
+      "evaluation_criteria": [
+        "Describe recovery planning and explain which outcomes still depend on workload design.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe the benefits of using cloud services",
+        "source_bullet": 2,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-1.2.3",
+      "name": "Security and governance benefits",
+      "description": "Explain how shared controls and guardrails support security and organizational compliance.",
+      "domain_id": "D1",
+      "subdomain_id": "D1.2",
+      "learning_objectives": [
+        "Explain how shared controls and guardrails support security and organizational compliance.",
+        "Explain security and governance benefits in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "security",
+        "governance",
+        "compliance"
+      ],
+      "prerequisites": [
+        "AZ900-1.1.1"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-cloud"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "Provider compliance automatically makes every application compliant."
+      ],
+      "evaluation_criteria": [
+        "Distinguish provider capabilities from customer configuration obligations.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe the benefits of using cloud services",
+        "source_bullet": 3,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-1.2.4",
+      "name": "Manageability benefits",
+      "description": "Explain centralized management, automation and remotely controlled provisioning.",
+      "domain_id": "D1",
+      "subdomain_id": "D1.2",
+      "learning_objectives": [
+        "Explain centralized management, automation and remotely controlled provisioning.",
+        "Explain manageability benefits in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "automation",
+        "management of cloud",
+        "management in cloud"
+      ],
+      "prerequisites": [
+        "AZ900-1.1.1"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-cloud"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "Manageability eliminates the need to monitor configurations."
+      ],
+      "evaluation_criteria": [
+        "Give a management task improved by automation and explain the remaining oversight.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe the benefits of using cloud services",
+        "source_bullet": 4,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-1.3.1",
+      "name": "IaaS boundaries",
+      "description": "Explain renting infrastructure while retaining control of operating systems and applications.",
+      "domain_id": "D1",
+      "subdomain_id": "D1.3",
+      "learning_objectives": [
+        "Explain renting infrastructure while retaining control of operating systems and applications.",
+        "Explain iaas boundaries in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "IaaS",
+        "virtual machines"
+      ],
+      "prerequisites": [
+        "AZ900-1.1.2"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-cloud"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "The provider patches the guest OS for every IaaS workload."
+      ],
+      "evaluation_criteria": [
+        "Identify who patches the guest OS and why infrastructure control may be useful.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe cloud service types",
+        "source_bullet": 1,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-1.3.2",
+      "name": "PaaS boundaries",
+      "description": "Explain deploying applications to a provider-managed runtime and platform.",
+      "domain_id": "D1",
+      "subdomain_id": "D1.3",
+      "learning_objectives": [
+        "Explain deploying applications to a provider-managed runtime and platform.",
+        "Explain paas boundaries in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "PaaS",
+        "runtime",
+        "App Service"
+      ],
+      "prerequisites": [
+        "AZ900-1.1.2"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-cloud"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "PaaS transfers ownership of application code and data to the provider."
+      ],
+      "evaluation_criteria": [
+        "Describe the platform duties removed from the developer and the duties retained.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe cloud service types",
+        "source_bullet": 2,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-1.3.3",
+      "name": "SaaS boundaries",
+      "description": "Explain consuming a complete application while administering user access and data use.",
+      "domain_id": "D1",
+      "subdomain_id": "D1.3",
+      "learning_objectives": [
+        "Explain consuming a complete application while administering user access and data use.",
+        "Explain saas boundaries in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "SaaS",
+        "application subscription"
+      ],
+      "prerequisites": [
+        "AZ900-1.1.2"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-cloud"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "SaaS customers have no security responsibilities."
+      ],
+      "evaluation_criteria": [
+        "Describe customer access and information-management duties for a SaaS application.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe cloud service types",
+        "source_bullet": 3,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-1.3.4",
+      "name": "Service model selection",
+      "description": "Choose IaaS, PaaS or SaaS based on control, operational effort and application needs.",
+      "domain_id": "D1",
+      "subdomain_id": "D1.3",
+      "learning_objectives": [
+        "Choose IaaS, PaaS or SaaS based on control, operational effort and application needs.",
+        "Explain service model selection in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "IaaS",
+        "PaaS",
+        "SaaS"
+      ],
+      "prerequisites": [
+        "AZ900-1.3.1",
+        "AZ900-1.3.2",
+        "AZ900-1.3.3"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-cloud"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "A deployment model such as private cloud is a service model such as PaaS."
+      ],
+      "evaluation_criteria": [
+        "Select and defend a service model for a custom web app and a ready-made productivity tool.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe cloud service types",
+        "source_bullet": 4,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-2.1.1",
+      "name": "Regions and boundaries",
+      "description": "Differentiate regions, region-pair arrangements and sovereign cloud boundaries.",
+      "domain_id": "D2",
+      "subdomain_id": "D2.1",
+      "learning_objectives": [
+        "Differentiate regions, region-pair arrangements and sovereign cloud boundaries.",
+        "Explain regions and boundaries in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "region",
+        "region pair",
+        "sovereign region"
+      ],
+      "prerequisites": [
+        "AZ900-1.1.1"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-architecture",
+        "azure-regions"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "Every Azure region has a pair and every service replicates automatically to it."
+      ],
+      "evaluation_criteria": [
+        "Explain regional placement without assuming universal pairing or automatic replication.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe the core architectural components of Azure",
+        "source_bullet": 1,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-2.1.2",
+      "name": "Availability zones",
+      "description": "Explain physically separate zone facilities within a supporting region and their resiliency role.",
+      "domain_id": "D2",
+      "subdomain_id": "D2.1",
+      "learning_objectives": [
+        "Explain physically separate zone facilities within a supporting region and their resiliency role.",
+        "Explain availability zones in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "availability zone",
+        "zone-redundant",
+        "zonal"
+      ],
+      "prerequisites": [
+        "AZ900-2.1.1"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-architecture",
+        "azure-regions"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "Availability zones are separate Azure regions."
+      ],
+      "evaluation_criteria": [
+        "Compare a zone failure with a regional failure and identify the design implication.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe the core architectural components of Azure",
+        "source_bullet": 2,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-2.1.3",
+      "name": "Datacenters",
+      "description": "Place physical facilities and their power, cooling and networking below Azure regional abstractions.",
+      "domain_id": "D2",
+      "subdomain_id": "D2.1",
+      "learning_objectives": [
+        "Place physical facilities and their power, cooling and networking below Azure regional abstractions.",
+        "Explain datacenters in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "datacenter",
+        "physical infrastructure"
+      ],
+      "prerequisites": [
+        "AZ900-2.1.1"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-architecture",
+        "azure-regions"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "A datacenter and an Azure region are interchangeable terms."
+      ],
+      "evaluation_criteria": [
+        "Connect a physical facility to the region and zone abstractions.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe the core architectural components of Azure",
+        "source_bullet": 3,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-2.1.4",
+      "name": "Resources and groups",
+      "description": "Explain individual Azure service instances and their lifecycle management containers.",
+      "domain_id": "D2",
+      "subdomain_id": "D2.1",
+      "learning_objectives": [
+        "Explain individual Azure service instances and their lifecycle management containers.",
+        "Explain resources and groups in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "resource",
+        "resource group",
+        "lifecycle"
+      ],
+      "prerequisites": [
+        "AZ900-1.1.1"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-architecture"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "Every resource in a resource group must be in the same Azure region."
+      ],
+      "evaluation_criteria": [
+        "Explain why related resources may share a lifecycle group across locations.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe the core architectural components of Azure",
+        "source_bullet": 4,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-2.1.5",
+      "name": "Subscriptions",
+      "description": "Explain subscriptions as billing and management boundaries for Azure resources.",
+      "domain_id": "D2",
+      "subdomain_id": "D2.1",
+      "learning_objectives": [
+        "Explain subscriptions as billing and management boundaries for Azure resources.",
+        "Explain subscriptions in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "subscription",
+        "billing",
+        "quotas"
+      ],
+      "prerequisites": [
+        "AZ900-1.1.1"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-architecture"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "A subscription is a physical region."
+      ],
+      "evaluation_criteria": [
+        "Separate a billing boundary from a regional deployment choice.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe the core architectural components of Azure",
+        "source_bullet": 5,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-2.1.6",
+      "name": "Management groups",
+      "description": "Explain governance scopes above subscriptions for inherited organizational rules.",
+      "domain_id": "D2",
+      "subdomain_id": "D2.1",
+      "learning_objectives": [
+        "Explain governance scopes above subscriptions for inherited organizational rules.",
+        "Explain management groups in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "management group",
+        "inheritance"
+      ],
+      "prerequisites": [
+        "AZ900-1.1.1"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-architecture"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "A management group directly contains deployed virtual machines."
+      ],
+      "evaluation_criteria": [
+        "Explain how a policy assigned above subscriptions reaches child scopes.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe the core architectural components of Azure",
+        "source_bullet": 6,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-2.1.7",
+      "name": "Management hierarchy",
+      "description": "Trace management groups, subscriptions, resource groups and resources in scope order.",
+      "domain_id": "D2",
+      "subdomain_id": "D2.1",
+      "learning_objectives": [
+        "Trace management groups, subscriptions, resource groups and resources in scope order.",
+        "Explain management hierarchy in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "scope",
+        "hierarchy",
+        "inheritance"
+      ],
+      "prerequisites": [
+        "AZ900-2.1.4",
+        "AZ900-2.1.5",
+        "AZ900-2.1.6"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-architecture"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "Resource groups contain subscriptions."
+      ],
+      "evaluation_criteria": [
+        "Draw the scope hierarchy and explain one inherited assignment.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe the core architectural components of Azure",
+        "source_bullet": 7,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-2.2.1",
+      "name": "Compute trade-offs",
+      "description": "Compare virtual machines, containers and functions by isolation and operational abstraction.",
+      "domain_id": "D2",
+      "subdomain_id": "D2.2",
+      "learning_objectives": [
+        "Compare virtual machines, containers and functions by isolation and operational abstraction.",
+        "Explain compute trade-offs in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "virtual machine",
+        "container",
+        "function"
+      ],
+      "prerequisites": [
+        "AZ900-1.3.4"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-architecture"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "Containers each require a separate full guest operating system."
+      ],
+      "evaluation_criteria": [
+        "Choose compute for a legacy OS-dependent app and an event-triggered task.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe Azure compute and networking services",
+        "source_bullet": 1,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-2.2.2",
+      "name": "VM deployment options",
+      "description": "Distinguish individual VMs, Virtual Machine Scale Sets, availability sets and Azure Virtual Desktop.",
+      "domain_id": "D2",
+      "subdomain_id": "D2.2",
+      "learning_objectives": [
+        "Distinguish individual VMs, Virtual Machine Scale Sets, availability sets and Azure Virtual Desktop.",
+        "Explain vm deployment options in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "Azure Virtual Machines",
+        "Virtual Machine Scale Sets",
+        "availability sets",
+        "Azure Virtual Desktop"
+      ],
+      "prerequisites": [
+        "AZ900-1.3.4"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-architecture"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "Availability sets automatically add VM instances when demand increases."
+      ],
+      "evaluation_criteria": [
+        "Match scaling, fault-domain distribution and desktop delivery to the right VM option.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe Azure compute and networking services",
+        "source_bullet": 2,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-2.2.3",
+      "name": "VM supporting resources",
+      "description": "Identify the compute size, disks, network interfaces and virtual network supporting a VM.",
+      "domain_id": "D2",
+      "subdomain_id": "D2.2",
+      "learning_objectives": [
+        "Identify the compute size, disks, network interfaces and virtual network supporting a VM.",
+        "Explain vm supporting resources in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "VM size",
+        "managed disk",
+        "network interface",
+        "virtual network"
+      ],
+      "prerequisites": [
+        "AZ900-1.3.4"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-architecture"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "Every VM requires a public IP address."
+      ],
+      "evaluation_criteria": [
+        "Describe a private VM deployment and its supporting resources.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe Azure compute and networking services",
+        "source_bullet": 3,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-2.2.4",
+      "name": "Application hosting",
+      "description": "Choose web apps, container hosting or VMs by runtime needs and management burden.",
+      "domain_id": "D2",
+      "subdomain_id": "D2.2",
+      "learning_objectives": [
+        "Choose web apps, container hosting or VMs by runtime needs and management burden.",
+        "Explain application hosting in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "web apps",
+        "containers",
+        "virtual machines"
+      ],
+      "prerequisites": [
+        "AZ900-1.3.4"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-architecture"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "A web app requires the customer to patch the hosting OS."
+      ],
+      "evaluation_criteria": [
+        "Compare managed web hosting and a VM for a workload requiring OS customization.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe Azure compute and networking services",
+        "source_bullet": 4,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-2.2.5",
+      "name": "Network connectivity",
+      "description": "Explain VNets, subnets, peering, Azure DNS, VPN Gateway and ExpressRoute in connectivity scenarios.",
+      "domain_id": "D2",
+      "subdomain_id": "D2.2",
+      "learning_objectives": [
+        "Explain VNets, subnets, peering, Azure DNS, VPN Gateway and ExpressRoute in connectivity scenarios.",
+        "Explain network connectivity in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "Azure Virtual Network",
+        "subnet",
+        "peering",
+        "Azure DNS",
+        "VPN Gateway",
+        "ExpressRoute"
+      ],
+      "prerequisites": [
+        "AZ900-2.1.4"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-architecture"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "ExpressRoute and VPN Gateway both require the same public-internet tunnel."
+      ],
+      "evaluation_criteria": [
+        "Match name resolution, private-network segmentation and hybrid connectivity to their services.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe Azure compute and networking services",
+        "source_bullet": 5,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-2.2.6",
+      "name": "Endpoint exposure",
+      "description": "Differentiate a publicly addressable service endpoint from private network access.",
+      "domain_id": "D2",
+      "subdomain_id": "D2.2",
+      "learning_objectives": [
+        "Differentiate a publicly addressable service endpoint from private network access.",
+        "Explain endpoint exposure in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "public endpoint",
+        "private endpoint",
+        "private IP"
+      ],
+      "prerequisites": [
+        "AZ900-2.1.4"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-architecture"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "A private endpoint is simply a public endpoint protected by a password."
+      ],
+      "evaluation_criteria": [
+        "Explain how endpoint choice changes network reachability without replacing authorization.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe Azure compute and networking services",
+        "source_bullet": 6,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-2.3.1",
+      "name": "Storage service selection",
+      "description": "Match object, file, queue and table storage to data shape and access requirements.",
+      "domain_id": "D2",
+      "subdomain_id": "D2.3",
+      "learning_objectives": [
+        "Match object, file, queue and table storage to data shape and access requirements.",
+        "Explain storage service selection in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "Blob Storage",
+        "Azure Files",
+        "Queue Storage",
+        "Table Storage"
+      ],
+      "prerequisites": [
+        "AZ900-1.1.1"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-architecture"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "Blob Storage is the same as an SMB file share."
+      ],
+      "evaluation_criteria": [
+        "Select storage for unstructured objects, shared files and asynchronous messages.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe Azure storage services",
+        "source_bullet": 1,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-2.3.2",
+      "name": "Access tier trade-offs",
+      "description": "Compare online and archival access tiers using access frequency, retrieval and retention costs.",
+      "domain_id": "D2",
+      "subdomain_id": "D2.3",
+      "learning_objectives": [
+        "Compare online and archival access tiers using access frequency, retrieval and retention costs.",
+        "Explain access tier trade-offs in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "hot",
+        "cool",
+        "cold",
+        "archive"
+      ],
+      "prerequisites": [
+        "AZ900-2.3.1"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-architecture"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "Archive data is available with the same immediate read behavior as hot data."
+      ],
+      "evaluation_criteria": [
+        "Choose a tier and explain retrieval latency and cost consequences.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe Azure storage services",
+        "source_bullet": 2,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-2.3.3",
+      "name": "Storage replication",
+      "description": "Compare local, zonal and geographic replication and their failure boundaries.",
+      "domain_id": "D2",
+      "subdomain_id": "D2.3",
+      "learning_objectives": [
+        "Compare local, zonal and geographic replication and their failure boundaries.",
+        "Explain storage replication in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "LRS",
+        "ZRS",
+        "GRS",
+        "GZRS",
+        "RA-GRS",
+        "RA-GZRS"
+      ],
+      "prerequisites": [
+        "AZ900-2.3.1"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-architecture"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "Geo-redundancy is a substitute for protection against accidental deletion."
+      ],
+      "evaluation_criteria": [
+        "Choose replication for a zone failure and explain the separate need for recovery controls.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe Azure storage services",
+        "source_bullet": 3,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-2.3.4",
+      "name": "Storage accounts",
+      "description": "Relate storage account capabilities and performance choices to supported data services.",
+      "domain_id": "D2",
+      "subdomain_id": "D2.3",
+      "learning_objectives": [
+        "Relate storage account capabilities and performance choices to supported data services.",
+        "Explain storage accounts in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "storage account",
+        "standard",
+        "premium",
+        "storage types"
+      ],
+      "prerequisites": [
+        "AZ900-2.3.1"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-architecture"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "Every storage account kind supports every service and redundancy option."
+      ],
+      "evaluation_criteria": [
+        "Explain why account selection must follow service, performance and redundancy requirements.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe Azure storage services",
+        "source_bullet": 4,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-2.3.5",
+      "name": "File transfer tools",
+      "description": "Compare command-line transfer, graphical exploration and hybrid file synchronization.",
+      "domain_id": "D2",
+      "subdomain_id": "D2.3",
+      "learning_objectives": [
+        "Compare command-line transfer, graphical exploration and hybrid file synchronization.",
+        "Explain file transfer tools in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "AzCopy",
+        "Azure Storage Explorer",
+        "Azure File Sync"
+      ],
+      "prerequisites": [
+        "AZ900-2.3.1"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-architecture"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "Azure File Sync and AzCopy both provide the same persistent synchronization service."
+      ],
+      "evaluation_criteria": [
+        "Choose AzCopy, Storage Explorer or File Sync from the intended transfer workflow.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe Azure storage services",
+        "source_bullet": 5,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-2.3.6",
+      "name": "Migration services",
+      "description": "Distinguish discovery and migration orchestration from physical offline data transfer.",
+      "domain_id": "D2",
+      "subdomain_id": "D2.3",
+      "learning_objectives": [
+        "Distinguish discovery and migration orchestration from physical offline data transfer.",
+        "Explain migration services in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "Azure Migrate",
+        "Azure Data Box"
+      ],
+      "prerequisites": [
+        "AZ900-2.3.1"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-architecture"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "Data Box is an online VPN service."
+      ],
+      "evaluation_criteria": [
+        "Choose assessment and migration tooling or an offline appliance based on workload and bandwidth.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe Azure storage services",
+        "source_bullet": 6,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-2.4.1",
+      "name": "Directory services",
+      "description": "Distinguish cloud identity with Microsoft Entra ID from managed domain capabilities.",
+      "domain_id": "D2",
+      "subdomain_id": "D2.4",
+      "learning_objectives": [
+        "Distinguish cloud identity with Microsoft Entra ID from managed domain capabilities.",
+        "Explain directory services in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "Microsoft Entra ID",
+        "Microsoft Entra Domain Services"
+      ],
+      "prerequisites": [
+        "AZ900-1.1.1"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-architecture"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "Microsoft Entra ID is a domain controller offering the same protocols as traditional AD DS."
+      ],
+      "evaluation_criteria": [
+        "Match cloud sign-in and legacy domain protocol requirements to the appropriate directory service.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe Azure identity, access, and security",
+        "source_bullet": 1,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-2.4.2",
+      "name": "Authentication methods",
+      "description": "Explain single sign-on, multiple factors and passwordless sign-in as distinct capabilities.",
+      "domain_id": "D2",
+      "subdomain_id": "D2.4",
+      "learning_objectives": [
+        "Explain single sign-on, multiple factors and passwordless sign-in as distinct capabilities.",
+        "Explain authentication methods in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "SSO",
+        "MFA",
+        "passwordless"
+      ],
+      "prerequisites": [
+        "AZ900-2.4.1"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-architecture"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "Two passwords constitute two independent authentication factors."
+      ],
+      "evaluation_criteria": [
+        "Explain factors and contrast reduced sign-in prompts with stronger authentication.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe Azure identity, access, and security",
+        "source_bullet": 2,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-2.4.3",
+      "name": "External identities",
+      "description": "Explain collaboration and customer identity scenarios involving users outside an organization.",
+      "domain_id": "D2",
+      "subdomain_id": "D2.4",
+      "learning_objectives": [
+        "Explain collaboration and customer identity scenarios involving users outside an organization.",
+        "Explain external identities in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "external identities",
+        "B2B",
+        "customer identity"
+      ],
+      "prerequisites": [
+        "AZ900-2.4.1"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-architecture"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "Every collaborator must become an employee account in the resource organization."
+      ],
+      "evaluation_criteria": [
+        "Describe access for a partner while retaining identity and authorization boundaries.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe Azure identity, access, and security",
+        "source_bullet": 3,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-2.4.4",
+      "name": "Conditional Access",
+      "description": "Explain policy decisions driven by identity, signals and required access controls.",
+      "domain_id": "D2",
+      "subdomain_id": "D2.4",
+      "learning_objectives": [
+        "Explain policy decisions driven by identity, signals and required access controls.",
+        "Explain conditional access in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "Conditional Access",
+        "signals",
+        "access controls"
+      ],
+      "prerequisites": [
+        "AZ900-2.4.1"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-architecture"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "Conditional Access assigns Azure resource roles."
+      ],
+      "evaluation_criteria": [
+        "Explain a context-dependent MFA requirement and separate it from authorization.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe Azure identity, access, and security",
+        "source_bullet": 4,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-2.4.5",
+      "name": "Azure RBAC",
+      "description": "Explain resource authorization using a principal, role definition and scope.",
+      "domain_id": "D2",
+      "subdomain_id": "D2.4",
+      "learning_objectives": [
+        "Explain resource authorization using a principal, role definition and scope.",
+        "Explain azure rbac in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "RBAC",
+        "principal",
+        "role",
+        "scope",
+        "least privilege"
+      ],
+      "prerequisites": [
+        "AZ900-2.4.1"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-architecture"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "Authenticating successfully grants access to all Azure resources."
+      ],
+      "evaluation_criteria": [
+        "Construct a least-privilege assignment at the narrowest suitable scope.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe Azure identity, access, and security",
+        "source_bullet": 5,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-2.4.6",
+      "name": "Zero Trust principles",
+      "description": "Apply explicit verification, least privilege and assumed compromise to an access scenario.",
+      "domain_id": "D2",
+      "subdomain_id": "D2.4",
+      "learning_objectives": [
+        "Apply explicit verification, least privilege and assumed compromise to an access scenario.",
+        "Explain zero trust principles in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "verify explicitly",
+        "least privilege",
+        "assume breach"
+      ],
+      "prerequisites": [
+        "AZ900-1.1.1"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-architecture"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "Traffic inside a corporate network is inherently trustworthy."
+      ],
+      "evaluation_criteria": [
+        "Explain why a trusted network location alone is insufficient for access.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe Azure identity, access, and security",
+        "source_bullet": 6,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-2.4.7",
+      "name": "Layered defenses",
+      "description": "Explain how independent physical, identity, network and application controls limit compromise.",
+      "domain_id": "D2",
+      "subdomain_id": "D2.4",
+      "learning_objectives": [
+        "Explain how independent physical, identity, network and application controls limit compromise.",
+        "Explain layered defenses in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "defense in depth",
+        "layers"
+      ],
+      "prerequisites": [
+        "AZ900-1.1.1"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-architecture"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "A strong firewall removes the need for identity and application controls."
+      ],
+      "evaluation_criteria": [
+        "Describe how a second control limits harm after one layer fails.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe Azure identity, access, and security",
+        "source_bullet": 7,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-2.4.8",
+      "name": "Defender for Cloud",
+      "description": "Explain cloud security posture recommendations and workload threat-protection capabilities.",
+      "domain_id": "D2",
+      "subdomain_id": "D2.4",
+      "learning_objectives": [
+        "Explain cloud security posture recommendations and workload threat-protection capabilities.",
+        "Explain defender for cloud in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "Microsoft Defender for Cloud",
+        "posture",
+        "workload protection"
+      ],
+      "prerequisites": [
+        "AZ900-1.1.1"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-architecture"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "Defender for Cloud replaces all organizational security processes and controls."
+      ],
+      "evaluation_criteria": [
+        "Distinguish posture improvement from threat detection and response needs.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe Azure identity, access, and security",
+        "source_bullet": 8,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-3.1.1",
+      "name": "Cost drivers",
+      "description": "Explain how resource configuration, region, usage, data movement and purchasing affect charges.",
+      "domain_id": "D3",
+      "subdomain_id": "D3.1",
+      "learning_objectives": [
+        "Explain how resource configuration, region, usage, data movement and purchasing affect charges.",
+        "Explain cost drivers in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "region",
+        "metering",
+        "egress",
+        "resource size"
+      ],
+      "prerequisites": [
+        "AZ900-1.1.5",
+        "AZ900-2.1.5"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-governance"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "Moving a workload to cloud always lowers its cost."
+      ],
+      "evaluation_criteria": [
+        "Identify relevant cost drivers for a cross-region workload without inventing current prices.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe cost management in Azure",
+        "source_bullet": 1,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-3.1.2",
+      "name": "Pricing estimates",
+      "description": "Use the pricing calculator to model resource assumptions and compare estimates.",
+      "domain_id": "D3",
+      "subdomain_id": "D3.1",
+      "learning_objectives": [
+        "Use the pricing calculator to model resource assumptions and compare estimates.",
+        "Explain pricing estimates in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "Azure pricing calculator",
+        "estimate",
+        "assumptions"
+      ],
+      "prerequisites": [
+        "AZ900-1.1.5",
+        "AZ900-2.1.5"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-governance"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "A calculator estimate is a guaranteed final invoice."
+      ],
+      "evaluation_criteria": [
+        "State assumptions and explain why actual billing may differ from an estimate.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe cost management in Azure",
+        "source_bullet": 2,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-3.1.3",
+      "name": "Cost Management",
+      "description": "Explain spending analysis, budgets and alerts as tools for financial oversight.",
+      "domain_id": "D3",
+      "subdomain_id": "D3.1",
+      "learning_objectives": [
+        "Explain spending analysis, budgets and alerts as tools for financial oversight.",
+        "Explain cost management in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "Cost Management",
+        "budget",
+        "alert"
+      ],
+      "prerequisites": [
+        "AZ900-1.1.5",
+        "AZ900-2.1.5"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-governance"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "A budget alert automatically shuts down every resource."
+      ],
+      "evaluation_criteria": [
+        "Describe how an alert prompts action and distinguish it from an enforcement automation.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe cost management in Azure",
+        "source_bullet": 3,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-3.1.4",
+      "name": "Resource tags",
+      "description": "Explain metadata labels for organization, allocation and reporting.",
+      "domain_id": "D3",
+      "subdomain_id": "D3.1",
+      "learning_objectives": [
+        "Explain metadata labels for organization, allocation and reporting.",
+        "Explain resource tags in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "tags",
+        "metadata",
+        "cost allocation"
+      ],
+      "prerequisites": [
+        "AZ900-1.1.5",
+        "AZ900-2.1.5"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-governance",
+        "azure-tags"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "Tags automatically inherit to every child resource."
+      ],
+      "evaluation_criteria": [
+        "Propose cost-center tags and explain why inheritance must be handled explicitly.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe cost management in Azure",
+        "source_bullet": 4,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-3.2.1",
+      "name": "Microsoft Purview",
+      "description": "Explain data governance, discovery and compliance capabilities at a fundamentals level.",
+      "domain_id": "D3",
+      "subdomain_id": "D3.2",
+      "learning_objectives": [
+        "Explain data governance, discovery and compliance capabilities at a fundamentals level.",
+        "Explain microsoft purview in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "Microsoft Purview",
+        "data governance",
+        "discovery"
+      ],
+      "prerequisites": [
+        "AZ900-2.1.7"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-governance"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "Purview and Azure Policy enforce the same resource deployment rules."
+      ],
+      "evaluation_criteria": [
+        "Differentiate data governance needs from Azure resource configuration policies.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe features and tools in Azure for governance and compliance",
+        "source_bullet": 1,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-3.2.2",
+      "name": "Azure Policy",
+      "description": "Explain evaluation and enforcement of organizational resource requirements.",
+      "domain_id": "D3",
+      "subdomain_id": "D3.2",
+      "learning_objectives": [
+        "Explain evaluation and enforcement of organizational resource requirements.",
+        "Explain azure policy in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "Azure Policy",
+        "initiative",
+        "compliance"
+      ],
+      "prerequisites": [
+        "AZ900-2.1.7"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-governance"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "Azure Policy assigns user permissions just like RBAC."
+      ],
+      "evaluation_criteria": [
+        "Contrast a permitted deployment configuration with a user authorization decision.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe features and tools in Azure for governance and compliance",
+        "source_bullet": 2,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-3.2.3",
+      "name": "Resource locks",
+      "description": "Explain protection against control-plane deletion or modification and its limitations.",
+      "domain_id": "D3",
+      "subdomain_id": "D3.2",
+      "learning_objectives": [
+        "Explain protection against control-plane deletion or modification and its limitations.",
+        "Explain resource locks in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "CanNotDelete",
+        "ReadOnly",
+        "control plane"
+      ],
+      "prerequisites": [
+        "AZ900-2.1.7"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-governance",
+        "azure-locks"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "A deletion lock prevents all data-plane data loss."
+      ],
+      "evaluation_criteria": [
+        "Choose a lock and explain why separate data protection is still necessary.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe features and tools in Azure for governance and compliance",
+        "source_bullet": 3,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-3.3.1",
+      "name": "Azure portal",
+      "description": "Explain browser-based resource configuration and management.",
+      "domain_id": "D3",
+      "subdomain_id": "D3.3",
+      "learning_objectives": [
+        "Explain browser-based resource configuration and management.",
+        "Explain azure portal in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "Azure portal",
+        "browser",
+        "resource management"
+      ],
+      "prerequisites": [
+        "AZ900-2.1.7"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-governance"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "Only the portal can create Azure resources."
+      ],
+      "evaluation_criteria": [
+        "Choose portal interaction for exploration and identify an automation alternative.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe features and tools for managing and deploying Azure resources",
+        "source_bullet": 1,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-3.3.2",
+      "name": "Shell and command-line tools",
+      "description": "Distinguish the hosted Cloud Shell environment from Azure CLI and Azure PowerShell tooling.",
+      "domain_id": "D3",
+      "subdomain_id": "D3.3",
+      "learning_objectives": [
+        "Distinguish the hosted Cloud Shell environment from Azure CLI and Azure PowerShell tooling.",
+        "Explain shell and command-line tools in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "Cloud Shell",
+        "Azure CLI",
+        "Azure PowerShell"
+      ],
+      "prerequisites": [
+        "AZ900-2.1.7"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-governance"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "Cloud Shell is a separate Azure resource deployment language."
+      ],
+      "evaluation_criteria": [
+        "Explain where commands execute and compare CLI commands with PowerShell cmdlets.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe features and tools for managing and deploying Azure resources",
+        "source_bullet": 2,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-3.3.3",
+      "name": "Azure Arc",
+      "description": "Explain extending Azure management to supported resources outside Azure.",
+      "domain_id": "D3",
+      "subdomain_id": "D3.3",
+      "learning_objectives": [
+        "Explain extending Azure management to supported resources outside Azure.",
+        "Explain azure arc in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "Azure Arc",
+        "hybrid management",
+        "multicloud"
+      ],
+      "prerequisites": [
+        "AZ900-2.1.7"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-governance"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "Connecting a server to Arc physically migrates it into Azure."
+      ],
+      "evaluation_criteria": [
+        "Describe management of an on-premises server while its workload remains in place.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe features and tools for managing and deploying Azure resources",
+        "source_bullet": 3,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-3.3.4",
+      "name": "Infrastructure as code",
+      "description": "Explain repeatable provisioning from versioned machine-readable infrastructure definitions.",
+      "domain_id": "D3",
+      "subdomain_id": "D3.3",
+      "learning_objectives": [
+        "Explain repeatable provisioning from versioned machine-readable infrastructure definitions.",
+        "Explain infrastructure as code in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "IaC",
+        "declarative",
+        "version control"
+      ],
+      "prerequisites": [
+        "AZ900-2.1.7"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-governance"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "An infrastructure definition guarantees that all deployments are safe and cost-free."
+      ],
+      "evaluation_criteria": [
+        "Explain review and repeatability benefits plus validation responsibilities.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe features and tools for managing and deploying Azure resources",
+        "source_bullet": 4,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-3.3.5",
+      "name": "ARM and templates",
+      "description": "Explain Azure Resource Manager as a management layer and ARM templates as declarative deployment definitions.",
+      "domain_id": "D3",
+      "subdomain_id": "D3.3",
+      "learning_objectives": [
+        "Explain Azure Resource Manager as a management layer and ARM templates as declarative deployment definitions.",
+        "Explain arm and templates in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "Azure Resource Manager",
+        "ARM templates",
+        "deployment"
+      ],
+      "prerequisites": [
+        "AZ900-2.1.7"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-governance"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "ARM templates are imperative scripts that must enumerate every provisioning step."
+      ],
+      "evaluation_criteria": [
+        "Connect a template deployment to ARM and explain declarative desired state.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe features and tools for managing and deploying Azure resources",
+        "source_bullet": 5,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-3.4.1",
+      "name": "Azure Advisor",
+      "description": "Explain personalized recommendations for improving deployed resource configurations.",
+      "domain_id": "D3",
+      "subdomain_id": "D3.4",
+      "learning_objectives": [
+        "Explain personalized recommendations for improving deployed resource configurations.",
+        "Explain azure advisor in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "Azure Advisor",
+        "recommendations"
+      ],
+      "prerequisites": [
+        "AZ900-2.1.4"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-governance"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "Advisor is the source of all live platform incident notifications."
+      ],
+      "evaluation_criteria": [
+        "Separate a recommended optimization from a current service disruption.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe monitoring tools in Azure",
+        "source_bullet": 1,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-3.4.2",
+      "name": "Service Health",
+      "description": "Explain service incidents, planned maintenance and advisories relevant to a customer environment.",
+      "domain_id": "D3",
+      "subdomain_id": "D3.4",
+      "learning_objectives": [
+        "Explain service incidents, planned maintenance and advisories relevant to a customer environment.",
+        "Explain service health in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "Azure Service Health",
+        "incidents",
+        "maintenance",
+        "Resource Health"
+      ],
+      "prerequisites": [
+        "AZ900-2.1.4"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-governance"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "A public Azure status page provides the same personalized view as Service Health."
+      ],
+      "evaluation_criteria": [
+        "Select the appropriate view for a customer-specific platform incident.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe monitoring tools in Azure",
+        "source_bullet": 2,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    },
+    {
+      "id": "AZ900-3.4.3",
+      "name": "Azure Monitor ecosystem",
+      "description": "Explain metrics and logs, Log Analytics queries, alerts and application telemetry.",
+      "domain_id": "D3",
+      "subdomain_id": "D3.4",
+      "learning_objectives": [
+        "Explain metrics and logs, Log Analytics queries, alerts and application telemetry.",
+        "Explain azure monitor ecosystem in your own words and apply the distinction to an unfamiliar scenario."
+      ],
+      "concepts": [
+        "Azure Monitor",
+        "Log Analytics",
+        "alerts",
+        "Application Insights"
+      ],
+      "prerequisites": [
+        "AZ900-2.1.4"
+      ],
+      "sources": [
+        "official-guide",
+        "learn-governance"
+      ],
+      "complementary_resources": [
+        "savill-course",
+        "ricardo-pt"
+      ],
+      "misconceptions": [
+        "Application Insights and Service Health report the same kind of evidence."
+      ],
+      "evaluation_criteria": [
+        "Match application traces, log analysis and threshold notification to their monitoring capabilities.",
+        "Reject the listed misconception with a reason rather than only naming a product."
+      ],
+      "mastery_criteria": [
+        "At least two independently scored, reasoned demonstrations in different scenarios.",
+        "Include an uncued explanation and later retrieval; hints or a lucky choice alone are inconclusive."
+      ],
+      "provenance": {
+        "source_id": "official-guide",
+        "source_section": "Describe monitoring tools in Azure",
+        "source_bullet": 3,
+        "editorial_status": "paraphrased-and-mapped",
+        "verified_on": "2026-10-15"
+      },
+      "exam_version": "2026-07-20"
+    }
+  ]
+}

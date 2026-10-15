@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/vmenezesdev/az-900-tutor/schemas/curriculum.schema.json",
+  "title": "AZ-900 editorial curriculum",
+  "type": "object",
+  "required": ["schema_version", "version", "verified_on", "domains", "subdomains", "competencies"],
+  "properties": {
+    "schema_version": {"const": "1.0"},
+    "version": {"type": "string", "format": "date"},
+    "verified_on": {"type": "string", "format": "date"},
+    "language": {"type": "string"},
+    "domains": {"type": "array", "minItems": 1, "items": {
+      "type": "object", "required": ["id", "name", "weight_min", "weight_max"],
+      "properties": {"id": {"type": "string"}, "name": {"type": "string", "minLength": 1}, "weight_min": {"type": "number", "minimum": 0, "maximum": 100}, "weight_max": {"type": "number", "minimum": 0, "maximum": 100}}
+    }},
+    "subdomains": {"type": "array", "items": {
+      "type": "object", "required": ["id", "domain_id", "name", "expected_objectives"],
+      "properties": {"id": {"type": "string"}, "domain_id": {"type": "string"}, "name": {"type": "string"}, "expected_objectives": {"type": "integer", "minimum": 1}}
+    }},
+    "competencies": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/competency"}}
+  },
+  "$defs": {
+    "strings": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
+    "nonemptyStrings": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "competency": {
+      "type": "object",
+      "required": ["id", "name", "description", "domain_id", "subdomain_id", "learning_objectives", "concepts", "prerequisites", "sources", "complementary_resources", "misconceptions", "evaluation_criteria", "mastery_criteria", "provenance", "exam_version"],
+      "properties": {
+        "id": {"type": "string", "pattern": "^AZ900-[0-9]+\\.[0-9]+\\.[0-9]+$"},
+        "name": {"type": "string", "minLength": 1},
+        "description": {"type": "string", "minLength": 1},
+        "domain_id": {"type": "string"},
+        "subdomain_id": {"type": "string"},
+        "learning_objectives": {"$ref": "#/$defs/nonemptyStrings"},
+        "concepts": {"$ref": "#/$defs/nonemptyStrings"},
+        "prerequisites": {"$ref": "#/$defs/strings"},
+        "sources": {"$ref": "#/$defs/nonemptyStrings"},
+        "complementary_resources": {"$ref": "#/$defs/strings"},
+        "misconceptions": {"$ref": "#/$defs/nonemptyStrings"},
+        "evaluation_criteria": {"$ref": "#/$defs/nonemptyStrings"},
+        "mastery_criteria": {"$ref": "#/$defs/nonemptyStrings"},
+        "exam_version": {"type": "string", "format": "date"},
+        "provenance": {
+          "type": "object", "required": ["source_id", "source_section", "source_bullet", "editorial_status", "verified_on"],
+          "properties": {"source_id": {"type": "string"}, "source_section": {"type": "string"}, "source_bullet": {"type": "integer", "minimum": 1}, "editorial_status": {"const": "paraphrased-and-mapped"}, "verified_on": {"type": "string", "format": "date"}}
+        }
+      }
+    }
+  }
+}
