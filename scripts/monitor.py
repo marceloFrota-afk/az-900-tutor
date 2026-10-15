@@ -61,6 +61,9 @@ class Blocks(HTMLParser):
 def snapshot(html, source_url=GUIDE):
     parser = Blocks()
     parser.feed(html)
+    parser.close()
+    if parser.tag is not None or parser.skip:
+        raise SourceError('Unclosed structural or executable element')
     # Work strictly within the one versioned skills section, not navigation/changelog.
     starts = [i for i, (tag, text) in enumerate(parser.blocks)
               if tag == 'h2' and text.startswith('Skills measured as of ')]
@@ -121,21 +124,31 @@ class SafeRedirect(urllib.request.HTTPRedirectHandler):
     def redirect_request(self, req, fp, code, msg, headers, newurl):
         target = urllib.parse.urlparse(newurl)
         original = urllib.parse.urlparse(req.full_url)
-        if target.scheme != 'https' or target.hostname != original.hostname:
+        if (target.scheme != 'https' or target.hostname != original.hostname
+                or target.username or target.password or target.port not in (None, 443)):
             raise SourceError('Cross-host or non-HTTPS redirect requires manual review')
+        validate_public_url(newurl)
         return super().redirect_request(req, fp, code, msg, headers, newurl)
 
 
-def fetch(url):
+def validate_public_url(url):
     parsed = urllib.parse.urlparse(url)
-    if parsed.scheme != 'https' or not parsed.hostname or parsed.username or parsed.password:
+    if (parsed.scheme != 'https' or not parsed.hostname or parsed.username or parsed.password
+            or parsed.port not in (None, 443)):
         raise SourceError('Only public HTTPS URLs are supported')
     # Optional link checking must not access local/private network endpoints.
     import ipaddress
     import socket
-    for address in socket.getaddrinfo(parsed.hostname, 443, type=socket.SOCK_STREAM):
+    addresses = socket.getaddrinfo(parsed.hostname, 443, type=socket.SOCK_STREAM)
+    if not addresses:
+        raise SourceError('No public address resolved')
+    for address in addresses:
         if not ipaddress.ip_address(address[4][0]).is_global:
             raise SourceError('Non-public address refused')
+
+
+def fetch(url):
+    validate_public_url(url)
     request = urllib.request.Request(url, headers={'User-Agent': 'az-900-tutor-monitor/1.0',
                                                   'Accept': 'text/html'})
     with urllib.request.build_opener(SafeRedirect()).open(request, timeout=20) as response:
@@ -147,7 +160,34 @@ def fetch(url):
         return data.decode('utf-8')
 
 
+def validate_snapshot(value):
+    """Refuse corrupt snapshots rather than deriving misleading differences."""
+    try:
+        if value['schema_version'] != 1:
+            raise SourceError('Unsupported snapshot version')
+        expected = digest({k: v for k, v in value.items() if k != 'fingerprint'})
+        if value['fingerprint'] != expected:
+            raise SourceError('Snapshot fingerprint mismatch')
+        datetime.strptime(value['effective_date'], '%Y-%m-%d')
+        domains = value['domains']
+        groups = [g for d in domains for g in d['groups']]
+        objectives = [h for g in groups for h in g['objectives']]
+        if (not isinstance(domains, list) or not 2 <= len(domains) <= 10
+                or len(groups) < 5 or not 20 <= len(objectives) <= 300
+                or value['objective_count'] != len(objectives)
+                or any(not g['objectives'] or not isinstance(g['label'], str) or not g['label'] for g in groups)
+                or any(not isinstance(d['label'], str) or not d['label'] for d in domains)
+                or any(not isinstance(h, str) or not re.fullmatch('[0-9a-f]{64}', h) for h in objectives)):
+            raise SourceError('Invalid snapshot objective structure')
+    except (KeyError, TypeError, ValueError) as exc:
+        if isinstance(exc, SourceError):
+            raise
+        raise SourceError('Malformed snapshot') from exc
+
+
 def compare(baseline, candidate):
+    validate_snapshot(baseline)
+    validate_snapshot(candidate)
     old, new = baseline['domains'], candidate['domains']
     old_count, new_count = baseline['objective_count'], candidate['objective_count']
     if len(old) != len(new) or new_count < old_count * .75 or new_count > old_count * 1.5:
@@ -179,12 +219,15 @@ def gh(*args):
 
 def publish_issue(report, output):
     """One open monitoring issue; timestamp alone never triggers an update."""
-    signature = digest({k: v for k, v in report.items() if k != 'checked_at'})
+    signature = digest({k: v for k, v in report.items() if k not in ('checked_at', 'publication')})
     signature_marker = f'<!-- report:{signature} -->'
     issues = json.loads(gh('issue', 'list', '--state', 'open', '--search',
                            'in:body "az900-source-monitor:v1"', '--limit', '100',
                            '--json', 'number,body'))
-    matches = [i for i in issues if MARKER in i['body']]
+    matches = sorted([i for i in issues if MARKER in (i.get('body') or '')],
+                     key=lambda i: i['number'])
+    if len(matches) > 1:
+        raise SourceError('Multiple open monitor issues; reconcile markers manually')
     if any(signature_marker in issue['body'] for issue in matches):
         return
     body = output / 'issue.md'
@@ -198,6 +241,21 @@ def publish_issue(report, output):
         gh('issue', 'create', '--title', 'Review AZ-900 official source monitoring', '--body-file', str(body))
 
 
+def publish_report(report, output):
+    if report['status'] == 'unchanged' and not report.get('links_error') and not any(
+            x['status'] == 'review' for x in report.get('links', [])):
+        return 0
+    try:
+        publish_issue(report, output)
+        report['publication'] = {'status': 'published_or_already_current'}
+        return 0
+    except (OSError, ValueError, KeyError, subprocess.CalledProcessError) as exc:
+        # Do not expose command output: a CLI failure can contain credential diagnostics.
+        report['publication'] = {'status': 'failure', 'error_type': type(exc).__name__,
+                                 'error': 'Issue publication failed; check repository permissions and CLI authentication'}
+        return 3
+
+
 def main(argv=None):
     cli = argparse.ArgumentParser(description=__doc__)
     cli.add_argument('--baseline', type=Path, default=ROOT / 'exam/versions/monitor-baseline.json')
@@ -205,9 +263,21 @@ def main(argv=None):
     cli.add_argument('--output', type=Path, default=ROOT / 'work/monitor')
     cli.add_argument('--write-baseline', type=Path, help='Explicit manual snapshot generation only')
     cli.add_argument('--issue', action='store_true')
+    cli.add_argument('--publish-report', action='store_true',
+                     help='Publish an existing output/report.json without fetching sources')
     cli.add_argument('--check-links', action='store_true', help='Optional bounded catalog check')
     args = cli.parse_args(argv)
     args.output.mkdir(parents=True, exist_ok=True)
+    if args.publish_report:
+        report_path = args.output / 'report.json'
+        report = json.loads(report_path.read_text(encoding='utf-8'))
+        if report.get('status') not in ('unchanged', 'changed', 'failure'):
+            raise SourceError('Unknown report status')
+        code = publish_report(report, args.output)
+        report_path.write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
+        return code
+    # A failure must never upload a candidate from an earlier successful run.
+    (args.output / 'candidate.json').unlink(missing_ok=True)
     report = {'checked_at': datetime.now(timezone.utc).isoformat(timespec='seconds')}
     exit_code = 0
     try:
@@ -222,7 +292,7 @@ def main(argv=None):
                       source_url=GUIDE, baseline_fingerprint=baseline['fingerprint'],
                       candidate_fingerprint=candidate['fingerprint'], differences=differences)
         (args.output / 'candidate.json').write_text(json.dumps(candidate, indent=2) + '\n', encoding='utf-8')
-    except (OSError, ValueError, KeyError, urllib.error.URLError) as exc:
+    except (OSError, ValueError, KeyError, TypeError, urllib.error.URLError) as exc:
         report.update(status='failure', error_type=type(exc).__name__, error=str(exc))
         exit_code = 2
     if args.check_links:
@@ -237,12 +307,13 @@ def main(argv=None):
                 except (OSError, ValueError, urllib.error.URLError) as exc:
                     links.append({'id': resource['id'], 'status': 'review', 'error': str(exc)})
             report['links'] = links
-        except (OSError, ValueError, KeyError) as exc:
+        except (OSError, ValueError, KeyError, TypeError) as exc:
             report['links_error'] = str(exc)
+    if args.issue:
+        publication_code = publish_report(report, args.output)
+        exit_code = publication_code or exit_code
     (args.output / 'report.json').write_text(json.dumps(report, indent=2) + '\n', encoding='utf-8')
     print(json.dumps(report))
-    if args.issue and (report['status'] != 'unchanged' or any(x['status'] == 'review' for x in report.get('links', []))):
-        publish_issue(report, args.output)
     return exit_code
 
 
