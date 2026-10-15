@@ -45,7 +45,7 @@ with no packages to install. [Contracts](docs/data-contracts.md) explain the for
 | [Source monitor](docs/maintenance.md) | Weekly/manual detection with review issues; never auto-approves curriculum changes |
 | [Evaluation scenarios](evals/) | Behavioral cases separate from deterministic data/tool tests |
 
-Baseline: the [official study guide](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-900)
+Baseline: the [official study guide](https://learn.microsoft.com/credentials/certifications/resources/study-guides/az-900?wt.mc_id=studentamb_475517)
 effective **July 20, 2026**, checked **October 15, 2026**. Domain ranges are
 25–30% cloud concepts, 35–40% architecture/services, and 30–35% management/governance.
 The source guide and [coverage map](exam/coverage.json) are the scope authority;
@@ -88,6 +88,8 @@ Scheduled monitoring becomes active only after the workflow is merged onto the
 default branch. Fetch failures are errors, never “no changes”. Review issues use
 a stable marker to avoid duplicates; semantic changes need human review.
 [Maintenance](docs/maintenance.md) documents baseline approval and monitoring limits.
+
+Official Microsoft Learn links may include the maintainer's Student Ambassadors contributor ID for attribution, without guaranteeing qualified visits or Microsoft endorsement. [Details](resources/README.md#microsoft-student-ambassadors-attribution).
 
 ## Limits and contribution
 
