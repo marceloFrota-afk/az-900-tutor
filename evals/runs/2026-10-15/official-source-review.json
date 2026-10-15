@@ -1,0 +1,14 @@
+{
+  "checked_at": "2026-10-15T14:14:20+00:00",
+  "status": "unchanged",
+  "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-900",
+  "baseline_fingerprint": "a5bfd686d941f9f095483c45ef3d8f045c7b6305d6aeea6b50ee34c65b5bdbaa",
+  "candidate_fingerprint": "a5bfd686d941f9f095483c45ef3d8f045c7b6305d6aeea6b50ee34c65b5bdbaa",
+  "differences": {
+    "classifications": [],
+    "added_objective_digests": [],
+    "removed_objective_digests": [],
+    "old_count": 57,
+    "new_count": 57
+  }
+}

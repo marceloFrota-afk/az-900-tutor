@@ -23,3 +23,7 @@ The utility reports only explicit reviewer judgments; it does not call a model o
 For a paired comparison, use identical prompts, fresh contexts, equivalent tools, and preferably randomize condition order and blind the reviewer to the condition. Report per-case results before aggregates. A single sample per condition is noisy, the cases were written by this project, and contamination from development context is possible. This suite can identify contract violations; it does not establish better exam outcomes, statistical significance, learner mastery, or a passing probability.
 
 Structural tests check data links, state transitions and this runner. They do not execute or grade a tutor model. Consult committed run reports, if any, for actually executed qualitative results. Independent subject-matter review and learner trials remain needed.
+
+## Continuation actually executed
+
+See [completion report](../docs/completion-report.md) and [preserved paired development probes](runs/2026-10-15/). Twenty real responses, ten per condition, were judged criterion by criterion; both arms have 9 passes and 1 failure. Shared factual packet and known context/configuration limits are preserved. A behavior repair has no post-fix evaluation claim. These observations do not establish controlled instructional efficacy.

@@ -165,6 +165,18 @@ class MonitorTests(unittest.TestCase):
                 m.publish_issue({'status': 'failure'}, Path(td))
             self.assertEqual(1, gh.call_count)
 
+    def test_publication_avoids_eventual_search_and_refuses_saturated_listing(self):
+        with tempfile.TemporaryDirectory() as td:
+            with patch.object(m, 'gh', side_effect=['[]', '']) as gh:
+                m.publish_issue({'status': 'failure'}, Path(td), marker='<!-- test-only -->', title='TEST ONLY')
+                self.assertNotIn('--search', gh.call_args_list[0].args)
+                self.assertIn('TEST ONLY', gh.call_args_list[1].args)
+                self.assertIn('<!-- test-only -->', (Path(td) / 'issue.md').read_text())
+            with patch.object(m, 'gh', return_value=json.dumps([{'number': i, 'body': ''} for i in range(1000)])) as gh:
+                with self.assertRaisesRegex(m.SourceError, 'limit'):
+                    m.publish_issue({'status': 'failure'}, Path(td))
+                self.assertEqual(gh.call_count, 1)
+
     def test_redirect_policy(self):
         import urllib.request
         request = urllib.request.Request(m.GUIDE)

@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-15",
+  "first_response_count": 20,
+  "case_count": 10,
+  "response_turns_per_case": 1,
+  "learner_interventions": 0,
+  "factual_packet": "evals/factual-context.md",
+  "repository_integration_commit": "e9ec359",
+  "snapshot_limit": "First few repository probes began before integration commit; same pedagogical contract except persistence handoff guidance was being strengthened. Filesystem was shared and not frozen. No strict causal A/B claim.",
+  "baseline_prompt_wrapper": "Respond as helpful AZ-900 tutor; read only factual packet for supplied context; tools including web available; do not read other repository files; do not evaluate yourself; save exact response and return it.",
+  "repository_prompt_wrapper": "Respond as AZ-900 tutor using repository condition; read factual packet, AGENTS.md, TUTOR.md, skill, pedagogy/protocol.md and pedagogy/evidence.md; same tools including web; do not evaluate yourself; save exact response and return it.",
+  "prompt_limit": "Learner prompts preserved verbatim. Wrapper wording varied slightly across dispatches; these fields preserve its common instructions, not an exact replay of every orchestration message.",
+  "reviewer_limit": "Primary integration agent reviewed outputs separately from authors. Not blinded, independent-model or human validation.",
+  "conclusion": "No measured improvement: both conditions 9 passed / 1 failed under stated criteria; small synthetic single-turn probes only."
+}
