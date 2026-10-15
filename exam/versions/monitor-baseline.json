@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "source_url": "https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-900",
+  "effective_date": "2026-07-20",
+  "domains": [
+    {
+      "label": "Describe cloud concepts (25–30%)",
+      "groups": [
+        {
+          "label": "Describe cloud computing",
+          "objectives": [
+            "bbdece2bbe78fa2e0d6b3ddc7c8e256067fcd3455b72047d52bf0fbe9e0bb993",
+            "41aaad301ad8eaa0897db543c4b5bdf19df3c6146feac8998a8821a629cc6dcb",
+            "9f65062f56aa109a3921c2d3179303a7f713c19dfb6f9e1c8352fd1d925ca1ad",
+            "774a8db801c71ee62712fa6ec806a49f68eb5e5ced0faff79f406aa16b2f68ef",
+            "3ac54f25de8e9db1d31710e0574d6581c91e52f4648b4f073013bf85abb0d01a",
+            "e067d9e3c44a30c212f19af84be1c07f246af3be219591f30312c37847e8eaff",
+            "9151f219189b2e0beaea40b4e4eb3195c4f04637ff0220c46edaab4f3393f0fb"
+          ]
+        },
+        {
+          "label": "Describe the benefits of using cloud services",
+          "objectives": [
+            "36126ba0999717a98c585142b3da31bc9d648fcabcef20ead160de296450874c",
+            "11601244ec01193f9db510bb2fa9465cb922c18ad533d4b653fe968811531033",
+            "c3fd38482c4e5f1570539be1cc5948bec85f89a364d6995f47a54c0fe8ee5acb",
+            "d931677abf3c3202e3e797878ac14c49ed739959ac901f65b841a3c99928b13f"
+          ]
+        },
+        {
+          "label": "Describe cloud service types",
+          "objectives": [
+            "f10d85c3246dde1a6a13aa2480cc270d89fd0393c4c0cc3300dc767cd660617c",
+            "644bc7601864aec8d6b0ec211df381125928a49f43a99d8a485db9a1adc5d1af",
+            "f0fc79696122753b9a4d1f71e5e3c687a7aa868e4af9bf2debeec442b8af6366",
+            "6a1e9f4d1b0115e3d182aae1f43786ce73fea1f4859a42af96ed722f464e9483"
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Describe Azure architecture and services (35–40%)",
+      "groups": [
+        {
+          "label": "Describe the core architectural components of Azure",
+          "objectives": [
+            "bfd346b95c6655315cced808dbc5104638d678808e815f4e271cb34bf2fb57bd",
+            "0809f7cfa5a93326df21a96ba9266a86297d11741a08d580b2b05d795b2e796d",
+            "cc5d7c4f3f0fc3140a21009c4cc607cd9856b53f315fc78d8aac65a75b62c58a",
+            "025976d7baf49a101e53d13464a47448deef394e0b9bfc9d371e59de7add65cc",
+            "e16f23b8e3f44a2960f32432f643236f7c02b453e712f5b800bc5681329e3bea",
+            "1288dc4031d9bb495f63178156869344e233704a9e389b3f0f8a40c61122a872",
+            "1d77687240efb131eabe27dab681714a4e3cf5f50b33703aa3732f0c07ac1386"
+          ]
+        },
+        {
+          "label": "Describe Azure compute and networking services",
+          "objectives": [
+            "17b216b19ec623abbc0f1f59099d1382598abbc9470b68982c00d184385e1fae",
+            "7165c322ad142ab0a8005900fad641c70489a06808553fc30d817fcd10d28f96",
+            "46f43ba41f888d7af49fe18025046048bba145eeb4318048f55e36028ea565cd",
+            "87c0e180105b033c12deef429d86cab19dccbd4d36602381116d7a2bf8a2548b",
+            "a4ab15068f31ae754ced545f3dc47972b637496f904917e69231651f66e4680a",
+            "898626c5a359075979248ed307c2dd2e481eebae81a42e746b4866f75057ad05"
+          ]
+        },
+        {
+          "label": "Describe Azure storage services",
+          "objectives": [
+            "5011e0f732402b119e9f61e5b3273ddfe022a2ee9f011312f9ef961f71e988ab",
+            "97af935b3d7dc7a077b60a0e378de997cdfd38676a0316763d724e8c58530f8b",
+            "b20d62da7ab45e3bbbbbd6f10731e3f31b61834850989bd07fcad80342c511c2",
+            "be3ef68bbdbdebb0f9da5a7f1a806bc17636f9ea78a302a8cecd9522d91eb852",
+            "d9c3b999d33a2fcca1cc16f5a1c7f1e7987747b45207165f11a4d6a77f4ebfd3",
+            "29f75a950e76cd9cdd51835e1e14d8a3bdee99723e072304791679bf45e3eeaf"
+          ]
+        },
+        {
+          "label": "Describe Azure identity, access, and security",
+          "objectives": [
+            "ae66493eb92754147618f614e536153e56c5d46865ce2f374a07f6373578a74b",
+            "907fe3b7fc3240b1dffd8b6515aca0c327e80061fec3d2af9503d7fc6dc36225",
+            "d9a1c30e5e4175260c8f7df72c5a77b728a549ba3d87358cba2d4e79e780978c",
+            "10c82f13220e7949dc5538c098b40a9a7d03d53d3932efe8aede0db48fe3b7b9",
+            "adde9dfd0ac495936eed91024f6ea19ba7ab444e60e42d645bdce8fc04a28987",
+            "8fc4a98aefeb395ab5af8278357fc1370760836db200a29ea6e59a0ee05f1ddd",
+            "66c38b329c77a12334f075095a8ad35df41424dcbb7da9a25587b6f1aa60e558",
+            "81425cc0c1ed6435e04f61f92ecaec7bb4ebc36775d451dff69b85fe242a5dd9"
+          ]
+        }
+      ]
+    },
+    {
+      "label": "Describe Azure management and governance (30–35%)",
+      "groups": [
+        {
+          "label": "Describe cost management in Azure",
+          "objectives": [
+            "6974d511ec5d4f27de0b3320843921862510350d9347be31c9c8617621ffa404",
+            "7795927444a06880fb7095ddddce6e79a755aeab201e897729f1b98120e0c15c",
+            "1a258a9e27ac527abcf6bbcf844311a0c6765441fd4c5cb4b38cfae17f354cb8",
+            "aa1f06881ded611a97bef3e8d33b7a0f751796c888eea08248e34a5838510c22"
+          ]
+        },
+        {
+          "label": "Describe features and tools in Azure for governance and compliance",
+          "objectives": [
+            "76af6d7e72bb81f3033d29facebefbf735415c1df52fb5bd535302ba69787f31",
+            "b4ab93adb3a5cabee59735ac53f460b7b75747b0ac1997883e67244b627c49a8",
+            "7822f2bd9112174490f723fee61528ee9df8d45d19190979be09ff49553ff4bc"
+          ]
+        },
+        {
+          "label": "Describe features and tools for managing and deploying Azure resources",
+          "objectives": [
+            "5fa54a4e1f964a3bd61793684881b215c1f6bf8b72a6e309f2e3605d375217bd",
+            "ff5b47a34008e572e021f98b65daeadbec461fa0cc4abda22f1526e3fc65e11b",
+            "d674c6b47ef6c0df8ca45298d7fe65f132a72d2404d973891f24aac2b11d3523",
+            "32b5ec353e620f2a62e329582bb6515304c299c56b9be20198aa291fd52de2dc",
+            "fc0cbf05900dab41e6ca8dd52ffa2f1830185353fd45995d8e6218db94bca965"
+          ]
+        },
+        {
+          "label": "Describe monitoring tools in Azure",
+          "objectives": [
+            "c10e2e84fa8e7440f37a568e3e0df2b58825f7fd9cda97e60e36fc49dea335b6",
+            "7d8564fb5a6c05e31c0618e552bce55b4a5c0ffa773394a4ea4c655b350e81fc",
+            "d34ade902d259407b9d9f1fa0b42368faa53e604a9adfcab515bc90ad5e7daf5"
+          ]
+        }
+      ]
+    }
+  ],
+  "editorial_digest": "f03f314c93dc3e6ae9379cad23f454c8181679664718afda192e44640080f1fb",
+  "objective_count": 57,
+  "fingerprint": "a5bfd686d941f9f095483c45ef3d8f045c7b6305d6aeea6b50ee34c65b5bdbaa"
+}

@@ -1,0 +1,7 @@
+.learner/
+learner-export*.json
+__pycache__/
+*.pyc
+.venv/
+work/
+monitor-output/

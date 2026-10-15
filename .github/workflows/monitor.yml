@@ -1,0 +1,36 @@
+name: Monitor official sources
+on:
+  schedule:
+    - cron: '23 8 * * 1'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: official-source-monitor
+  cancel-in-progress: false
+jobs:
+  monitor:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    permissions:
+      contents: read
+      issues: write
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Detect and report changes or collection failures
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: python scripts/monitor.py --issue
+      - name: Preserve candidate and diagnostic report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: official-source-review
+          path: work/monitor/
+          retention-days: 14
