@@ -31,4 +31,49 @@ A VNet overview fetch returned a cache miss; it was not used as verified support
 
 The committed coverage tests compare the complete primary competency set with the curriculum, protect Q001–Q030 mappings, check original/source/rubric metadata and coverage counts, and require distinct transfer variants. A missing-competency fixture retains all three domains and must be rejected by the repository validator. Run the full documented validation after integration; parent-agent changes to the validator enforce that last contract. This report does not claim that automated checks evaluate the educational quality of the questions.
 
-The additions are marked independent review pending in item metadata. Independent review must examine the final prompts, keys, criteria and mappings before changing that status. Human subject-matter review, learner trials, translation review, empirical difficulty, item discrimination, fresh delayed exercises and pass prediction remain unvalidated. Broad primary coverage is not full sub-concept coverage or evidence that a learner has mastered all 57 competencies.
+At authoring time the additions were marked independent review pending. The subsequent review below supersedes that pending status. Human subject-matter review, learner trials, translation review, empirical difficulty, item discrimination, fresh delayed exercises and pass prediction remain unvalidated. Broad primary coverage is not full sub-concept coverage or evidence that a learner has mastered all 57 competencies.
+
+## Independent AI editorial review — 2026-10-15
+
+Evaluator: the content-maintenance AI agent, separate from the agent that authored
+Q031–Q065. This is an independent pass relative to the question author within the
+same maintenance run, not a human expert review or an external audit. The reviewer
+read all 65 prompts, options, answer keys, item criteria, rationales, distractor
+explanations and primary mappings. All new mappings fit their stated competencies;
+no answer-letter correction was needed in the seven inherited multiple-choice
+items. The following concrete issues were corrected:
+
+- Q013 asked for any suitable managed API host, but its criterion required App
+  Service. The key and criterion now accept another justified compatible service,
+  such as [Azure Container Apps](https://learn.microsoft.com/en-us/azure/container-apps/overview),
+  which supports API endpoints without managing underlying infrastructure.
+- Q032 could equate any dedicated resources with a private cloud. It now explicitly
+  asks about a whole cloud environment for exclusive organizational use. The
+  explanation distinguishes that from dedicated hardware inside a public cloud,
+  supported by [Azure Dedicated Hosts](https://learn.microsoft.com/en-us/azure/virtual-machines/dedicated-hosts/overview).
+- Q050 asked for one concrete additional layer, but full credit demanded two.
+  The criterion now matches the single example requested, alongside the explanation
+  of layered protection.
+- Q058 linked manageability alone for availability/scaling. It now also links the
+  [directly relevant official unit](https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/2-high-availability-scalability-cloud).
+
+Targeted checks confirmed the important boundaries in Q021 (Reader control-plane
+read without DataActions), Q026/Q060 (locks protect control-plane operations),
+Q037/Q065 (not all regions are paired; pairs do not automatically implement
+application recovery), Q023/Q061 (budgets do not stop consumption), and Q063
+(replication differs from retained historical recovery). Sources inspected include
+[Reader](https://learn.microsoft.com/en-us/azure/role-based-access-control/built-in-roles/general),
+[locks](https://learn.microsoft.com/en-us/azure/azure-resource-manager/management/lock-resources),
+[region pairs](https://learn.microsoft.com/en-us/azure/reliability/regions-paired),
+[budgets](https://learn.microsoft.com/en-us/azure/cost-management-billing/costs/tutorial-acm-create-budgets),
+and [data protection](https://learn.microsoft.com/en-us/azure/storage/blobs/data-protection-overview).
+The reviewer also accessed the official Learn conceptual units for cloud models,
+service types, architecture, compute/networking, storage, identity/security,
+costs, governance, management and monitoring while authoring the lesson material.
+
+The review did not execute Azure deployments, inspect every leaf page linked by
+the inherited questions, or measure learner outcomes. Most additions use open
+responses and still require tutor judgment; several rationales restate criteria
+and can benefit from richer feedback after learner trials. Item-level metadata
+now records the actual independent AI review, with human and empirical validation
+still pending. Automated structural checks support coverage and integrity only.

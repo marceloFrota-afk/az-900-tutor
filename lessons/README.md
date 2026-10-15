@@ -9,6 +9,11 @@ explained or hinted is learning evidence, not an unseen assessment item.
 Use one unit at a time: explain, discuss the worked example, ask the retrieval
 prompt, give feedback, then change the context with the transfer prompt. Ask for
 reasoning and adapt the depth. The contrast identifies a common misconception.
+Each unit also supplies `cloud_azure_distinction` and `depth_guidance`. For a
+beginner, check the listed curriculum prerequisites, explain the focus concepts,
+then use the example before retrieval. For an experienced learner, start with the
+uncued transfer scenario and the unit's specific evaluation challenge; repair only
+the observed gap. Experience is a starting depth choice, never evidence of mastery.
 The explanation, example and contrast are tutor reference material; do not paste
 them together with the prompt during a diagnostic or assessment. Do not require
 an Azure account: all examples and prompts are conceptual, with no deployment.

@@ -17,7 +17,31 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/3-what-cloud-compute"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Conceito geral de nuvem; exemplos e condições comerciais Azure ilustram o conceito e dependem do serviço.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [],
+          "focus_concepts": [
+            "cloud computing",
+            "on-demand"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Explain what changes when a local workload moves to an on-demand provider.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-1.1.2",
@@ -32,7 +56,33 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/4-describe-shared-responsibility-model"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Conceito geral de nuvem; exemplos e condições comerciais Azure ilustram o conceito e dependem do serviço.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-1.1.1"
+          ],
+          "focus_concepts": [
+            "shared responsibility",
+            "data"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Assign data, operating-system and datacenter responsibilities for IaaS, PaaS and SaaS.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-1.1.3",
@@ -47,7 +97,33 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/5-define-cloud-models"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Conceito geral de nuvem; exemplos e condições comerciais Azure ilustram o conceito e dependem do serviço.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-1.1.1"
+          ],
+          "focus_concepts": [
+            "public cloud",
+            "private cloud"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Compare ownership, access and integration across the three deployment models.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-1.1.4",
@@ -62,7 +138,33 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/5-define-cloud-models"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Conceito geral de nuvem; exemplos e condições comerciais Azure ilustram o conceito e dependem do serviço.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-1.1.3"
+          ],
+          "focus_concepts": [
+            "public cloud",
+            "private cloud"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Justify a model for a legacy workload with on-premises dependencies.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-1.1.5",
@@ -77,7 +179,33 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/6-describe-consumption-based-model"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Conceito geral de nuvem; exemplos e condições comerciais Azure ilustram o conceito e dependem do serviço.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-1.1.1"
+          ],
+          "focus_concepts": [
+            "consumption",
+            "OpEx"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Explain why unused attached capacity can still incur costs.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-1.1.6",
@@ -92,7 +220,33 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/7a-describe-cost-optimization-options"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Conceito geral de nuvem; exemplos e condições comerciais Azure ilustram o conceito e dependem do serviço.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-1.1.1"
+          ],
+          "focus_concepts": [
+            "pay-as-you-go",
+            "reservations"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Compare flexibility, commitment and interruption tolerance in two pricing scenarios.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-1.1.7",
@@ -107,7 +261,33 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/6-functions"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Conceito geral de nuvem; exemplos e condições comerciais Azure ilustram o conceito e dependem do serviço.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-1.1.1"
+          ],
+          "focus_concepts": [
+            "serverless",
+            "events"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Explain what the provider manages and give an event-driven workload example.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-1.2.1",
@@ -122,7 +302,33 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/2-high-availability-scalability-cloud"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Benefício geral de nuvem que depende de arquitetura e operação; serviços Azure oferecem mecanismos para implementá-lo.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-1.1.1"
+          ],
+          "focus_concepts": [
+            "high availability",
+            "vertical scaling"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Separate a capacity bottleneck from an availability problem and propose suitable responses.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-1.2.2",
@@ -137,7 +343,33 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/3-reliability-predictability-cloud"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Benefício geral de nuvem que depende de arquitetura e operação; serviços Azure oferecem mecanismos para implementá-lo.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-1.1.1"
+          ],
+          "focus_concepts": [
+            "reliability",
+            "predictability"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Describe recovery planning and explain which outcomes still depend on workload design.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-1.2.3",
@@ -152,7 +384,33 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/4-security-governance-cloud"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Benefício geral de nuvem que depende de arquitetura e operação; serviços Azure oferecem mecanismos para implementá-lo.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-1.1.1"
+          ],
+          "focus_concepts": [
+            "security",
+            "governance"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Distinguish provider capabilities from customer configuration obligations.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-1.2.4",
@@ -167,7 +425,33 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/5-manageability-cloud"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Benefício geral de nuvem que depende de arquitetura e operação; serviços Azure oferecem mecanismos para implementá-lo.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-1.1.1"
+          ],
+          "focus_concepts": [
+            "automation",
+            "management of cloud"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Give a management task improved by automation and explain the remaining oversight.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-1.3.1",
@@ -182,7 +466,33 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-cloud-service-types/2-describe-infrastructure-service"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Modelo geral de responsabilidade de serviço; produtos Azure são exemplos e devem ser avaliados conforme a funcionalidade contratada.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-1.1.2"
+          ],
+          "focus_concepts": [
+            "IaaS",
+            "virtual machines"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Identify who patches the guest OS and why infrastructure control may be useful.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-1.3.2",
@@ -197,7 +507,33 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-cloud-service-types/3-describe-platform-service"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Modelo geral de responsabilidade de serviço; produtos Azure são exemplos e devem ser avaliados conforme a funcionalidade contratada.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-1.1.2"
+          ],
+          "focus_concepts": [
+            "PaaS",
+            "runtime"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Describe the platform duties removed from the developer and the duties retained.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-1.3.3",
@@ -212,7 +548,33 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-cloud-service-types/4-describe-software-service"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Modelo geral de responsabilidade de serviço; produtos Azure são exemplos e devem ser avaliados conforme a funcionalidade contratada.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-1.1.2"
+          ],
+          "focus_concepts": [
+            "SaaS",
+            "application subscription"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Describe customer access and information-management duties for a SaaS application.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-1.3.4",
@@ -227,7 +589,35 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-cloud-service-types/"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Modelo geral de responsabilidade de serviço; produtos Azure são exemplos e devem ser avaliados conforme a funcionalidade contratada.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-1.3.1",
+            "AZ900-1.3.2",
+            "AZ900-1.3.3"
+          ],
+          "focus_concepts": [
+            "IaaS",
+            "PaaS"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Select and defend a service model for a custom web app and a ready-made productivity tool.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-2.1.1",
@@ -242,7 +632,33 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/5-describe-azure-physical-infrastructure"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "A separação física e lógica é geral; regiões, zonas, grupos e assinaturas descritos aqui são estruturas específicas do Azure.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-1.1.1"
+          ],
+          "focus_concepts": [
+            "region",
+            "region pair"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Explain regional placement without assuming universal pairing or automatic replication.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-2.1.2",
@@ -257,7 +673,33 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/5-describe-azure-physical-infrastructure"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "A separação física e lógica é geral; regiões, zonas, grupos e assinaturas descritos aqui são estruturas específicas do Azure.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-2.1.1"
+          ],
+          "focus_concepts": [
+            "availability zone",
+            "zone-redundant"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Compare a zone failure with a regional failure and identify the design implication.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-2.1.3",
@@ -272,7 +714,33 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/5-describe-azure-physical-infrastructure"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "A separação física e lógica é geral; regiões, zonas, grupos e assinaturas descritos aqui são estruturas específicas do Azure.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-2.1.1"
+          ],
+          "focus_concepts": [
+            "datacenter",
+            "physical infrastructure"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Connect a physical facility to the region and zone abstractions.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-2.1.4",
@@ -287,7 +755,33 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/6-describe-azure-management-infrastructure"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "A separação física e lógica é geral; regiões, zonas, grupos e assinaturas descritos aqui são estruturas específicas do Azure.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-1.1.1"
+          ],
+          "focus_concepts": [
+            "resource",
+            "resource group"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Explain why related resources may share a lifecycle group across locations.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-2.1.5",
@@ -302,7 +796,33 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/6-describe-azure-management-infrastructure"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "A separação física e lógica é geral; regiões, zonas, grupos e assinaturas descritos aqui são estruturas específicas do Azure.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-1.1.1"
+          ],
+          "focus_concepts": [
+            "subscription",
+            "billing"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Separate a billing boundary from a regional deployment choice.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-2.1.6",
@@ -317,7 +837,33 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/6-describe-azure-management-infrastructure"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "A separação física e lógica é geral; regiões, zonas, grupos e assinaturas descritos aqui são estruturas específicas do Azure.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-1.1.1"
+          ],
+          "focus_concepts": [
+            "management group",
+            "inheritance"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Explain how a policy assigned above subscriptions reaches child scopes.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-2.1.7",
@@ -332,7 +878,35 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-core-architectural-components-of-azure/6-describe-azure-management-infrastructure"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "A separação física e lógica é geral; regiões, zonas, grupos e assinaturas descritos aqui são estruturas específicas do Azure.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-2.1.4",
+            "AZ900-2.1.5",
+            "AZ900-2.1.6"
+          ],
+          "focus_concepts": [
+            "scope",
+            "hierarchy"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Draw the scope hierarchy and explain one inherited assignment.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-2.2.1",
@@ -347,7 +921,33 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Processamento e conectividade são conceitos gerais; nomes, limites e integrações dos serviços apresentados são específicos do Azure.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-1.3.4"
+          ],
+          "focus_concepts": [
+            "virtual machine",
+            "container"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Choose compute for a legacy OS-dependent app and an event-triggered task.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-2.2.2",
@@ -363,7 +963,33 @@
         "https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/2-virtual-machines",
         "https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/4-virtual-desktop"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Processamento e conectividade são conceitos gerais; nomes, limites e integrações dos serviços apresentados são específicos do Azure.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-1.3.4"
+          ],
+          "focus_concepts": [
+            "Azure Virtual Machines",
+            "Virtual Machine Scale Sets"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Match scaling, fault-domain distribution and desktop delivery to the right VM option.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-2.2.3",
@@ -378,7 +1004,33 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/2-virtual-machines"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Processamento e conectividade são conceitos gerais; nomes, limites e integrações dos serviços apresentados são específicos do Azure.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-1.3.4"
+          ],
+          "focus_concepts": [
+            "VM size",
+            "managed disk"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Describe a private VM deployment and its supporting resources.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-2.2.4",
@@ -393,7 +1045,33 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/7-describe-application-hosting-options"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Processamento e conectividade são conceitos gerais; nomes, limites e integrações dos serviços apresentados são específicos do Azure.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-1.3.4"
+          ],
+          "focus_concepts": [
+            "web apps",
+            "containers"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Compare managed web hosting and a VM for a workload requiring OS customization.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-2.2.5",
@@ -412,7 +1090,33 @@
         "https://learn.microsoft.com/en-us/training/modules/describe-azure-networking-services/4-expressroute",
         "https://learn.microsoft.com/en-us/training/modules/describe-azure-networking-services/5-domain-name-system"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Processamento e conectividade são conceitos gerais; nomes, limites e integrações dos serviços apresentados são específicos do Azure.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-2.1.4"
+          ],
+          "focus_concepts": [
+            "Azure Virtual Network",
+            "subnet"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Match name resolution, private-network segmentation and hybrid connectivity to their services.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-2.2.6",
@@ -427,7 +1131,33 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-azure-networking-services/2-virtual-network"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Processamento e conectividade são conceitos gerais; nomes, limites e integrações dos serviços apresentados são específicos do Azure.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-2.1.4"
+          ],
+          "focus_concepts": [
+            "public endpoint",
+            "private endpoint"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Explain how endpoint choice changes network reachability without replacing authorization.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-2.3.1",
@@ -442,7 +1172,33 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/4-describe-azure-storage-services"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Persistência, redundância e recuperação são conceitos gerais; serviços, tiers, contas e ferramentas apresentados são opções específicas do Azure.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-1.1.1"
+          ],
+          "focus_concepts": [
+            "Blob Storage",
+            "Azure Files"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Select storage for unstructured objects, shared files and asynchronous messages.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-2.3.2",
@@ -457,7 +1213,33 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/4-describe-azure-storage-services"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Persistência, redundância e recuperação são conceitos gerais; serviços, tiers, contas e ferramentas apresentados são opções específicas do Azure.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-2.3.1"
+          ],
+          "focus_concepts": [
+            "hot",
+            "cool"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Choose a tier and explain retrieval latency and cost consequences.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-2.3.3",
@@ -472,7 +1254,33 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/3-redundancy"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Persistência, redundância e recuperação são conceitos gerais; serviços, tiers, contas e ferramentas apresentados são opções específicas do Azure.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-2.3.1"
+          ],
+          "focus_concepts": [
+            "LRS",
+            "ZRS"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Choose replication for a zone failure and explain the separate need for recovery controls.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-2.3.4",
@@ -487,7 +1295,33 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/2-accounts"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Persistência, redundância e recuperação são conceitos gerais; serviços, tiers, contas e ferramentas apresentados são opções específicas do Azure.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-2.3.1"
+          ],
+          "focus_concepts": [
+            "storage account",
+            "standard"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Explain why account selection must follow service, performance and redundancy requirements.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-2.3.5",
@@ -502,7 +1336,33 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/7-identify-azure-file-movement-options"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Persistência, redundância e recuperação são conceitos gerais; serviços, tiers, contas e ferramentas apresentados são opções específicas do Azure.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-2.3.1"
+          ],
+          "focus_concepts": [
+            "AzCopy",
+            "Azure Storage Explorer"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Choose AzCopy, Storage Explorer or File Sync from the intended transfer workflow.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-2.3.6",
@@ -517,7 +1377,33 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-azure-storage-services/6-identify-azure-data-migration-options"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Persistência, redundância e recuperação são conceitos gerais; serviços, tiers, contas e ferramentas apresentados são opções específicas do Azure.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-2.3.1"
+          ],
+          "focus_concepts": [
+            "Azure Migrate",
+            "Azure Data Box"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Choose assessment and migration tooling or an offline appliance based on workload and bandwidth.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-2.4.1",
@@ -532,7 +1418,33 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/2-directory-services"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Identidade, menor privilégio e camadas de proteção são conceitos gerais; Entra, Azure RBAC e Defender são implementações e serviços específicos.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-1.1.1"
+          ],
+          "focus_concepts": [
+            "Microsoft Entra ID",
+            "Microsoft Entra Domain Services"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Match cloud sign-in and legacy domain protocol requirements to the appropriate directory service.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-2.4.2",
@@ -547,7 +1459,33 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/3-authentication-methods"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Identidade, menor privilégio e camadas de proteção são conceitos gerais; Entra, Azure RBAC e Defender são implementações e serviços específicos.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-2.4.1"
+          ],
+          "focus_concepts": [
+            "SSO",
+            "MFA"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Explain factors and contrast reduced sign-in prompts with stronger authentication.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-2.4.3",
@@ -562,7 +1500,33 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/4-external-identities"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Identidade, menor privilégio e camadas de proteção são conceitos gerais; Entra, Azure RBAC e Defender são implementações e serviços específicos.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-2.4.1"
+          ],
+          "focus_concepts": [
+            "external identities",
+            "B2B"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Describe access for a partner while retaining identity and authorization boundaries.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-2.4.4",
@@ -577,7 +1541,33 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/5-conditional-access"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Identidade, menor privilégio e camadas de proteção são conceitos gerais; Entra, Azure RBAC e Defender são implementações e serviços específicos.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-2.4.1"
+          ],
+          "focus_concepts": [
+            "Conditional Access",
+            "signals"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Explain a context-dependent MFA requirement and separate it from authorization.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-2.4.5",
@@ -592,7 +1582,33 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/6-role-based-access-control"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Identidade, menor privilégio e camadas de proteção são conceitos gerais; Entra, Azure RBAC e Defender são implementações e serviços específicos.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-2.4.1"
+          ],
+          "focus_concepts": [
+            "RBAC",
+            "principal"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Construct a least-privilege assignment at the narrowest suitable scope.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-2.4.6",
@@ -607,7 +1623,33 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/7-describe-zero-trust-model"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Identidade, menor privilégio e camadas de proteção são conceitos gerais; Entra, Azure RBAC e Defender são implementações e serviços específicos.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-1.1.1"
+          ],
+          "focus_concepts": [
+            "verify explicitly",
+            "least privilege"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Explain why a trusted network location alone is insufficient for access.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-2.4.7",
@@ -622,7 +1664,33 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/8-describe-defense-depth"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Identidade, menor privilégio e camadas de proteção são conceitos gerais; Entra, Azure RBAC e Defender são implementações e serviços específicos.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-1.1.1"
+          ],
+          "focus_concepts": [
+            "defense in depth",
+            "layers"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Describe how a second control limits harm after one layer fails.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-2.4.8",
@@ -637,7 +1705,33 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-azure-identity-access-security/9-describe-microsoft-defender-for-cloud"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Identidade, menor privilégio e camadas de proteção são conceitos gerais; Entra, Azure RBAC e Defender são implementações e serviços específicos.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-1.1.1"
+          ],
+          "focus_concepts": [
+            "Microsoft Defender for Cloud",
+            "posture"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Distinguish posture improvement from threat detection and response needs.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-3.1.1",
@@ -652,7 +1746,34 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/2-describe-factors-affect-costs-azure"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Estimar, medir e atribuir gastos é prática geral; a calculadora e Cost Management e suas regras pertencem ao ecossistema Azure.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-1.1.5",
+            "AZ900-2.1.5"
+          ],
+          "focus_concepts": [
+            "region",
+            "metering"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Identify relevant cost drivers for a cross-region workload without inventing current prices.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-3.1.2",
@@ -667,7 +1788,34 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/3-compare-pricing-total-cost-of-ownership-calculators"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Estimar, medir e atribuir gastos é prática geral; a calculadora e Cost Management e suas regras pertencem ao ecossistema Azure.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-1.1.5",
+            "AZ900-2.1.5"
+          ],
+          "focus_concepts": [
+            "Azure pricing calculator",
+            "estimate"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "State assumptions and explain why actual billing may differ from an estimate.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-3.1.3",
@@ -682,7 +1830,34 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/6-describe-azure-tool"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Estimar, medir e atribuir gastos é prática geral; a calculadora e Cost Management e suas regras pertencem ao ecossistema Azure.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-1.1.5",
+            "AZ900-2.1.5"
+          ],
+          "focus_concepts": [
+            "Cost Management",
+            "budget"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Describe how an alert prompts action and distinguish it from an enforcement automation.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-3.1.4",
@@ -697,7 +1872,34 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-cost-management-azure/7-describe-purpose-of-tags"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Estimar, medir e atribuir gastos é prática geral; a calculadora e Cost Management e suas regras pertencem ao ecossistema Azure.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-1.1.5",
+            "AZ900-2.1.5"
+          ],
+          "focus_concepts": [
+            "tags",
+            "metadata"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Propose cost-center tags and explain why inheritance must be handled explicitly.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-3.2.1",
@@ -712,7 +1914,33 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-azure-for-governance-compliance/2-describe-purpose-microsoft-purview"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Governança e proteção contra mudanças são necessidades gerais; Purview, Azure Policy e resource locks implementam controles distintos neste ecossistema.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-2.1.7"
+          ],
+          "focus_concepts": [
+            "Microsoft Purview",
+            "data governance"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Differentiate data governance needs from Azure resource configuration policies.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-3.2.2",
@@ -727,7 +1955,33 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-azure-for-governance-compliance/3-describe-purpose-azure-policy"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Governança e proteção contra mudanças são necessidades gerais; Purview, Azure Policy e resource locks implementam controles distintos neste ecossistema.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-2.1.7"
+          ],
+          "focus_concepts": [
+            "Azure Policy",
+            "initiative"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Contrast a permitted deployment configuration with a user authorization decision.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-3.2.3",
@@ -742,7 +1996,33 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-azure-for-governance-compliance/4-describe-purpose-resource-locks"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Governança e proteção contra mudanças são necessidades gerais; Purview, Azure Policy e resource locks implementam controles distintos neste ecossistema.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-2.1.7"
+          ],
+          "focus_concepts": [
+            "CanNotDelete",
+            "ReadOnly"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Choose a lock and explain why separate data protection is still necessary.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-3.3.1",
@@ -757,7 +2037,33 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-manage-deploy-azure-resources/2-describe-interacting-azure"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Automação e infraestrutura como código são práticas gerais; portal, Cloud Shell, Arc e ARM são ferramentas Azure com permissões e limites próprios.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-2.1.7"
+          ],
+          "focus_concepts": [
+            "Azure portal",
+            "browser"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Choose portal interaction for exploration and identify an automation alternative.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-3.3.2",
@@ -772,7 +2078,33 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-manage-deploy-azure-resources/2-describe-interacting-azure"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Automação e infraestrutura como código são práticas gerais; portal, Cloud Shell, Arc e ARM são ferramentas Azure com permissões e limites próprios.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-2.1.7"
+          ],
+          "focus_concepts": [
+            "Cloud Shell",
+            "Azure CLI"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Explain where commands execute and compare CLI commands with PowerShell cmdlets.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-3.3.3",
@@ -787,7 +2119,33 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-manage-deploy-azure-resources/3-describe-purpose-of-azure-arc"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Automação e infraestrutura como código são práticas gerais; portal, Cloud Shell, Arc e ARM são ferramentas Azure com permissões e limites próprios.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-2.1.7"
+          ],
+          "focus_concepts": [
+            "Azure Arc",
+            "hybrid management"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Describe management of an on-premises server while its workload remains in place.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-3.3.4",
@@ -802,7 +2160,33 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-manage-deploy-azure-resources/4-describe-azure-resource-manager-azure-arm-templates"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Automação e infraestrutura como código são práticas gerais; portal, Cloud Shell, Arc e ARM são ferramentas Azure com permissões e limites próprios.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-2.1.7"
+          ],
+          "focus_concepts": [
+            "IaC",
+            "declarative"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Explain review and repeatability benefits plus validation responsibilities.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-3.3.5",
@@ -817,7 +2201,33 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-features-tools-manage-deploy-azure-resources/4-describe-azure-resource-manager-azure-arm-templates"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Automação e infraestrutura como código são práticas gerais; portal, Cloud Shell, Arc e ARM são ferramentas Azure com permissões e limites próprios.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-2.1.7"
+          ],
+          "focus_concepts": [
+            "Azure Resource Manager",
+            "ARM templates"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Connect a template deployment to ARM and explain declarative desired state.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-3.4.1",
@@ -832,7 +2242,33 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-monitoring-tools-azure/2-describe-purpose-of-azure-advisor"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Observabilidade e recomendações são necessidades gerais; Advisor, Service Health e Monitor têm responsabilidades específicas no Azure.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-2.1.4"
+          ],
+          "focus_concepts": [
+            "Azure Advisor",
+            "recommendations"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Separate a recommended optimization from a current service disruption.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-3.4.2",
@@ -847,7 +2283,33 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-monitoring-tools-azure/3-describe-azure-service-health"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Observabilidade e recomendações são necessidades gerais; Advisor, Service Health e Monitor têm responsabilidades específicas no Azure.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-2.1.4"
+          ],
+          "focus_concepts": [
+            "Azure Service Health",
+            "incidents"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Select the appropriate view for a customer-specific platform incident.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     },
     {
       "id": "L-3.4.3",
@@ -862,7 +2324,33 @@
       "source_urls": [
         "https://learn.microsoft.com/en-us/training/modules/describe-monitoring-tools-azure/4-describe-azure-monitor"
       ],
-      "reviewed_on": "2026-10-15"
+      "reviewed_on": "2026-10-15",
+      "cloud_azure_distinction": "Observabilidade e recomendações são necessidades gerais; Advisor, Service Health e Monitor têm responsabilidades específicas no Azure.",
+      "depth_guidance": {
+        "beginner": {
+          "prerequisite_ids": [
+            "AZ900-2.1.4"
+          ],
+          "focus_concepts": [
+            "Azure Monitor",
+            "Log Analytics"
+          ],
+          "sequence": [
+            "explanation",
+            "worked_example",
+            "retrieval_prompt"
+          ],
+          "support": "Verifique os conceitos iniciais; explique termos desconhecidos e permita uma tentativa guiada antes de mudar o cenário. Registre ajuda como ajuda."
+        },
+        "experienced": {
+          "sequence": [
+            "transfer_prompt",
+            "contrast"
+          ],
+          "challenge": "Match application traces, log analysis and threshold notification to their monitoring capabilities.",
+          "support": "Comece sem pistas. Peça justificativa, limites e uma alternativa rejeitada; retorne à explicação somente na lacuna observada. Não atribua domínio por experiência declarada."
+        }
+      }
     }
   ]
 }

@@ -5,7 +5,7 @@
     "license": "MIT",
     "concept_sources": "Microsoft Learn modules/paths; source content does not supply these questions.",
     "reviewed_at": "2026-10-15",
-    "limitations": "Q001-Q030 previously independently reviewed; Q031-Q065 author self-reviewed on 2026-10-15 with independent review pending. Not human Azure SME certification, learner trials, psychometric calibration or exam prediction.",
+    "limitations": "Q001-Q065 independently editorial-reviewed by a second AI agent on 2026-10-15. This is not human Azure SME certification, learner trials, psychometric calibration or exam prediction.",
     "independent_editorial_review": {
       "date": "2026-10-15",
       "method": "Second agent read all prompts, keys, rubrics, distractors and primary competency mappings; checked official conceptual documentation, with targeted verification of ambiguous storage and RBAC cases.",
@@ -33,6 +33,18 @@
         "Q064",
         "Q065"
       ]
+    },
+    "expansion_independent_editorial_review": {
+      "date": "2026-10-15",
+      "evaluator": "Content agent separate from the Q031-Q065 authoring agent; shared maintenance run",
+      "method": "Read all 65 final prompts, options, keys, item criteria, rationales, distractors and primary mappings; inspected official Learn concept units and targeted technical documents.",
+      "changes": [
+        "Q013 accepts other justified compatible managed API hosts rather than requiring App Service only.",
+        "Q032 distinguishes an exclusive private-cloud environment from dedicated hardware in public cloud.",
+        "Q050 awards full credit for the one concrete additional-layer example requested by the prompt.",
+        "Q058 adds the directly relevant availability/scalability conceptual source."
+      ],
+      "limits": "Independent of the item author, not independent of the project or a human SME. No live Azure deployments, learner study, empirical difficulty calibration or prediction of exam outcomes. Not every leaf source of inherited Q001-Q030 was reread."
     }
   },
   "questions": [
@@ -396,10 +408,10 @@
       "difficulty": "intermediate",
       "language": "pt-BR",
       "prompt": "Você precisa publicar uma API web convencional e prefere que a plataforma cuide do SO. Indique uma opção Azure e uma condição que faria VMs serem mais adequadas.",
-      "answer": "Azure App Service/Web Apps é uma opção PaaS. VMs podem ser mais adequadas se houver dependência de configuração privilegiada do SO ou software não suportado pela plataforma.",
+      "answer": "Azure App Service/Web Apps é uma opção PaaS; aceitar outra hospedagem gerenciada compatível, como Azure Container Apps, com justificativa que atenda ao requisito. VMs podem ser mais adequadas se houver dependência de configuração privilegiada do SO ou software não suportado pela plataforma escolhida.",
       "rubric": {
         "scale": "0..3",
-        "criterion": "Propõe App Service e justifica uma limitação concreta sem declarar que é sempre superior.",
+        "criterion": "Propõe uma hospedagem Azure compatível sem gerir o SO, como App Service, e justifica uma limitação concreta que favoreça VMs; não exige um único nome de produto nem declara superioridade universal.",
         "full_credit": 3,
         "partial_credit": "1: recognizes a relevant concept but misses a key distinction; 2: correct key distinction without transfer; 3: complete explanation and application.",
         "no_credit": "Incorrect, absent, or contradictory explanation. A correct option with incorrect reasoning is inconclusive."
@@ -407,7 +419,8 @@
       "rationale": "Escolher hospedagem depende do grau de controle exigido e das responsabilidades que a equipe aceita.",
       "distractor_rationales": {},
       "source_urls": [
-        "https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/"
+        "https://learn.microsoft.com/en-us/training/modules/describe-azure-compute-networking-services/",
+        "https://learn.microsoft.com/en-us/azure/container-apps/overview"
       ],
       "skill_type": "application",
       "original": true,
@@ -912,7 +925,7 @@
       ],
       "skill_type": "application",
       "original": true,
-      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
       "verified_at": "2026-10-15"
     },
     {
@@ -922,23 +935,24 @@
       "type": "application",
       "difficulty": "intermediate",
       "language": "pt-BR",
-      "prompt": "Uma organização já opera uma nuvem privada para uma carga que deve continuar local. Quer integrar capacidade de uma nuvem pública a ela. Escolha pública, privada ou híbrida e explique o que mudaria se toda a solução precisasse usar recursos dedicados exclusivamente à organização.",
-      "answer": "A integração pede nuvem híbrida. Se toda a solução exigir recursos exclusivos, a opção é nuvem privada, que pode ser hospedada localmente ou por terceiros; pública não significa dados abertos.",
+      "prompt": "Uma organização já opera uma nuvem privada para uma carga que deve continuar local. Quer integrar capacidade de uma nuvem pública a ela. Escolha pública, privada ou híbrida. Depois explique qual modelo descreve um ambiente de nuvem inteiro de uso exclusivo de uma organização, hospedado localmente ou por terceiros.",
+      "answer": "A integração pede nuvem híbrida. Um ambiente de nuvem inteiro de uso exclusivo da organização descreve nuvem privada, independentemente de hospedagem local ou por terceiros. Ter apenas hardware dedicado em um serviço de nuvem pública não transforma sozinho o modelo em nuvem privada; pública também não significa dados abertos.",
       "rubric": {
         "scale": "0..3",
-        "criterion": "Escolhe híbrida pela integração e privada pela exclusividade, sem confundir local de hospedagem com modelo.",
+        "criterion": "Escolhe híbrida pela integração e privada pelo ambiente de nuvem exclusivo, sem confundir local de hospedagem ou simples dedicação de hardware com modelo de implantação.",
         "full_credit": 3,
         "partial_credit": "1: identifica uma parte correta, mas omite a distinção central; 2: explica a distinção central, mas deixa incompleta uma aplicação solicitada; 3: atende a todos os elementos do critério.",
         "no_credit": "0: resposta ausente, incorreta ou contraditória na distinção central. Nomes de serviços sem justificativa não demonstram aplicação."
       },
-      "rationale": "Escolhe híbrida pela integração e privada pela exclusividade, sem confundir local de hospedagem com modelo.",
+      "rationale": "O modelo depende do ambiente de nuvem e de quem ele atende. Azure Dedicated Host ilustra que hardware reservado também pode existir na nuvem pública, por isso exclusividade de uma máquina não basta para classificar todo o ambiente.",
       "distractor_rationales": {},
       "source_urls": [
-        "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/5-define-cloud-models"
+        "https://learn.microsoft.com/en-us/training/modules/describe-cloud-compute/5-define-cloud-models",
+        "https://learn.microsoft.com/en-us/azure/virtual-machines/dedicated-hosts/overview"
       ],
       "skill_type": "application",
       "original": true,
-      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
       "verified_at": "2026-10-15"
     },
     {
@@ -966,7 +980,7 @@
       ],
       "skill_type": "application",
       "original": true,
-      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
       "verified_at": "2026-10-15"
     },
     {
@@ -992,7 +1006,7 @@
       ],
       "skill_type": "application",
       "original": true,
-      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
       "verified_at": "2026-10-15"
     },
     {
@@ -1018,7 +1032,7 @@
       ],
       "skill_type": "application",
       "original": true,
-      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
       "verified_at": "2026-10-15"
     },
     {
@@ -1044,7 +1058,7 @@
       ],
       "skill_type": "application",
       "original": true,
-      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
       "verified_at": "2026-10-15"
     },
     {
@@ -1071,7 +1085,7 @@
       ],
       "skill_type": "application",
       "original": true,
-      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
       "verified_at": "2026-10-15"
     },
     {
@@ -1098,7 +1112,7 @@
       ],
       "skill_type": "application",
       "original": true,
-      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
       "verified_at": "2026-10-15"
     },
     {
@@ -1124,7 +1138,7 @@
       ],
       "skill_type": "application",
       "original": true,
-      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
       "verified_at": "2026-10-15"
     },
     {
@@ -1150,7 +1164,7 @@
       ],
       "skill_type": "application",
       "original": true,
-      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
       "verified_at": "2026-10-15"
     },
     {
@@ -1176,7 +1190,7 @@
       ],
       "skill_type": "application",
       "original": true,
-      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
       "verified_at": "2026-10-15"
     },
     {
@@ -1203,7 +1217,7 @@
       ],
       "skill_type": "application",
       "original": true,
-      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
       "verified_at": "2026-10-15"
     },
     {
@@ -1229,7 +1243,7 @@
       ],
       "skill_type": "application",
       "original": true,
-      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
       "verified_at": "2026-10-15"
     },
     {
@@ -1255,7 +1269,7 @@
       ],
       "skill_type": "application",
       "original": true,
-      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
       "verified_at": "2026-10-15"
     },
     {
@@ -1281,7 +1295,7 @@
       ],
       "skill_type": "application",
       "original": true,
-      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
       "verified_at": "2026-10-15"
     },
     {
@@ -1308,7 +1322,7 @@
       ],
       "skill_type": "application",
       "original": true,
-      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
       "verified_at": "2026-10-15"
     },
     {
@@ -1334,7 +1348,7 @@
       ],
       "skill_type": "application",
       "original": true,
-      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
       "verified_at": "2026-10-15"
     },
     {
@@ -1360,7 +1374,7 @@
       ],
       "skill_type": "application",
       "original": true,
-      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
       "verified_at": "2026-10-15"
     },
     {
@@ -1386,7 +1400,7 @@
       ],
       "skill_type": "application",
       "original": true,
-      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
       "verified_at": "2026-10-15"
     },
     {
@@ -1400,7 +1414,7 @@
       "answer": "Defesa em profundidade combina controles independentes em camadas. MFA dificulta uso indevido de credenciais; autorização e validação na aplicação limitam ações/dados; monitoramento ajuda a detectar atividade. Uma falha de rede não deve derrubar todas as outras proteções.",
       "rubric": {
         "scale": "0..3",
-        "criterion": "Rejeita controle único e explica pelo menos duas outras camadas com efeitos concretos após falha de rede.",
+        "criterion": "Rejeita controle único, explica proteção em camadas e aplica pelo menos uma outra camada com efeito concreto após falha do firewall, conforme solicitado pelo prompt.",
         "full_credit": 3,
         "partial_credit": "1: identifica uma parte correta, mas omite a distinção central; 2: explica a distinção central, mas deixa incompleta uma aplicação solicitada; 3: atende a todos os elementos do critério.",
         "no_credit": "0: resposta ausente, incorreta ou contraditória na distinção central. Nomes de serviços sem justificativa não demonstram aplicação."
@@ -1412,7 +1426,7 @@
       ],
       "skill_type": "application",
       "original": true,
-      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
       "verified_at": "2026-10-15"
     },
     {
@@ -1438,7 +1452,7 @@
       ],
       "skill_type": "application",
       "original": true,
-      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
       "verified_at": "2026-10-15"
     },
     {
@@ -1464,7 +1478,7 @@
       ],
       "skill_type": "application",
       "original": true,
-      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
       "verified_at": "2026-10-15"
     },
     {
@@ -1490,7 +1504,7 @@
       ],
       "skill_type": "application",
       "original": true,
-      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
       "verified_at": "2026-10-15"
     },
     {
@@ -1516,7 +1530,7 @@
       ],
       "skill_type": "application",
       "original": true,
-      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
       "verified_at": "2026-10-15"
     },
     {
@@ -1542,7 +1556,7 @@
       ],
       "skill_type": "application",
       "original": true,
-      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
       "verified_at": "2026-10-15"
     },
     {
@@ -1568,7 +1582,7 @@
       ],
       "skill_type": "application",
       "original": true,
-      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
       "verified_at": "2026-10-15"
     },
     {
@@ -1594,7 +1608,7 @@
       ],
       "skill_type": "application",
       "original": true,
-      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
       "verified_at": "2026-10-15"
     },
     {
@@ -1616,11 +1630,12 @@
       "rationale": "Relaciona redundância à disponibilidade, crescimento à escalabilidade e ajuste bidirecional à elasticidade.",
       "distractor_rationales": {},
       "source_urls": [
-        "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/5-manageability-cloud"
+        "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/5-manageability-cloud",
+        "https://learn.microsoft.com/en-us/training/modules/describe-benefits-use-cloud-services/2-high-availability-scalability-cloud"
       ],
       "skill_type": "transfer",
       "original": true,
-      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
       "verified_at": "2026-10-15",
       "transfer_variant": true
     },
@@ -1649,7 +1664,7 @@
       ],
       "skill_type": "transfer",
       "original": true,
-      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
       "verified_at": "2026-10-15",
       "transfer_variant": true
     },
@@ -1680,7 +1695,7 @@
       ],
       "skill_type": "transfer",
       "original": true,
-      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
       "verified_at": "2026-10-15",
       "transfer_variant": true
     },
@@ -1708,7 +1723,7 @@
       ],
       "skill_type": "transfer",
       "original": true,
-      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
       "verified_at": "2026-10-15",
       "transfer_variant": true
     },
@@ -1736,7 +1751,7 @@
       ],
       "skill_type": "transfer",
       "original": true,
-      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
       "verified_at": "2026-10-15",
       "transfer_variant": true
     },
@@ -1764,7 +1779,7 @@
       ],
       "skill_type": "transfer",
       "original": true,
-      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
       "verified_at": "2026-10-15",
       "transfer_variant": true
     },
@@ -1792,7 +1807,7 @@
       ],
       "skill_type": "transfer",
       "original": true,
-      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
       "verified_at": "2026-10-15",
       "transfer_variant": true
     },
@@ -1820,7 +1835,7 @@
       ],
       "skill_type": "transfer",
       "original": true,
-      "editorial_status": "Author self-review against official conceptual sources on 2026-10-15; independent editorial review pending; human Azure SME and learner validation pending",
+      "editorial_status": "Independently reviewed by a second AI agent against official conceptual sources on 2026-10-15; human Azure SME and learner validation pending",
       "verified_at": "2026-10-15",
       "transfer_variant": true
     }

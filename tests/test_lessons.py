@@ -50,6 +50,23 @@ class LessonTests(unittest.TestCase):
             values = [u[field] for u in self.units]
             self.assertEqual(len(values), len(set(values)), field)
 
+    def test_depth_guidance_tracks_curriculum_and_uses_unit_content(self):
+        competencies = {c['id']: c for c in self.curriculum['competencies']}
+        for unit in self.units:
+            with self.subTest(unit=unit['id']):
+                competency = competencies[unit['competency_id']]
+                self.assertGreater(len(unit['cloud_azure_distinction']), 30)
+                guidance = unit['depth_guidance']
+                self.assertEqual(guidance['beginner']['prerequisite_ids'], competency['prerequisites'])
+                self.assertTrue(guidance['beginner']['focus_concepts'])
+                self.assertTrue(set(guidance['beginner']['focus_concepts']) <= set(competency['concepts']))
+                self.assertIn(guidance['experienced']['challenge'], competency['evaluation_criteria'])
+                self.assertEqual(guidance['experienced']['sequence'][0], 'transfer_prompt')
+                for depth in ('beginner', 'experienced'):
+                    for field in guidance[depth]['sequence']:
+                        self.assertIn(field, unit)
+                    self.assertTrue(guidance[depth]['support'].strip())
+
     def test_official_sources_and_review_dates_exist(self):
         for unit in self.units:
             with self.subTest(unit=unit['id']):
