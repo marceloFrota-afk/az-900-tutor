@@ -72,7 +72,7 @@ competence. Evidence must include independent explanation and application on
 different prompts and days; expired evidence prompts review. These are conservative
 project heuristics, not a validated model of learning or an exam pass prediction.
 
-`.learner/` is ignored by Git. Keep exports private, including when switching
+`.learner/` is ignored by Git. Optional [private-fork progress sync](docs/fork-progress.md) requires explicit opt-in and keeps learner history on a separate branch in a verified personal private fork. Keep exports private, including when switching
 agents. With a chatbot that cannot write files, request the JSON state at the end
 of the session and save it yourself. Do not assume chat memory carries over.
 
