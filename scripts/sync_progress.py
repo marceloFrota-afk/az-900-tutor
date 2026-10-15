@@ -4,10 +4,8 @@ Uses git CLI (no dependencies). Never writes progress to the upstream project.
 """
 import argparse
 import json
-import os
 import re
 import subprocess
-import sys
 import tempfile
 from pathlib import Path
 
@@ -109,9 +107,13 @@ def sync(state_path, remote=None, confirm=False):
         if previous.returncode == 0:
             git("checkout", "-q", "-b", "learner-progress", "FETCH_HEAD", cwd=base)
             existing = base / PROGRESS_PATH
+            if not existing.exists():
+                raise ValueError("Remote progress branch exists without state.json; refusing to modify it")
             if existing.exists():
                 old = tutor.import_state(json.loads(existing.read_text(encoding="utf-8")))
                 current = tutor.import_state(json.loads(payload))
+                if old["curriculum_version"] != current["curriculum_version"] or old["profile"] != current["profile"]:
+                    raise ValueError("Remote profile or curriculum differs; resolve before syncing")
                 if old != current and (len(old["events"]) > len(current["events"]) or any(e not in current["events"] for e in old["events"])):
                     raise ValueError("Remote has learner events missing locally. Resolve manually; refusing destructive overwrite.")
         else:
