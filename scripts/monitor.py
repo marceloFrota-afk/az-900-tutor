@@ -217,14 +217,15 @@ def gh(*args):
     return subprocess.run(['gh', *args], check=True, capture_output=True, text=True).stdout
 
 
-def publish_issue(report, output):
+def publish_issue(report, output, *, marker=MARKER, title='Review AZ-900 official source monitoring'):
     """One open monitoring issue; timestamp alone never triggers an update."""
     signature = digest({k: v for k, v in report.items() if k not in ('checked_at', 'publication')})
     signature_marker = f'<!-- report:{signature} -->'
-    issues = json.loads(gh('issue', 'list', '--state', 'open', '--search',
-                           'in:body "az900-source-monitor:v1"', '--limit', '100',
+    issues = json.loads(gh('issue', 'list', '--state', 'open', '--limit', '1000',
                            '--json', 'number,body'))
-    matches = sorted([i for i in issues if MARKER in (i.get('body') or '')],
+    if len(issues) >= 1000:
+        raise SourceError('Open issue listing limit reached; refusing possible duplicate publication')
+    matches = sorted([i for i in issues if marker in (i.get('body') or '')],
                      key=lambda i: i['number'])
     if len(matches) > 1:
         raise SourceError('Multiple open monitor issues; reconcile markers manually')
@@ -232,13 +233,13 @@ def publish_issue(report, output):
         return
     body = output / 'issue.md'
     # No untrusted page text is executed or inserted into shell commands.
-    body.write_text(MARKER + '\n' + signature_marker + '\n\n'
+    body.write_text(marker + '\n' + signature_marker + '\n\n'
                     'Official guide monitoring requires maintainer review. Approved files are unchanged.\n\n'
                     '```json\n' + json.dumps(report, indent=2) + '\n```\n', encoding='utf-8')
     if matches:
         gh('issue', 'edit', str(matches[0]['number']), '--body-file', str(body))
     else:
-        gh('issue', 'create', '--title', 'Review AZ-900 official source monitoring', '--body-file', str(body))
+        gh('issue', 'create', '--title', title, '--body-file', str(body))
 
 
 def publish_report(report, output):

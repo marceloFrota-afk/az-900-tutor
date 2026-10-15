@@ -1,0 +1,11 @@
+{
+  "test_only": true,
+  "repository": "vmenezesdev/az-900-tutor",
+  "steps": [
+    "created one clearly labeled synthetic issue",
+    "same report with changed timestamp left body unchanged",
+    "changed report updated the same issue",
+    "closed test issue"
+  ],
+  "issue_url": "https://github.com/vmenezesdev/az-900-tutor/issues/2"
+}

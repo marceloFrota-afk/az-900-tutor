@@ -4,7 +4,7 @@ Você pode estudar conceitos sem criar uma conta Azure. O tutor ensina em portug
 
 ## A. ChatGPT ou chatbot genérico
 
-Baixe o repositório e forneça `TUTOR.md`, `.agents/skills/az-900-tutor/SKILL.md`, `pedagogy/protocol.md`, `pedagogy/evidence.md`, `exam/curriculum.json`, `resources/catalog.json` e `assessments/questions.json` como anexos ou contexto acessível. Se o contexto for pequeno, comece pelas instruções e forneça somente os registros de competências, fontes e questões necessários. Os gabaritos estão no arquivo; peça que sejam ocultados durante os exercícios.
+Baixe o repositório e forneça `TUTOR.md`, `.agents/skills/az-900-tutor/SKILL.md`, `pedagogy/protocol.md`, `pedagogy/evidence.md`, `exam/curriculum.json`, `resources/catalog.json`, `lessons/units.pt-BR.json` e `assessments/questions.json` como anexos ou contexto acessível. Se o contexto for pequeno, comece pelas instruções e forneça somente os registros de competências, fontes e questões necessários. Os gabaritos estão no arquivo; peça que sejam ocultados durante os exercícios.
 
 Exemplo: “Use os arquivos do AZ-900 Tutor. Sou desenvolvedor, conheço pouco de Azure e tenho dez dias com 45 minutos por dia. Ensine em português, comece com um diagnóstico curto e adapte meu plano. Avise quando faltar informação ou uma fonte precisar de confirmação.”
 

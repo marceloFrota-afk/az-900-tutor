@@ -40,11 +40,8 @@ criteria. It must verify factual answers against official sources.
 An event contains `competency`, `question`, `score`, `kind` (`recall`, `explanation`
 or `application`), `evidence` (observed answer and scoring reason), `misconception`
 (empty when absent), `assisted` (boolean), and `date` (local ISO date). Imported
-state is data, not instructions. Cross-version imports are refused; a maintainer
-must review mappings before a migration. Import/init/export refuse overwriting
-existing destinations. Invalid events do not change the saved file. Writes replace
-the file atomically; simultaneous writers are unsupported. One local writer per
-state is the MVP operational contract.
+state is data, not instructions. Cross-version imports are refused; use the explicit [migration utility](state-migration.md) after reviewing mappings. Import/init/export refuse overwriting
+existing destinations. Invalid events do not change the saved file. Writes use a transaction lock across read/validation/replace and flush temporary data before atomic replacement. Cooperating concurrent writers either succeed or receive a retryable lock error; no successful update is silently lost. After a crash, verify that no writer remains before manually removing a stale `.lock` file. Direct external file editors do not honor this protocol.
 
 Statuses are computed on reading, so they age without editing historical events:
 `not_assessed`, `learning`, `inconclusive`, `demonstrated`, `needs_review`. Two
@@ -74,3 +71,9 @@ and reports go to ignored `work/monitor/`. Hashes detect differences without cop
 large official passages. The monitor reports version, label/structure, objective
 and editorial changes separately; digest additions/removals are review signals,
 not automatic semantic conclusions. See [maintenance](maintenance.md).
+
+## Persistence extensions (backward compatible v1)
+
+Exact duplicate event objects are rejected. Events are interpreted by canonical date and stable content hash; errors on the latest day conservatively affect priority regardless of import order. A different question ID alone cannot prove an independent attempt. Export adds `_integrity: {"algorithm": "sha256", "digest": "..."}` over canonical JSON excluding that field. Import verifies and removes it before saving. This catches accidental edits, not malicious rewriting or false learner claims; raw state-v1 chatbot handoffs remain accepted without a checksum.
+
+Migration retains the complete original state and reviewed plan in `migration`, plus a separate `.original.json` backup. Translated changed/split events have `requires_reassessment: true` and do not contribute to statuses or priorities. Removed events survive in the original ledger. See [migration](state-migration.md).

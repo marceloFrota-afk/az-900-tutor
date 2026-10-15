@@ -114,6 +114,20 @@ def validate():
         require(all(url.startswith("https://learn.microsoft.com/") for url in q["source_urls"]), f"Question {q['id']}: requires official conceptual source")
         qdomains.add(q["domain_id"])
     require(qdomains == domains, "Question bank misses a domain")
+    require({q["competency_id"] for q in questions} == ids, "Question bank misses a competency")
+    for q in questions:
+        if q.get("transfer_variant"):
+            require(q["skill_type"] == "transfer", f"Transfer item {q['id']} must test transfer")
+            require(sum(x["competency_id"] == q["competency_id"] for x in questions) >= 2,
+                    f"Transfer item {q['id']} needs a distinct first item")
+    lessons = load("lessons/units.pt-BR.json")
+    require(lessons["curriculum_version"] == c["version"], "Lesson curriculum version differs")
+    units = lessons["units"]
+    unique(units, "lesson")
+    require(len(units) == len(ids) and {u["competency_id"] for u in units} == ids, "Lesson coverage differs")
+    for unit in units:
+        for field in ("explanation", "worked_example", "contrast", "retrieval_prompt", "transfer_prompt", "source_urls"):
+            require(bool(unit.get(field)), f"Lesson {unit['id']}: missing {field}")
     skill = (ROOT / ".agents/skills/az-900-tutor/SKILL.md").read_text(encoding="utf-8")
     require(skill.startswith("---\n"), "Skill requires YAML frontmatter")
     front = skill.split("---", 2)[1]
