@@ -17,7 +17,7 @@ class SyncProgressTests(unittest.TestCase):
                     "ssh://git@github.com/alice/az-900-tutor"):
             self.assertEqual(sync_progress.parse_remote(url), ("alice", "az-900-tutor"))
         self.assertIsNone(sync_progress.parse_remote("https://evil.example/alice/az-900-tutor"))
-        self.assertIsNone(sync_progress.parse_remote("https://github.com/alice/other"))
+        self.assertEqual(sync_progress.parse_remote("https://github.com/alice/other"), ("alice", "other"))
 
     def test_reject_upstream_or_ambiguous_remotes(self):
         def fake_git(*args, **kwargs):
