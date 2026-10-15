@@ -32,8 +32,8 @@ def git(*args, cwd=ROOT, check=True):
 def parse_remote(url):
     """Return normalized GitHub owner/repo for common HTTPS and SSH remote forms."""
     match = re.fullmatch(
-        r"(?:https://github\\.com/|ssh://git@github\\.com/|git@github\\.com:)"
-        r"([A-Za-z0-9-]+)/([A-Za-z0-9_.-]+?)(?:\\.git)?/?", url.strip())
+        r"(?:https://github\.com/|ssh://git@github\.com/|git@github\.com:)"
+        r"([A-Za-z0-9-]+)/([A-Za-z0-9_.-]+?)(?:\.git)?/?", url.strip())
     return (match.group(1), match.group(2)) if match else None
 
 
