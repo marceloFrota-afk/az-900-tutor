@@ -51,7 +51,7 @@ forneça esse estado na próxima sessão. Ele não deve inventar memória anteri
 
 ## Escopo e confiança
 
-Currículo baseado no [guia oficial](https://learn.microsoft.com/en-us/credentials/certifications/resources/study-guides/az-900)
+Currículo baseado no [guia oficial](https://learn.microsoft.com/credentials/certifications/resources/study-guides/az-900?wt.mc_id=studentamb_475517)
 vigente desde **20/07/2026**, verificado em **15/10/2026**. Todos os objetivos estão
 mapeados, com 57 fichas didáticas essenciais e 65 questões autorais cobrindo as 57 competências. As fichas não substituem um curso completo. As fontes oficiais têm precedência sobre as comunitárias.
 
@@ -62,6 +62,8 @@ probabilidade de aprovação. Simulados autorais não reproduzem a prova real.
 O monitor semanal/manual propõe revisão quando detecta mudanças e falha
 explicitamente se não consegue interpretar a fonte. Nunca altera silenciosamente
 o currículo. O agendamento só funciona após o merge na branch principal.
+
+Links oficiais Microsoft Learn podem incluir o Contributor ID do mantenedor para atribuição no Microsoft Student Ambassadors. Isso não garante visitas qualificadas nem implica endosso da Microsoft. [Detalhes](resources/README.md#microsoft-student-ambassadors-attribution).
 
 ## Validar e contribuir
 
