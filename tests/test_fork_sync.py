@@ -22,7 +22,7 @@ class SyncProgressTests(unittest.TestCase):
     def test_reject_upstream_or_ambiguous_remotes(self):
         def fake_git(*args, **kwargs):
             if args == ("remote",):
-                return result("origin\\npersonal\\n")
+                return result("origin\npersonal\n")
             return result("https://github.com/" + ("vmenezesdev" if args[-1] == "origin" else "alice") + "/az-900-tutor.git")
         with patch.object(sync_progress, "git", side_effect=fake_git):
             self.assertEqual(sync_progress.choose_remote(), ("personal", "alice", "az-900-tutor"))
@@ -32,13 +32,13 @@ class SyncProgressTests(unittest.TestCase):
     def test_private_fork_required(self):
         with patch.object(sync_progress.subprocess, "run", side_effect=[
             result('{"is_fork":true,"parent":"vmenezesdev/az-900-tutor","owner":"alice"}'),
-            result("alice\\n"), result("false\\n")]):
+            result("alice\n"), result("false\n")]):
             with self.assertRaisesRegex(ValueError, "public"):
                 sync_progress.verify_fork("alice", "az-900-tutor")
 
     def test_dry_run_never_prepares_or_uploads(self):
-        with patch.object(sync_progress, "choose_remote", return_value=("personal", "alice", "az-900-tutor")), \\
-             patch.object(sync_progress, "verify_fork", return_value="alice/az-900-tutor"), \\
+        with patch.object(sync_progress, "choose_remote", return_value=("personal", "alice", "az-900-tutor")), \
+             patch.object(sync_progress, "verify_fork", return_value="alice/az-900-tutor"), \
              patch.object(sync_progress, "prepare_payload", side_effect=AssertionError("read/upload forbidden")):
             self.assertEqual(sync_progress.sync("nonexistent.json")["status"], "dry_run")
 
