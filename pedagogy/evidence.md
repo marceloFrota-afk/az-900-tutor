@@ -11,4 +11,3 @@ An evidence-based readiness statement should describe domain coverage; unseen or
 ## Basis and limits
 
 Retrieval practice and distributing study have research support, but these studies do not validate this project's thresholds, schedule, or AZ-900 outcomes. [Dunlosky et al. (2013)](https://doi.org/10.1177/1529100612453266) reviewed common study techniques; [Karpicke and Roediger (2008)](https://doi.org/10.1126/science.1152408) experimentally examined repeated retrieval. We apply those principles as design guidance. Scaffolding, targeted feedback, and mastery judgments here are explicitly implemented tutoring choices; an LLM may still grade inconsistently. Qualitative fixtures in `evals/` test behavior, while real learner outcome validation remains future work.
-
