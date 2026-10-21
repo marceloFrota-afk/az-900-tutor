@@ -46,7 +46,7 @@ Não use HTTP em produção. Os valores locais do `wrangler.toml` não são conf
 
 ## Verificar antes de compartilhar
 
-Consulte os metadados do servidor de recursos e do servidor de autorização definidos no código. Faça uma chamada a `POST /mcp) sem token e confirme que a resposta é `401` com o desafio `resource_metadata`. Em seguida, complete o consentimento Google e teste o fluxo inteiro com um cliente MCP real:
+Consulte os metadados do servidor de recursos e do servidor de autorização definidos no código. Faça uma chamada a `POST /mcp` sem token e confirme que a resposta é `401` com o desafio `resource_metadata`. Em seguida, complete o consentimento Google e teste o fluxo inteiro com um cliente MCP real:
 
 1. conectar e autorizar;
 2. consultar `get_profile` e inicializar `update_profile`;
@@ -60,7 +60,7 @@ Registre cliente, versão, sistema operacional, data e quais etapas passaram. Um
 
 ## Conectar um cliente
 
-Adicione a URL `<PUBLIC_BASE_URL>/mcp) pelo fluxo de conexão MCP remoto / Streamable HTTP do cliente e autorize com a conta Google usada nos estudos. Os nomes dos menus variam entre aplicativos. O cliente precisa suportar MCP remoto, OAuth e ferramentas de escrita.
+Adicione a URL `<PUBLIC_BASE_URL>/mcp` pelo fluxo de conexão MCP remoto / Streamable HTTP do cliente e autorize com a conta Google usada nos estudos. Os nomes dos menus variam entre aplicativos. O cliente precisa suportar MCP remoto, OAuth e ferramentas de escrita.
 
 Na primeira sessão, consulte `get_profile` e use `update_profile` para definir prazo, minutos disponíveis, idioma e experiência. Ao voltar, use `get_profile`, `get_progress` e `get_study_plan`. O mesmo sujeito Google recupera o mesmo registro em outro cliente compatível.
 
