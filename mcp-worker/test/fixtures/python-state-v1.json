@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "curriculum_version": "2026-07-20",
+  "profile": {
+    "goal": "AZ-900 preparation",
+    "deadline": "2026-12-20",
+    "minutes_per_day": 45,
+    "language": "pt-BR",
+    "experience": "Software developer; little Azure"
+  },
+  "events": [
+    {
+      "competency": "AZ900-1.1.1",
+      "question": "interop-q1",
+      "score": 0.9,
+      "kind": "explanation",
+      "evidence": "Explained shared responsibility and applied it to a VM scenario.",
+      "misconception": "",
+      "assisted": false,
+      "date": "2026-10-18"
+    },
+    {
+      "competency": "AZ900-1.1.1",
+      "question": "interop-q2",
+      "score": 0.85,
+      "kind": "application",
+      "evidence": "Applied the model to a changed scenario and justified the choice.",
+      "misconception": "",
+      "assisted": false,
+      "date": "2026-10-20"
+    }
+  ],
+  "_integrity": {
+    "algorithm": "sha256",
+    "digest": "7e03ff73c612afb84c8f09efe5a3c16f411258138758cb159bd05ee69533213c"
+  }
+}

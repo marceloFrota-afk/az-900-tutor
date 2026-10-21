@@ -5,7 +5,7 @@ on:
 permissions:
   contents: read
 jobs:
-  validate:
+  python:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest]
@@ -19,4 +19,22 @@ jobs:
         with:
           python-version: ${{ matrix.python }}
       - run: python scripts/validate.py
+      - run: python scripts/sync_mcp_content.py --check
       - run: python -m unittest discover -s tests -v
+  worker:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: mcp-worker/package-lock.json
+      - run: npm ci
+        working-directory: mcp-worker
+      - run: npm run typecheck
+        working-directory: mcp-worker
+      - run: npm test
+        working-directory: mcp-worker

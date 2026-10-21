@@ -2,7 +2,13 @@
 
 Você pode estudar conceitos sem criar uma conta Azure. O tutor ensina em português e preserva os nomes oficiais dos serviços. Enviar apenas o endereço do repositório não garante que um chatbot tenha lido seus arquivos.
 
-## A. ChatGPT ou chatbot genérico
+## A. MCP hospedado entre conversas
+
+Se o servidor remoto do AZ-900 Tutor foi implantado, conecte o recurso MCP remoto do cliente a `<PUBLIC_BASE_URL>/mcp` e autorize com Google. Veja [configuração, privacidade e operação](mcp-hosting.md). No primeiro acesso, consulte `get_profile`; para continuar depois, use `get_progress` e `get_study_plan`. O servidor não depende da memória do chat.
+
+O cliente precisa oferecer MCP remoto, OAuth e permissão para executar ferramentas de escrita. O suporte varia; teste OAuth e `record_assessment` no aplicativo real. Se as gravações não forem confiáveis, use a alternativa local abaixo.
+
+## B. ChatGPT ou chatbot genérico
 
 Baixe o repositório e forneça `TUTOR.md`, `.agents/skills/az-900-tutor/SKILL.md`, `pedagogy/protocol.md`, `pedagogy/evidence.md`, `exam/curriculum.json`, `resources/catalog.json`, `lessons/units.pt-BR.json` e `assessments/questions.json` como anexos ou contexto acessível. Se o contexto for pequeno, comece pelas instruções e forneça somente os registros de competências, fontes e questões necessários. Os gabaritos estão no arquivo; peça que sejam ocultados durante os exercícios.
 
@@ -10,7 +16,7 @@ Exemplo: “Use os arquivos do AZ-900 Tutor. Sou desenvolvedor, conheço pouco d
 
 Se o chatbot não puder gravar arquivos, peça um resumo JSON para continuidade ao final e salve você mesmo. Inclua versão do currículo, objetivo, prazo, tempo disponível, respostas reais, pistas usadas, equívocos e datas de revisão. Forneça esse arquivo na próxima sessão. O tutor não deve fingir lembrar um histórico indisponível. Mantenha os dados pessoais em local privado.
 
-## B. Agente de código e progresso local
+## C. Agente de código e progresso local
 
 Clone o repositório e abra sua pasta no agente. Peça que leia `AGENTS.md` e `TUTOR.md`. Agentes com descoberta de skills podem usar `.agents/skills/az-900-tutor/`; quando isso não existir, a leitura explícita funciona como alternativa. Mantenha o repositório inteiro acessível. Se a ferramenta exigir registro, registre ou vincule essa pasta pelo mecanismo documentado do agente; copiar só a skill deixa o currículo e as questões para trás.
 
@@ -38,7 +44,7 @@ O registro acima é um exemplo de sintaxe; só o use se essa aprendizagem ocorre
 
 Os estados indicam não avaliado (`not_assessed`), em aprendizagem (`learning`), demonstrado (`demonstrated`), revisão necessária (`needs_review`) e inconclusivo (`inconclusive`). A heurística exige dias e perguntas diferentes com explicação e aplicação. O tutor deve ser mais cauteloso se houver memorização do banco, equívocos persistentes ou lacunas de cobertura.
 
-## C. Integração personalizada
+## D. Integração personalizada
 
 Leia os JSONs UTF-8 diretamente: `exam/curriculum.json` contém competências e relações; `resources/catalog.json`, recursos; `assessments/questions.json`, questões e rubricas. Preserve IDs estáveis, fontes, proveniência e versão. Não mostre os campos de gabarito antes do momento de feedback. Não há runtime proprietário, conta de serviço nem API paga obrigatória.
 

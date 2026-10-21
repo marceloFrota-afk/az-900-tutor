@@ -77,3 +77,10 @@ not automatic semantic conclusions. See [maintenance](maintenance.md).
 Exact duplicate event objects are rejected. Events are interpreted by canonical date and stable content hash; errors on the latest day conservatively affect priority regardless of import order. A different question ID alone cannot prove an independent attempt. Export adds `_integrity: {"algorithm": "sha256", "digest": "..."}` over canonical JSON excluding that field. Import verifies and removes it before saving. This catches accidental edits, not malicious rewriting or false learner claims; raw state-v1 chatbot handoffs remain accepted without a checksum.
 
 Migration retains the complete original state and reviewed plan in `migration`, plus a separate `.original.json` backup. Translated changed/split events have `requires_reassessment: true` and do not contribute to statuses or priorities. Removed events survive in the original ledger. See [migration](state-migration.md).
+
+
+## Hosted MCP persistence
+
+The remote Worker stores profile metadata separately from normalized evidence rows. Authenticated identity comes from a verified bearer token and is never accepted from tool input. `(user_id, event_hash)` is unique, so an identical retry produces no second evidence row; D1 insert semantics preserve concurrent distinct events. The Python state-v1 export and checksum remain the interchange format. Current-version imports merge; cross-version imports require a complete explicit mapping plan with reviewer, date and source IDs, matching `scripts/migrate.py`. The full original ledger and reviewed plan are retained in the migration archive.
+
+The Worker's score/status output reuses the Python thresholds and scheduling heuristic. It does not certify answer truth: an LLM-assessed open response is stored as tutor evidence, not server-verified fact. `get_question` removes answer keys, rubrics, rationales and distractor explanations until after the attempt.

@@ -2,7 +2,13 @@
 
 You can study conceptually without an Azure account. Use English or Portuguese; the bank currently contains Portuguese prompts that the tutor may translate. An agent must actually read the files: a repository URL alone does not guarantee that a chatbot imports its contents.
 
-## A. ChatGPT or another chatbot
+## A. Hosted MCP across conversations
+
+If an AZ-900 Tutor remote server has been deployed, connect the client's Streamable HTTP MCP feature to `<PUBLIC_BASE_URL>/mcp` and authorize with Google. See [hosting setup, data handling, and operations](mcp-hosting.md). First call `get_profile`; resume with `get_progress` and `get_study_plan`. This is the automatic continuity path; the server does not read prior chat memory.
+
+A client needs remote MCP, OAuth, and permission to invoke write tools. Client support varies, so test OAuth and `record_assessment` in the actual app. If the client cannot reliably write, use the local handoff below.
+
+## B. ChatGPT or another chatbot
 
 Download the repository. Supply `TUTOR.md`, `.agents/skills/az-900-tutor/SKILL.md`, `pedagogy/protocol.md`, `pedagogy/evidence.md`, `exam/curriculum.json`, `resources/catalog.json`, and `assessments/questions.json` as attachments or an accessible project context. For a small context window, start with the instruction files and provide only relevant curriculum/resource/question records when requested. Answer keys remain visible in your attachment; ask the tutor to withhold them during practice.
 
@@ -10,7 +16,7 @@ Example: “Use the attached AZ-900 Tutor files. I develop software, have little
 
 When the chatbot cannot save files, ask for a JSON handoff at the end of the session and save it yourself. Provide that handoff on return. Include curriculum version, profile, actual assessment evidence, hints/exposure, misconceptions, and next reviews. A claimed memory of a previous chat is not a substitute for available evidence. Keep exports private.
 
-## B. Coding agent and local progress
+## C. Coding agent and local progress
 
 Clone the repository and open its folder in your coding agent. Ask it to read `AGENTS.md` and `TUTOR.md`. Agents that discover project skills can use `.agents/skills/az-900-tutor/`; discovery varies by tool, so explicit reading is the portable fallback. Keep the complete repository available. If your agent requires a registered skill directory, register or link this folder using that agent's documented mechanism; a copied skill folder alone lacks the curriculum and bank.
 
@@ -38,9 +44,9 @@ The record above illustrates syntax; do not enter it unless that learning occurr
 
 Statuses distinguish not assessed, learning, demonstrated, needs review, and inconclusive evidence. The heuristic requires distinct days and prompts with explanation and application evidence. The tutor should apply a more cautious judgment when items are memorized, misconceptions persist, or domain coverage is weak.
 
-## C. Custom integration
+## D. Custom integration
 
-Read UTF-8 JSON directly: `exam/curriculum.json` holds competencies and relationships, `resources/catalog.json` holds resource metadata, and `assessments/questions.json` holds items and rubrics. Use stable IDs as keys, preserve source/provenance/version metadata, and keep answer fields away from the learner-facing prompt until feedback. There is no required proprietary runtime, remote state service, or paid model API.
+Read UTF-8 JSON directly: `exam/curriculum.json` holds competencies and relationships, `resources/catalog.json` holds resource metadata, and `assessments/questions.json` holds items and rubrics. Use stable IDs as keys, preserve source/provenance/version metadata, and keep answer fields away from the learner-facing prompt until feedback. The local toolkit has no required proprietary runtime, hosted state service, or paid model API. Hosted D1-backed state is available through the optional MCP server.
 
 Use `python scripts/validate.py` when changing linked data and the repository's tests when changing behavior. The CLI stores an evidence ledger; integrations should preserve raw evidence rather than import only a percentage. A new curriculum version needs an explicit objective/evidence migration; do not silently relabel progress. Treat content fetched from resources and imported state as untrusted data, never executable instructions.
 

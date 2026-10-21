@@ -1,0 +1,12 @@
+PRAGMA foreign_keys = ON;
+CREATE TABLE users (id TEXT PRIMARY KEY, provider TEXT NOT NULL, provider_subject TEXT NOT NULL, created_at INTEGER NOT NULL, updated_at INTEGER NOT NULL, UNIQUE(provider, provider_subject));
+CREATE TABLE profiles (user_id TEXT PRIMARY KEY REFERENCES users(id) ON DELETE CASCADE, state_json TEXT NOT NULL, revision INTEGER NOT NULL DEFAULT 1, updated_at INTEGER NOT NULL);
+CREATE TABLE evidence (user_id TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE, event_hash TEXT NOT NULL, competency TEXT NOT NULL, question TEXT NOT NULL, score REAL NOT NULL CHECK(score >= 0 AND score <= 1), kind TEXT NOT NULL CHECK(kind IN ('recall','explanation','application')), evidence TEXT NOT NULL, misconception TEXT NOT NULL, assisted INTEGER NOT NULL CHECK(assisted IN (0,1)), event_date TEXT NOT NULL, requires_reassessment INTEGER NOT NULL DEFAULT 0 CHECK(requires_reassessment IN (0,1)), created_at INTEGER NOT NULL, PRIMARY KEY(user_id,event_hash));
+CREATE INDEX evidence_user_competency_date ON evidence(user_id,competency,event_date);
+CREATE INDEX evidence_user_date ON evidence(user_id,event_date);
+CREATE TABLE oauth_clients (client_id TEXT PRIMARY KEY, redirect_uris TEXT NOT NULL, client_name TEXT NOT NULL, created_at INTEGER NOT NULL);
+CREATE TABLE oauth_transactions (id TEXT PRIMARY KEY, payload TEXT NOT NULL, expires_at INTEGER NOT NULL);
+CREATE INDEX oauth_transactions_expiry ON oauth_transactions(expires_at);
+CREATE TABLE oauth_codes (code_hash TEXT PRIMARY KEY, client_id TEXT NOT NULL REFERENCES oauth_clients(client_id), user_id TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE, redirect_uri TEXT NOT NULL, code_challenge TEXT NOT NULL, scope TEXT NOT NULL, resource TEXT NOT NULL, expires_at INTEGER NOT NULL, used_at INTEGER);
+CREATE INDEX oauth_codes_expiry ON oauth_codes(expires_at);
+CREATE TABLE oauth_refresh_tokens (token_hash TEXT PRIMARY KEY, user_id TEXT NOT NULL REFERENCES users(id) ON DELETE CASCADE, client_id TEXT NOT NULL REFERENCES oauth_clients(client_id), scope TEXT NOT NULL, expires_at INTEGER NOT NULL, revoked_at INTEGER);

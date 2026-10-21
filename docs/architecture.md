@@ -34,3 +34,14 @@ Out of scope: web/mobile UI, accounts, cloud hosting, payments, proprietary runt
 full lessons for every objective, real exam reproduction, guaranteed readiness,
 or evidence that this toolkit improves actual exam outcomes. Qualitative agent
 evaluations and calibrated learning studies are separate from deterministic tests.
+
+
+# ADR 002 — Optional remote MCP with D1 persistence
+
+Accepted 2026-10-21. Add an optional TypeScript Worker using the official MCP SDK's stateless Streamable HTTP handler. Keep the local Python utility and state-v1 JSON as supported first-class paths. The Worker bundles approved curriculum, original questions and lessons, and ports the deterministic evidence/status/recommendation rules. The model remains in the client.
+
+Google OpenID Connect supplies student identity; the Worker is an OAuth 2.1 authorization server for MCP clients, with PKCE S256, consent, resource metadata and signed short-lived access tokens. D1 stores normalized append-only evidence keyed by authenticated user ID and canonical event hash; duplicate retries are harmless. OAuth Client ID Metadata Documents are preferred, while Dynamic Client Registration remains as a compatibility fallback. No Durable Objects, KV, Vectorize, RAG, or model-provider service is required.
+
+The deployment is an optional hosted convenience, not a replacement for local portability. D1 row identity is derived from the verified access token, not tool arguments. Assessment scores are learner evidence supplied by the tutor model; the server does not grade open answers. Tool instructions ask clients to write and verify each valid assessment, but MCP clients can ignore those instructions or fail to invoke a tool. Local offline operation remains available.
+
+Tradeoffs: the operator manages Google OAuth credentials and D1 access; students must trust that service operator with assessment evidence. Google sign-in and Cloudflare deployment need secrets/configuration outside the repository. OAuth has local contract/integration coverage, but a real Google consent flow and production Cloudflare account require operator credentials and were not exercised in CI.

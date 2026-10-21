@@ -1,0 +1,371 @@
+{
+  "python_version": "2026-07-20",
+  "competency": "AZ900-1.1.1",
+  "today": "2026-10-21",
+  "cases": {
+    "empty": [],
+    "recall_only": [
+      {
+        "competency": "AZ900-1.1.1",
+        "question": "q-recall",
+        "score": 0.9,
+        "kind": "recall",
+        "evidence": "Observed q-recall",
+        "misconception": "",
+        "assisted": false,
+        "date": "2026-10-20"
+      }
+    ],
+    "one_explanation": [
+      {
+        "competency": "AZ900-1.1.1",
+        "question": "q-one",
+        "score": 0.9,
+        "kind": "explanation",
+        "evidence": "Observed q-one",
+        "misconception": "",
+        "assisted": false,
+        "date": "2026-10-20"
+      }
+    ],
+    "same_day_transfer": [
+      {
+        "competency": "AZ900-1.1.1",
+        "question": "q-a",
+        "score": 0.9,
+        "kind": "explanation",
+        "evidence": "Observed q-a",
+        "misconception": "",
+        "assisted": false,
+        "date": "2026-10-20"
+      },
+      {
+        "competency": "AZ900-1.1.1",
+        "question": "q-b",
+        "score": 0.9,
+        "kind": "application",
+        "evidence": "Observed q-b",
+        "misconception": "",
+        "assisted": false,
+        "date": "2026-10-20"
+      }
+    ],
+    "spaced_transfer": [
+      {
+        "competency": "AZ900-1.1.1",
+        "question": "q-a",
+        "score": 0.9,
+        "kind": "explanation",
+        "evidence": "Observed q-a",
+        "misconception": "",
+        "assisted": false,
+        "date": "2026-10-18"
+      },
+      {
+        "competency": "AZ900-1.1.1",
+        "question": "q-b",
+        "score": 0.9,
+        "kind": "application",
+        "evidence": "Observed q-b",
+        "misconception": "",
+        "assisted": false,
+        "date": "2026-10-20"
+      }
+    ],
+    "failure_resets": [
+      {
+        "competency": "AZ900-1.1.1",
+        "question": "q-a",
+        "score": 0.9,
+        "kind": "explanation",
+        "evidence": "Observed q-a",
+        "misconception": "",
+        "assisted": false,
+        "date": "2026-10-16"
+      },
+      {
+        "competency": "AZ900-1.1.1",
+        "question": "q-b",
+        "score": 0.9,
+        "kind": "application",
+        "evidence": "Observed q-b",
+        "misconception": "",
+        "assisted": false,
+        "date": "2026-10-18"
+      },
+      {
+        "competency": "AZ900-1.1.1",
+        "question": "q-c",
+        "score": 0.2,
+        "kind": "application",
+        "evidence": "Observed q-c",
+        "misconception": "",
+        "assisted": false,
+        "date": "2026-10-20"
+      }
+    ],
+    "assistance_resets": [
+      {
+        "competency": "AZ900-1.1.1",
+        "question": "q-a",
+        "score": 0.9,
+        "kind": "explanation",
+        "evidence": "Observed q-a",
+        "misconception": "",
+        "assisted": false,
+        "date": "2026-10-16"
+      },
+      {
+        "competency": "AZ900-1.1.1",
+        "question": "q-b",
+        "score": 1,
+        "kind": "application",
+        "evidence": "Observed q-b",
+        "misconception": "",
+        "assisted": true,
+        "date": "2026-10-18"
+      }
+    ],
+    "misconception_resets": [
+      {
+        "competency": "AZ900-1.1.1",
+        "question": "q-a",
+        "score": 0.9,
+        "kind": "explanation",
+        "evidence": "Observed q-a",
+        "misconception": "",
+        "assisted": false,
+        "date": "2026-10-16"
+      },
+      {
+        "competency": "AZ900-1.1.1",
+        "question": "q-b",
+        "score": 1,
+        "kind": "application",
+        "evidence": "Observed q-b",
+        "misconception": "Wrong cloud model",
+        "assisted": false,
+        "date": "2026-10-18"
+      }
+    ],
+    "same_question_repeated": [
+      {
+        "competency": "AZ900-1.1.1",
+        "question": "q-a",
+        "score": 0.9,
+        "kind": "explanation",
+        "evidence": "Observed q-a",
+        "misconception": "",
+        "assisted": false,
+        "date": "2026-10-18"
+      },
+      {
+        "competency": "AZ900-1.1.1",
+        "question": "q-a",
+        "score": 0.9,
+        "kind": "application",
+        "evidence": "Observed q-a",
+        "misconception": "",
+        "assisted": false,
+        "date": "2026-10-20"
+      }
+    ],
+    "review_due": [
+      {
+        "competency": "AZ900-1.1.1",
+        "question": "q-a",
+        "score": 0.9,
+        "kind": "explanation",
+        "evidence": "Observed q-a",
+        "misconception": "",
+        "assisted": false,
+        "date": "2026-10-01"
+      },
+      {
+        "competency": "AZ900-1.1.1",
+        "question": "q-b",
+        "score": 0.9,
+        "kind": "application",
+        "evidence": "Observed q-b",
+        "misconception": "",
+        "assisted": false,
+        "date": "2026-10-03"
+      }
+    ]
+  },
+  "expected_status": {
+    "empty": {
+      "status": "not_assessed",
+      "next_review": null,
+      "evidence_count": 0
+    },
+    "recall_only": {
+      "status": "needs_review",
+      "next_review": "2026-10-21",
+      "evidence_count": 1
+    },
+    "one_explanation": {
+      "status": "needs_review",
+      "next_review": "2026-10-21",
+      "evidence_count": 1
+    },
+    "same_day_transfer": {
+      "status": "needs_review",
+      "next_review": "2026-10-21",
+      "evidence_count": 2
+    },
+    "spaced_transfer": {
+      "status": "demonstrated",
+      "next_review": "2026-10-23",
+      "evidence_count": 2
+    },
+    "failure_resets": {
+      "status": "needs_review",
+      "next_review": "2026-10-21",
+      "evidence_count": 3
+    },
+    "assistance_resets": {
+      "status": "needs_review",
+      "next_review": "2026-10-19",
+      "evidence_count": 2
+    },
+    "misconception_resets": {
+      "status": "needs_review",
+      "next_review": "2026-10-19",
+      "evidence_count": 2
+    },
+    "same_question_repeated": {
+      "status": "needs_review",
+      "next_review": "2026-10-21",
+      "evidence_count": 2
+    },
+    "review_due": {
+      "status": "needs_review",
+      "next_review": "2026-10-06",
+      "evidence_count": 2
+    }
+  },
+  "recommendation_state": {
+    "schema_version": 1,
+    "curriculum_version": "2026-07-20",
+    "profile": {
+      "goal": "AZ-900 preparation",
+      "deadline": "2026-10-23",
+      "minutes_per_day": 18,
+      "language": "pt-BR",
+      "experience": "test"
+    },
+    "events": [
+      {
+        "competency": "AZ900-1.1.1",
+        "question": "q-a",
+        "score": 0.9,
+        "kind": "explanation",
+        "evidence": "Observed q-a",
+        "misconception": "",
+        "assisted": false,
+        "date": "2026-10-16"
+      },
+      {
+        "competency": "AZ900-1.1.1",
+        "question": "q-b",
+        "score": 0.9,
+        "kind": "application",
+        "evidence": "Observed q-b",
+        "misconception": "",
+        "assisted": false,
+        "date": "2026-10-18"
+      },
+      {
+        "competency": "AZ900-1.1.1",
+        "question": "q-c",
+        "score": 0.2,
+        "kind": "application",
+        "evidence": "Observed q-c",
+        "misconception": "",
+        "assisted": false,
+        "date": "2026-10-20"
+      }
+    ]
+  },
+  "expected_recommendations": [
+    {
+      "competency": "AZ900-1.1.1",
+      "name": "Cloud foundations",
+      "priority": 5.4333,
+      "reason": "needs_review",
+      "prerequisites_to_check": [],
+      "session_minutes": 15,
+      "avoid_questions": [
+        "q-a",
+        "q-b",
+        "q-c"
+      ],
+      "question_candidates": [
+        "Q031"
+      ],
+      "fallback": "If no unseen bank item exists, author a changed scenario from the objective rubric; identify it as unreviewed."
+    },
+    {
+      "competency": "AZ900-3.2.1",
+      "name": "Microsoft Purview",
+      "priority": 1.6083,
+      "reason": "not_assessed",
+      "prerequisites_to_check": [
+        "AZ900-2.1.7"
+      ],
+      "session_minutes": 15,
+      "avoid_questions": [],
+      "question_candidates": [
+        "Q053"
+      ],
+      "fallback": "If no unseen bank item exists, author a changed scenario from the objective rubric; identify it as unreviewed."
+    },
+    {
+      "competency": "AZ900-3.2.2",
+      "name": "Azure Policy",
+      "priority": 1.6083,
+      "reason": "not_assessed",
+      "prerequisites_to_check": [
+        "AZ900-2.1.7"
+      ],
+      "session_minutes": 15,
+      "avoid_questions": [],
+      "question_candidates": [
+        "Q025",
+        "Q060"
+      ],
+      "fallback": "If no unseen bank item exists, author a changed scenario from the objective rubric; identify it as unreviewed."
+    },
+    {
+      "competency": "AZ900-3.2.3",
+      "name": "Resource locks",
+      "priority": 1.6083,
+      "reason": "not_assessed",
+      "prerequisites_to_check": [
+        "AZ900-2.1.7"
+      ],
+      "session_minutes": 15,
+      "avoid_questions": [],
+      "question_candidates": [
+        "Q026"
+      ],
+      "fallback": "If no unseen bank item exists, author a changed scenario from the objective rubric; identify it as unreviewed."
+    },
+    {
+      "competency": "AZ900-3.3.1",
+      "name": "Azure portal",
+      "priority": 1.6083,
+      "reason": "not_assessed",
+      "prerequisites_to_check": [
+        "AZ900-2.1.7"
+      ],
+      "session_minutes": 15,
+      "avoid_questions": [],
+      "question_candidates": [
+        "Q054"
+      ],
+      "fallback": "If no unseen bank item exists, author a changed scenario from the objective rubric; identify it as unreviewed."
+    }
+  ]
+}

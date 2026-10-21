@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "curriculum_version": "2026-07-20",
+  "profile": {
+    "goal": "AZ-900 preparation",
+    "deadline": "2026-12-20",
+    "minutes_per_day": 30,
+    "language": "en",
+    "experience": "test"
+  },
+  "events": [
+    {
+      "competency": "AZ900-1.1.1",
+      "question": "integer-score",
+      "score": 1,
+      "kind": "recall",
+      "evidence": "A manually entered whole-number score",
+      "misconception": "",
+      "assisted": false,
+      "date": "2026-10-20"
+    }
+  ],
+  "_integrity": {
+    "algorithm": "sha256",
+    "digest": "91955e99d7d3919d3ab4a8ba2a33a532faee86c040b410d510824989b13d1cae"
+  }
+}
