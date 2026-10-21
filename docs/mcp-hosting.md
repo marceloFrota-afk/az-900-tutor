@@ -25,15 +25,35 @@ npm run dev
 
 `npm test` runs the Worker inside Cloudflare's local `workerd` test runtime with an isolated local D1 database. It includes a real MCP TypeScript client, two separate authenticated test identities, reconnect/resume, duplicate concurrent writes, question-key withholding, and authorization checks. These are local integration tests; they do not verify Google credentials, production Cloudflare, or any named AI application.
 
-## Create Cloudflare resources
+## Deploy to Cloudflare
 
-1. Authenticate Wrangler with an account you control: `npx wrangler login`.
+Run these commands **from `mcp-worker/`**, not the repository root. If you have not installed the Worker dependencies yet:
+
+```sh
+cd mcp-worker
+npm ci
+```
+
+Deployment has two stages: first create the Worker to obtain its public URL, then configure Google OAuth and publish the final settings. **Do not share the endpoint with students after the first deploy.** Authentication is not configured yet.
+
+### 1. Create D1 and deploy the Worker for the first time
+
+1. Authenticate Wrangler: `npx wrangler login`.
 2. Create the D1 database: `npx wrangler d1 create az900-tutor-progress`.
-3. Copy the returned `database_id` into `mcp-worker/wrangler.toml` in place of `REPLACE_WITH_D1_DATABASE_ID`.
-4. Set `PUBLIC_BASE_URL` to the final HTTPS Worker URL, such as `https://az-900-tutor-mcp.<account-subdomain>.workers.dev`, in `[vars]`.
-5. Apply migrations: `npm run migrate:remote`.
-6. Create a Google OAuth 2.0 **Web application** client in Google Cloud Console. Add this exact authorized redirect URI: `<PUBLIC_BASE_URL>/oauth/google/callback`. Configure the consent screen for the intended audience. The app requests only the `openid` identity scope.
-7. Set secrets without committing them:
+3. In `mcp-worker/wrangler.toml` (relative to the repository root), replace `REPLACE_WITH_D1_DATABASE_ID` with the returned `database_id`.
+4. Apply migrations: `npm run migrate:remote`.
+5. Create the Worker and obtain its public URL: `npm run deploy`. If Wrangler asks to configure a `workers.dev` subdomain, complete that step. Copy the **actual HTTPS URL reported by Wrangler**, typically `https://az-900-tutor-mcp.<account-subdomain>.workers.dev`.
+
+**This first deploy is only a bootstrap.** `wrangler.toml` initially contains `PUBLIC_BASE_URL = "http://localhost:8787"` for local development. OAuth metadata will not refer to the public URL yet, and `/mcp` returns `503` until `TOKEN_SIGNING_SECRET` is configured. Do not try to connect an MCP client at this stage.
+
+### 2. Configure the public URL and Google OAuth
+
+6. Replace `PUBLIC_BASE_URL` under `[vars]` in `mcp-worker/wrangler.toml` with the HTTPS address from step 5, **without a trailing slash or `/mcp`**. For a custom domain, first configure its routing and HTTPS in Cloudflare, and use that actual public origin instead.
+7. In the [Google Cloud Console](https://console.cloud.google.com/auth/clients), create an OAuth 2.0 client of type **Web application**. Add `<PUBLIC_BASE_URL>/oauth/google/callback` as an authorized redirect URI, using the **actual URL**, not the literal placeholder. Configure the consent screen for the intended audience. The Worker requests only the Google identity scope `openid`.
+
+### 3. Set secrets and finish deployment
+
+8. Store the Google credentials and signing secret in Cloudflare, never in Git:
 
    ```sh
    npx wrangler secret put GOOGLE_CLIENT_ID
@@ -41,12 +61,15 @@ npm run dev
    npx wrangler secret put TOKEN_SIGNING_SECRET
    ```
 
-   Generate `TOKEN_SIGNING_SECRET` with a cryptographically random value of at least 32 bytes, for example `openssl rand -base64 48`. `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET` are values issued by Google.
+   Google issues `GOOGLE_CLIENT_ID` and `GOOGLE_CLIENT_SECRET`. Generate a cryptographically random `TOKEN_SIGNING_SECRET` with at least 32 bytes, for example `openssl rand -base64 48`. Each `wrangler secret put` publishes a new Worker version, but does **not** replace the next step.
 
-8. Deploy: `npm run deploy`.
-9. Verify the two metadata URLs and `POST /mcp` returning `401` with a `resource_metadata` challenge. Complete a full Google consent and MCP client test before sharing the endpoint with students.
+9. Deploy again: `npm run deploy`. This publishes the corrected `PUBLIC_BASE_URL` from `wrangler.toml` alongside the previously stored secrets.
 
-Do not set a production URL to HTTP. The local-only development values in `wrangler.toml` are not production OAuth settings.
+### 4. Verify before sharing
+
+10. Check `<PUBLIC_BASE_URL>/.well-known/oauth-authorization-server` and `<PUBLIC_BASE_URL>/.well-known/oauth-protected-resource`. Confirm they identify the public origin. An unauthenticated `POST <PUBLIC_BASE_URL>/mcp` must return `401` with a `resource_metadata` challenge. Finally, complete Google sign-in and a real MCP client write/read test.
+
+Use HTTPS for the public URL. If you later change the Worker hostname or domain, update **both** `PUBLIC_BASE_URL` and the Google authorized redirect URI, then redeploy and retest. The local `http://localhost:8787` value must not remain in the final deployment.
 
 ## Connect a client
 
