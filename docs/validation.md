@@ -46,7 +46,7 @@ about an actual tutoring model. No real learner history is included.
 Ten synthetic cases and an evaluation-record runner are implemented in `evals/`.
 Preparing an empty run and summarizing it correctly reports ten unexecuted cases,
 zero passes. The runner never generates transcripts or guesses reviewer scores.
-The [observed smoke responses](../evals/observed-smoke.md) record actual delegated
+The [observed smoke responses](https://github.com/vmenezesdev/az-900-tutor/blob/trunk/evals/observed-smoke.md) record actual delegated
 agent responses under the contract and their limitations. They are development
 smoke evidence, not a controlled experiment or a claim that all agents pass.
 
