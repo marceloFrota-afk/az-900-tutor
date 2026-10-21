@@ -1,12 +1,8 @@
 # AZ-900 Tutor
 
-[Português brasileiro](README.pt-BR.md) · [Start studying](docs/usage.md) · [Resources](resources/README.md) · [Contribute](CONTRIBUTING.md)
+[Português brasileiro](README.pt-BR.md) · [Hosted MCP](docs/mcp-hosting.md) · [Start studying](docs/usage.md) · [Resources](resources/README.md) · [Contribute](CONTRIBUTING.md)
 
-A portable tutoring kit for Microsoft Azure Fundamentals. Give an agent the
-curriculum, teaching contract and original questions; it can diagnose gaps,
-teach with traceable sources, assess explanations and plan reviews. No hosted app,
-model subscription, Azure account or cloud deployment is required by this toolkit.
-Your chosen agent may have its own requirements.
+A portable tutoring kit for Microsoft Azure Fundamentals. Use it locally without a hosted service, or connect to the optional [remote MCP deployment](docs/mcp-hosting.md) for D1-backed progress across conversations and clients. The model runs in your MCP client; no model subscription or Azure account is required by this toolkit. Your chosen agent may have its own requirements.
 
 ## Start in five minutes
 
@@ -51,6 +47,13 @@ effective **July 20, 2026**, checked **October 15, 2026**. Domain ranges are
 The source guide and [coverage map](exam/coverage.json) are the scope authority;
 57 essential lessons and 65 original questions cover all 57 objectives. A changing
 exam requires reviewed updates, even when the monitor has not reported a change.
+
+## Two ways to use it
+
+- **Hosted MCP:** connect to a deployed remote server and authorize with Google. Progress is saved automatically to a private D1 record. See [deployment and client connection](docs/mcp-hosting.md).
+- **Local toolkit:** use the Python utility, local JSON, and optional private-fork sync below. No hosted app or account is required.
+
+The hosted server is an optional path; it does not replace the portable state-v1 contract, local tools, or optional fork sync. The project is independent and does not guarantee Microsoft exam outcomes.
 
 ## Keep your progress
 

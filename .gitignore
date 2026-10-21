@@ -5,3 +5,11 @@ __pycache__/
 .venv/
 work/
 monitor-output/
+
+# Local Cloudflare Worker development secrets
+mcp-worker/.dev.vars
+
+# Cloudflare Worker local artifacts
+mcp-worker/node_modules/
+mcp-worker/.wrangler/
+mcp-worker/worker-configuration.d.ts

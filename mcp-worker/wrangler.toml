@@ -1,0 +1,17 @@
+name = "az-900-tutor-mcp"
+main = "src/index.ts"
+compatibility_date = "2026-10-21"
+compatibility_flags = ["nodejs_compat"]
+
+[triggers]
+crons = ["0 5 * * *"]
+[observability]
+enabled = true
+head_sampling_rate = 0.1
+[[d1_databases]]
+binding = "DB"
+database_name = "az900-tutor-progress"
+database_id = "REPLACE_WITH_D1_DATABASE_ID"
+migrations_dir = "migrations"
+[vars]
+PUBLIC_BASE_URL = "http://localhost:8787"
