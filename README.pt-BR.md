@@ -1,10 +1,10 @@
 # AZ-900 Tutor
 
-[English](README.md) · [Documentação](https://vmenezesdev.github.io/az-900-tutor/) · [MCP hospedado](docs/mcp-hosting.md) · [Como usar](docs/usage.pt-BR.md) · [Recursos](resources/README.md)
+[English](README.md) · [Documentação](https://vmenezesdev.github.io/az-900-tutor/) · [MCP hospedado](docs/mcp-hosting.pt-BR.md) · [Como usar](docs/usage.pt-BR.md) · [Recursos](resources/README.md)
 
 Um kit aberto que ajuda agentes de IA a ensinar Azure Fundamentals com currículo
 verificável, diagnóstico, questões autorais, feedback e revisão. Use o toolkit local
-sem infraestrutura hospedada ou conecte-se ao [MCP remoto opcional](docs/mcp-hosting.md)
+sem infraestrutura hospedada ou conecte-se ao [MCP remoto opcional](docs/mcp-hosting.pt-BR.md)
 para persistir o progresso no D1 entre conversas e clientes compatíveis. O modelo
 continua sendo o do cliente. O tutor pode ensinar em português mesmo quando consulta
 uma fonte em inglês.
@@ -34,7 +34,7 @@ Python 3.11+ é necessário apenas para os utilitários, sem instalar pacotes.
 
 ## Duas formas de estudar
 
-- **MCP hospedado:** conecte-se ao endpoint remoto implantado e autorize com Google. O histórico é salvo no D1 e pode ser recuperado em outra sessão. [Configuração e conexão](docs/mcp-hosting.md).
+- **MCP hospedado:** conecte-se ao endpoint remoto implantado e autorize com Google. O histórico é salvo no D1 e pode ser recuperado em outra sessão. [Configuração e conexão](docs/mcp-hosting.pt-BR.md).
 - **Toolkit local:** use as ferramentas Python e o estado JSON portátil abaixo, com sincronização opcional via fork privado. Não exige conta nem serviço hospedado.
 
 O MCP é opcional. As duas formas preservam o contrato state v1 e as regras pedagógicas do projeto. O tutor é independente e não garante aprovação na certificação.
