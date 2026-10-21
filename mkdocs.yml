@@ -61,6 +61,13 @@ nav:
       - Architecture: architecture.md
       - Data contracts: data-contracts.md
       - State migration: state-migration.md
+  - Project evidence and operations:
+      - Completion evidence: completion-report.md
+      - Research: research.md
+      - Human review packet: human-review-pack.md
+      - Local fork progress: fork-progress.md
+      - Source monitor operations: monitor-operational.md
+      - Question review: questions-review-2026-10-15.md
   - Maintain and contribute:
       - Maintenance: maintenance.md
       - Editorial review: editorial-review.md
