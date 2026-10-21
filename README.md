@@ -1,6 +1,6 @@
 # AZ-900 Tutor
 
-[Português brasileiro](README.pt-BR.md) · [Hosted MCP](docs/mcp-hosting.md) · [Start studying](docs/usage.md) · [Resources](resources/README.md) · [Contribute](CONTRIBUTING.md)
+[Português brasileiro](README.pt-BR.md) · [Documentation site](https://vmenezesdev.github.io/az-900-tutor/) · [Hosted MCP](docs/mcp-hosting.md) · [Start studying](docs/usage.md) · [Resources](resources/README.md) · [Contribute](CONTRIBUTING.md)
 
 A portable tutoring kit for Microsoft Azure Fundamentals. Use it locally without a hosted service, or connect to the optional [remote MCP deployment](docs/mcp-hosting.md) for D1-backed progress across conversations and clients. The model runs in your MCP client; no model subscription or Azure account is required by this toolkit. Your chosen agent may have its own requirements.
 

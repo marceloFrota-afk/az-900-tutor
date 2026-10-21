@@ -1,6 +1,6 @@
 # AZ-900 Tutor
 
-[English](README.md) · [MCP hospedado](docs/mcp-hosting.md) · [Como usar](docs/usage.pt-BR.md) · [Recursos](resources/README.md)
+[English](README.md) · [Documentação](https://vmenezesdev.github.io/az-900-tutor/) · [MCP hospedado](docs/mcp-hosting.md) · [Como usar](docs/usage.pt-BR.md) · [Recursos](resources/README.md)
 
 Um kit aberto que ajuda agentes de IA a ensinar Azure Fundamentals com currículo
 verificável, diagnóstico, questões autorais, feedback e revisão. Use o toolkit local

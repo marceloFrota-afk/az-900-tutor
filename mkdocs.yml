@@ -1,0 +1,67 @@
+site_name: AZ-900 Tutor
+site_description: A portable, evidence-based tutoring kit for Azure Fundamentals with an optional remote MCP.
+site_url: https://vmenezesdev.github.io/az-900-tutor/
+repo_url: https://github.com/vmenezesdev/az-900-tutor
+repo_name: vmenezesdev/az-900-tutor
+docs_dir: docs
+site_dir: site
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.sections
+    - navigation.top
+    - navigation.footer
+    - content.code.copy
+    - content.tabs.link
+    - search.suggest
+    - search.highlight
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: cyan
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: indigo
+      accent: cyan
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
+nav:
+  - Overview: index.md
+  - Study:
+      - English: usage.md
+      - Português: usage.pt-BR.md
+      - Curriculum and coverage: completion-matrix.md
+      - Validation and limitations: validation.md
+  - Hosted MCP:
+      - English setup and operations: mcp-hosting.md
+      - Configuração e operação (PT-BR): mcp-hosting.pt-BR.md
+      - Architecture: architecture.md
+      - Data contracts: data-contracts.md
+      - State migration: state-migration.md
+  - Maintain and contribute:
+      - Maintenance: maintenance.md
+      - Editorial review: editorial-review.md
+      - Contributing: https://github.com/vmenezesdev/az-900-tutor/blob/trunk/CONTRIBUTING.md
