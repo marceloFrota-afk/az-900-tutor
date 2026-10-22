@@ -38,7 +38,7 @@ export async function authRoute(req: Request, e: Env, path: string): Promise<Res
         let parsed: URL; try { parsed = new URL(clientId) } catch { return err('invalid_client', 'Client metadata URL is invalid') }
         if (parsed.protocol !== 'https:' || parsed.port || parsed.username || parsed.password || parsed.hostname === 'localhost' || parsed.hostname.endsWith('.local') || parsed.hostname.endsWith('.internal') || /^\d{1,3}(\.\d{1,3}){3}$/.test(parsed.hostname)) return err('invalid_client', 'Client metadata must use a public HTTPS URL');
         try {
-          const response = await fetch(clientId, { headers: { accept: 'application/json' }, redirect: 'error', signal: AbortSignal.timeout(5000) });
+          const response = await fetch(clientId, { headers: { accept: 'application/json' }, redirect: 'manual', signal: AbortSignal.timeout(5000) });
           if (!response.ok) return err('invalid_client', 'Client metadata could not be retrieved');
           const raw = await response.text();
           if (raw.length > 65536) return err('invalid_client', 'Client metadata exceeds 64 KiB');
