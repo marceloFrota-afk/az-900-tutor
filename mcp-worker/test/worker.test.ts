@@ -19,7 +19,7 @@ beforeAll(async()=>{
 describe('Cloudflare Worker MCP integration',()=>{
  it('requires bearer auth, publishes OAuth metadata and DCR validates callbacks',async()=>{
   const unauth=await worker.fetch(new Request(`${base}/mcp`,{method:'POST'}),testEnv);expect(unauth.status).toBe(401);expect(unauth.headers.get('www-authenticate')).toContain('oauth-protected-resource');
-  const metadata=await worker.fetch(new Request(`${base}/.well-known/oauth-authorization-server`),testEnv);expect(metadata.status).toBe(200);const authMeta:any=await metadata.json();expect(authMeta.code_challenge_methods_supported).toContain('S256');expect(authMeta.client_id_metadata_document_supported).toBe(true);expect(authMeta.grant_types_supported).toEqual(['authorization_code']);
+  const metadata=await worker.fetch(new Request(`${base}/.well-known/oauth-authorization-server`),testEnv);expect(metadata.status).toBe(200);const authMeta:any=await metadata.json();expect(authMeta.code_challenge_methods_supported).toContain('S256');expect(authMeta.client_id_metadata_document_supported).toBe(true);expect(authMeta.grant_types_supported).toEqual(['authorization_code','refresh_token']);
   const bad=await worker.fetch(new Request(`${base}/register`,{method:'POST',headers:{'content-type':'application/json'},body:JSON.stringify({redirect_uris:['https://attacker.invalid/callback']})}),testEnv);expect(bad.status).toBe(201);
   const auth=await worker.fetch(new Request(`${base}/authorize?client_id=${(await bad.json() as any).client_id}&redirect_uri=http%3A%2F%2Fevil.test%2Fcb&response_type=code&state=x&code_challenge=${'a'.repeat(43)}&code_challenge_method=S256&resource=${encodeURIComponent(`${base}/mcp`)}`),testEnv);expect(auth.status).toBe(400);
  });
