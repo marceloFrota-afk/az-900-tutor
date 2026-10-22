@@ -10,6 +10,7 @@ monitor-output/
 mcp-worker/.dev.vars
 
 # Cloudflare Worker local artifacts
+.wrangler/
 mcp-worker/node_modules/
 mcp-worker/.wrangler/
 mcp-worker/worker-configuration.d.ts

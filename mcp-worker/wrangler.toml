@@ -11,7 +11,7 @@ head_sampling_rate = 0.1
 [[d1_databases]]
 binding = "DB"
 database_name = "az900-tutor-progress"
-database_id = "REPLACE_WITH_D1_DATABASE_ID"
+database_id = "e384f9f9-5e73-4b41-8b76-fd67ce8d2baa"
 migrations_dir = "migrations"
 [vars]
-PUBLIC_BASE_URL = "http://localhost:8787"
+PUBLIC_BASE_URL = "https://az-900-tutor-mcp.luminiware.workers.dev"
